@@ -2,7 +2,13 @@
 
 Quiz with multiple choice questions to prepare students getting their driving licence for sportboats in inland waters.  
 
+(C#, Mysql, Windows, Github)  
+
 *Created by: [R. Krüger](mailto:krueger.rico@web.de), [A. Biller](mailto:andie.biller@gmail.com), [S. Pflüger](mailto:sev@erratic-ink.com)*  
+
+## Project Outline
+
+The project requirements can be found [here](/pdf/Lernsituation.pdf).  
 
 ## UML Drafts
 
@@ -24,7 +30,7 @@ Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Grap
 Clone the project locally...  
 
 ```
-git clone <url.git>
+git clone <url>
 ```
 
 ...or pull the master when new changes of a contributor have been merged to it. Make sure you are in your local master branch.  
@@ -95,7 +101,7 @@ git branch -D <branchname>
 
 ## Kanban Board
 
-Manage your tasks [here]().  
+Manage your tasks [here](https://tree.taiga.io/project/ndbiller-as-fa54-gruppe-2-quiz/kanban).  
 
 ## TBC
 
