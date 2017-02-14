@@ -8,7 +8,7 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 ## Project Outline
 
-The project requirements can be found [here](/pdf/Lernsituation.pdf).  
+The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
 
 ## UML Drafts
 
