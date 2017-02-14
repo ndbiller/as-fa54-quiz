@@ -1,0 +1,95 @@
+@startuml
+
+hide circle
+skinparam classAttributeIconSize 0
+
+Manager "1" --> "1" DBConnector : uses >
+Manager "1" --> "15" Questionnaire : creates >
+Manager "1" --> "0..15" Questionnaire : uses <
+Questionnaire "1" o--> "30" Question : has
+DBConnector "1" --> "0,1" SqlConnection : establishes >
+DBConnector "1" --> "*" SqlCommand : executes >
+SqlCommand "1" --> "1" SqlDataReader : uses >
+
+class Manager {
+
++Name {get;set;} : string
++Threshhold {get;set;} : decimal
++History {get;set;} : List<int>
++Questions {get;set;} : List<Question>
+
++Manager(db : DBConnector)
+
++CreateQuestionnaires() : bool
++ShowQuestionnaires() : List<Questionnaire>
++ShowHistory() : List<Questionnaire>
++SelectQuestionnaire(id : int) : List<Question>
++ShowResult(id : int) : List<Question>
++SaveSettings() : bool
+
+}
+
+class Questionnaire {
+
++ID {get;set;} : int
+
++Questionnaire(data : string)
++Evaluate(threshhold : decimal) : bool
+
+}
+
+class Question {
+
++ID {get;set;} : int
++Text {get;set;} : string
++Answers {get;set;} : List<string>
++Solution {get;set;} : int
++Selected {get;set;} : int
+
++Question(data : string)
++Solve() : bool
+
+}
+
+class DBConnector {
+
++DataSource {get;set;} : string
++InitialCatalog {get;set;} : string
++IntegratedSecurity {get;set;} : string
++UserID {get;set;} : string
++Password {get;set;} : string
++Connection {get;set;} : SqlConnection
++ReadDataCommand {get;set;} : string
++Data {get;set;} : string
+
++DBConnector(dataSource : string, initialCatalog : string, integratedSecurity : string, userID : string,
+password : string)
++Connect() : SqlConnection
++Execute() : SqlCommand
++DataToCSV() : string
+
+}
+
+class SqlConnection {
+
++ConnectionString {get;set;} : string
+
++Open()
++Close()
++Dispose()
+
+}
+
+class SqlCommand {
+
++ExecuteReader()
+
+}
+
+class SqlDataReader {
+
++Read()
+
+}
+
+@enduml
