@@ -102,7 +102,3 @@ git branch -D <branchname>
 ## Kanban Board
 
 Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).  
-
-## TBC
-
-...  
