@@ -101,7 +101,7 @@ git branch -D <branchname>
 
 ## Kanban Board
 
-Manage your tasks [here](https://tree.taiga.io/project/ndbiller-as-fa54-gruppe-2-quiz/kanban).  
+Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).  
 
 ## TBC
 
