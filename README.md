@@ -1,4 +1,4 @@
-# AS - FA54 - Gruppe 2 - Quiz
+﻿# AS - FA54 - Gruppe 2 - Quiz
 
 Quiz with multiple choice questions to prepare students getting their driving licence for sportboats in inland waters.  
 
@@ -95,9 +95,9 @@ git branch -D <branchname>
 
 ## Contributor Roles
 
-- Rico Krüger - ?  
-- Andreas Biller - ?  
-- Severin Pflüger - ?  
+- Rico Krüger - Datenbanken  
+- Andreas Biller - Frontend  
+- Severin Pflüger - Backend  
 
 ## Kanban Board
 
