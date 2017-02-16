@@ -10,6 +10,16 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
 
+## Contributor Roles
+
+- Rico Krüger - Datenbanken  
+- Andreas Biller - Frontend  
+- Severin Pflüger - Backend  
+
+## Kanban Board
+
+Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
+
 ## UML Drafts
 
 ![UML 1.0](/img/2017-02-13_uml.png?raw=true "UML 1.0")  
@@ -24,6 +34,16 @@ Our very first draft of the UML can be found [here](/uml/2017-02-13_uml.dia). Cr
 Second draft of UML created from [2017-02-14_uml.txt](/uml/2017-02-14_uml.txt) with [PlantUML](http://plantuml.com/).  
 Documentation can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf).  
 Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed.  
+
+## Project Design Pattern
+
+![](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
+
+We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.
+
+![](/img/MVC-basic.svg.png?raw=true "MVC design pattern")  
+
+This is derived from the [model-view-controller design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).  
 
 ## Git Workflow
 
@@ -92,13 +112,4 @@ If a working branch is obsolete but not merged with the master you can force-del
 ```
 git branch -D <branchname>
 ```
-
-## Contributor Roles
-
-- Rico Krüger - Datenbanken  
-- Andreas Biller - Frontend  
-- Severin Pflüger - Backend  
-
-## Kanban Board
-
-Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).  
+ 
