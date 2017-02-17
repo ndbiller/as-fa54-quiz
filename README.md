@@ -137,14 +137,18 @@ git branch -D <branchname>
 
 ## Ergebnisprotokolle
 
-| **Protokollnummer:** |  |  
-| **Klassenbezeichnung:** |  |  
-| **Gruppenname (Zahl):** |  |  
-| **Datum:** |  |  
-| **AS-Blöcke:** | <label class="checkbox-inline"><input type="checkbox" class="glyphicon glyphicon-download" value="checked"/>1. Bl.</label> |  
-| **Heute erledigte Aufgaben des Frontend-Entwicklers:** |  
-|  |  
-| **Heute erledigte Aufgaben des Backend-Entwicklers:** |  
-|  |  
-| **Heute erledigte Aufgaben des Datenbankspezialisten:** |  
-|  |  
+**Protokollnummer:** |   
+**Klassenbezeichnung:** |   
+**Gruppenname (Zahl):** |   
+**Datum:** |   
+**AS-Blöcke:** | [ ] 1. Bl. [ ] 2. Bl. 3. Bl. [ ] 4. Bl. [ ] 5. Bl.  
+
+**Heute erledigte Aufgaben des Frontend-Entwicklers:**  
+---  
+
+**Heute erledigte Aufgaben des Backend-Entwicklers:**  
+---  
+
+**Heute erledigte Aufgaben des Datenbankspezialisten:**  
+---  
+  
