@@ -141,17 +141,19 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 ## Ergebnisprotokolle
 
+Ergebnisprotokoll | <span style="color:#FFFFFF;">white</span>
+--- | ---
 **Protokollnummer:** | 1
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
-**Datum:** | 17.02.2017
+**Datum:** | 13.02.2017 - 17.02.2017
 
 **AS-Blöcke:** 
-- [ ] 1. Bl.  
-- [ ] 2. Bl.  
-- [ ] 3. Bl.  
-- [ ] 4. Bl.  
-- [ ] 5. Bl.  
+- [x] 1. Bl.  
+- [x] 2. Bl.  
+- [x] 3. Bl.  
+- [x] 4. Bl.  
+- [x] 5. Bl.  
 
 **Heute erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
