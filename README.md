@@ -135,26 +135,16 @@ If a working branch is obsolete but not merged with the master you can force-del
 git branch -D <branchname>
 ```
 
+## Github Markdown
+
+Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
+
 ## Ergebnisprotokolle
 
-**Markdown for Tables**:  
-
-```markdown
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-```
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-**Protokollnummer:** | 
-**Klassenbezeichnung:** | 
-**Gruppenname (Zahl):** | 
-**Datum:** | 
+**Protokollnummer:** | 1
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 17.02.2017
 
 **AS-Blöcke:** 
 - [ ] 1. Bl.  
@@ -163,12 +153,14 @@ Content in the first column | Content in the second column
 - [ ] 4. Bl.  
 - [ ] 5. Bl.  
 
-**Heute erledigte Aufgaben des Frontend-Entwicklers:**  
----  
+**Heute erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+tasks: |
 
-**Heute erledigte Aufgaben des Backend-Entwicklers:**  
----  
+**Heute erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+tasks: |
 
-**Heute erledigte Aufgaben des Datenbankspezialisten:**  
----  
-  
+**Heute erledigte Aufgaben des Datenbankspezialisten:**|
+---|
+tasks: |
