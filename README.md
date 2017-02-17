@@ -141,9 +141,10 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 ## Ergebnisprotokolle
 
-Ergebnisprotokoll | -
---- | ---
+### Protokoll 13.02.2017 - 17.02.2017
+
 **Protokollnummer:** | 1
+--- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
 **Datum:** | 13.02.2017 - 17.02.2017
@@ -154,6 +155,87 @@ Ergebnisprotokoll | -
 - [x] 15.02.2017  
 - [x] 16.02.2017  
 - [x] 17.02.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
+---|
+tasks: |
+
+### Protokoll 20.02.2017 - 24.02.2017
+
+**Protokollnummer:** | 2
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 20.02.2017 - 24.02.2017
+
+**AS-Blöcke:**  
+- [ ] 20.02.2017  
+- [ ] 21.02.2017  
+- [ ] 22.02.2017  
+- [ ] 23.02.2017  
+- [ ] 24.02.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
+---|
+tasks: |
+
+### Protokoll 27.02.2017 - 03.03.2017
+
+**Protokollnummer:** | 3
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 27.02.2017 - 03.03.2017
+
+**AS-Blöcke:**  
+- [ ] 27.02.2017  
+- [ ] 28.02.2017  
+- [ ] 01.03.2017  
+- [ ] 02.03.2017  
+- [ ] 03.03.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+tasks: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
+---|
+tasks: |
+
+### Protokoll 06.03.2017 - 10.03.2017
+
+**Protokollnummer:** | 4
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 06.03.2017 - 10.03.2017
+
+**AS-Blöcke:**  
+- [ ] 06.03.2017  
+- [ ] 07.03.2017  
+- [ ] 08.03.2017 - **IHK Zwischenprüfung**  
+- [ ] 09.03.2017  
+- [ ] 10.03.2017  
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
