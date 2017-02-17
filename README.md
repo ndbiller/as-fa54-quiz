@@ -22,10 +22,14 @@ Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).
 
 ## Kanban Board Workflow
 
-Create issues for tasks. Add Labels and assign someone to the issues. Add issues as cards to **new**.  
-Create a local working branch for the issue and move the card with the issue assigned to you to **in progress** when you work at them.  
-If you finish working on an issue, move the card to **test**. Now write some tests for the issue and test your code.  
-If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
+- Create issues for tasks.  
+- Add labels and assign someone to issues.  
+- Add issues as cards to **new**.  
+- Create a local working branch for an issue assigned to you.  
+- Move the card to **in progress** when you work at it.  
+- If your work is done, move the card to **test**.  
+- Write some tests and test your code.  
+- If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
 After reviewing the branch in the pull request is finished the card can be moved to **done**.  
 We regularly merge all pull requests for cards in done with the master.  
 
@@ -130,4 +134,17 @@ If a working branch is obsolete but not merged with the master you can force-del
 ```
 git branch -D <branchname>
 ```
- 
+
+## Ergebnisprotokolle
+
+| **Protokollnummer:** |  |  
+| **Klassenbezeichnung:** |  |  
+| **Gruppenname (Zahl):** |  |  
+| **Datum:** |  |  
+| **AS-Blöcke:** | <label class="checkbox-inline"><input type="checkbox" class="glyphicon glyphicon-download" value="checked"/>1. Bl.</label> |  
+| **Heute erledigte Aufgaben des Frontend-Entwicklers:** |  
+|  |  
+| **Heute erledigte Aufgaben des Backend-Entwicklers:** |  
+|  |  
+| **Heute erledigte Aufgaben des Datenbankspezialisten:** |  
+|  |  
