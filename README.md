@@ -151,11 +151,17 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-**Protokollnummer:** |   
-**Klassenbezeichnung:** |   
-**Gruppenname (Zahl):** |   
-**Datum:** |   
-**AS-Blöcke:** | [ ] 1. Bl. [ ] 2. Bl. 3. Bl. [ ] 4. Bl. [ ] 5. Bl.  
+**Protokollnummer:** | 
+**Klassenbezeichnung:** | 
+**Gruppenname (Zahl):** | 
+**Datum:** | 
+
+**AS-Blöcke:** 
+- [ ] 1. Bl.  
+- [ ] 2. Bl.  
+- [ ] 3. Bl.  
+- [ ] 4. Bl.  
+- [ ] 5. Bl.  
 
 **Heute erledigte Aufgaben des Frontend-Entwicklers:**  
 ---  
