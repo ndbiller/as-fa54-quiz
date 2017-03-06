@@ -158,27 +158,27 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-tasks: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen|
+**tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen|
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-tasks: |
+**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
 ---|
-tasks: |
+**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
 
 ### Protokoll 06.03.2017 - 10.03.2017
 
-**Protokollnummer:** | 4
+**Protokollnummer:** | 2
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
 **Datum:** | 06.03.2017 - 10.03.2017
 
 **AS-Blöcke:**  
-- [ ] 06.03.2017  
+- [x] 06.03.2017  
 - [ ] 07.03.2017  
 - [ ] 08.03.2017 - **IHK Zwischenprüfung**  
 - [ ] 09.03.2017  
@@ -186,12 +186,12 @@ tasks: |
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-tasks: |
+**tasks**: Implementierung begonnen, Testklassen erstellt, View zur Ausgabe der Testklassen erstellt|
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-tasks: |
+**tasks**: |
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
 ---|
-tasks: |
+**tasks**: |
