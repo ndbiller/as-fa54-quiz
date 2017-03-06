@@ -186,7 +186,7 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Implementierung begonnen, Testklassen erstellt, View zur Ausgabe der Testklassen erstellt|
+**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt|
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|

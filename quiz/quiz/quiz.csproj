@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Master.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
     <Compile Include="Question.cs" />
@@ -75,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Window1.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\..\..\Binnen\Binnen\17.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

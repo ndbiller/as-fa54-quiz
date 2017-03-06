@@ -1,0 +1,10 @@
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.csprojResolveAssemblyReference.cache
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\Window1.baml
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\Window1.g.cs
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\App.g.cs
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\quiz_MarkupCompile.cache
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.g.resources
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\bin\Debug\quiz.exe
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\bin\Debug\quiz.pdb
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.exe
+E:\nd\oszimt\as\Gruppe2_Quiz\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.pdb
