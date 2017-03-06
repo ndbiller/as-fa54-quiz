@@ -5,7 +5,7 @@ using System.Text;
 
 namespace quiz
 {
-    class Question
+    public class Question
     {
         int Id { get; set; }
         string QuestionText { get; set; }
@@ -13,7 +13,7 @@ namespace quiz
         int CorrectAnswer { get; set; }
         int Selected { get; set; }
 
-        Question(int id, string questionText, IList<string> answers, int correctAnswer)
+        public Question(int id, string questionText, IList<string> answers, int correctAnswer)
         {
             Id = id;
             QuestionText = questionText;

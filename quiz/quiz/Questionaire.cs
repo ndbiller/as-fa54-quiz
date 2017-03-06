@@ -10,7 +10,7 @@ namespace quiz
         int Id { get; set; }
         IList<Question> Questions { get; set; }
 
-        Questionaire(IList<Question> questions)
+        public Questionaire(IList<Question> questions)
         {
             Questions = questions;
         }
