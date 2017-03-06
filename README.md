@@ -190,7 +190,7 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-**tasks**: |
+**tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen|
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
 ---|
