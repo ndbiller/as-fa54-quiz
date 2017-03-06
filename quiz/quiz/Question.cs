@@ -11,7 +11,7 @@ namespace quiz
         string QuestionText { get; set; }
         IList<string> Answers { get; set; }
         int CorrectAnswer { get; set; }
-        int Selected { get; set; }
+        public int Selected { get; set; }
 
         public Question(int id, string questionText, IList<string> answers, int correctAnswer)
         {
@@ -24,11 +24,20 @@ namespace quiz
 
         public bool Solve()
         {
-
+            Console.WriteLine("trying to solve..");
             if (Selected == CorrectAnswer)
+            {
+                Console.WriteLine("Answer Correct");
                 return true;
+
+            }
+
             else
+            {
+                Console.WriteLine("Answer Inorrect");
                 return false;
+
+            }
         }
 
     }
