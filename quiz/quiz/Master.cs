@@ -10,7 +10,7 @@ namespace quiz
         string WindowTitle { get; set; }
         decimal PassThreshhold { get; set; }
         IList<int> PreviousQuestionaires { get; set; }
-        IList<Questrion> QuestionsForQuestionaire { }
+        IList<Question> QuestionsForQuestionaire { }
 
     }
 }
