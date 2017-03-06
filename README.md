@@ -171,7 +171,7 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 ### Protokoll 06.03.2017 - 10.03.2017
 
-**Protokollnummer:** | 4
+**Protokollnummer:** | 2
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
