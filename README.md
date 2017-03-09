@@ -141,57 +141,127 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 ## Ergebnisprotokolle
 
-### Protokoll 13.02.2017 - 17.02.2017
+### Protokoll 1 - 13.02.2017 - 15.02.2017
 
 **Protokollnummer:** | 1
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
-**Datum:** | 13.02.2017 - 17.02.2017
+**Datum:** | 13.02.2017 - 15.02.2017
 
 **AS-Blöcke:**  
 - [x] 13.02.2017  
 - [x] 14.02.2017  
-- [x] 15.02.2017  
-- [x] 16.02.2017  
-- [x] 17.02.2017  
+- [x] 15.02.2017   
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen|
+**tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Dokumentation und Protokollierung begonnen|
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
 
-### Protokoll 06.03.2017 - 10.03.2017
+### Protokoll 2 - 16.02.2017 - 17.02.2017
 
 **Protokollnummer:** | 2
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
-**Datum:** | 06.03.2017 - 10.03.2017
+**Datum:** | 16.02.2017 - 17.02.2017
+
+**AS-Blöcke:**   
+- [x] 16.02.2017  
+- [x] 17.02.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+
+### Protokoll 3 - 06.03.2017 - 07.03.2017
+
+**Protokollnummer:** | 3
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 06.03.2017 - 07.03.2017
 
 **AS-Blöcke:**  
 - [x] 06.03.2017  
-- [x] 07.03.2017  
-- [x] 08.03.2017 - **IHK Zwischenprüfung**  
+- [x] 07.03.2017   
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Krankgeschrieben |
+
+
+### Protokoll 4 - 09.03.2017 - 10.03.2017
+
+**Protokollnummer:** | 4
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 09.03.2017 - 10.03.2017
+
+**AS-Blöcke:**  
 - [x] 09.03.2017  
 - [x] 10.03.2017  
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt, Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt |
+**tasks**: Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt, Änderung der Protokolle von Wöchentlich auf alle 2 Tage |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-**tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen|
+**tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:**|
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Embedded Datenbank angelegt |
+
+
+### Protokoll 5 - 27.03.2017 - 28.03.2017
+
+**Protokollnummer:** | 5
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 27.03.2017 - 28.03.2017
+
+**AS-Blöcke:**  
+- [ ] 27.03.2017  
+- [ ] 28.03.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
