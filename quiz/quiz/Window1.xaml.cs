@@ -15,6 +15,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Linq;
 
 namespace quiz
 {
@@ -25,6 +26,9 @@ namespace quiz
 
     public partial class Window1 : Window
     {
+//        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
+//IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
+//comboBox1.DataSource= fragenQuery.ToList();
 
         //habe den projekt ausgabetyp erstmal auf konsole geändert, um debugging zu erleichtern
         //DUMMY QUESTIONS
