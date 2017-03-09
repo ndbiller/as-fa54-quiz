@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/csharp,visualstudio
 
 ### Csharp ###
@@ -18,6 +17,14 @@
 
 # Build results
 */*/[Oo]bj/[Dd]ebug/
+*/*/[Bb]in/[Dd]ebug/
+quiz/quiz/[Oo]bj/[Dd]ebug/
+quiz/quiz/[Bb]in/[Dd]ebug/
+/*/*/obj/Debug/
+/*/*/bin/Debug/
+/quiz/quiz/obj/Debug/
+/quiz/quiz/bin/Debug/
+
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
