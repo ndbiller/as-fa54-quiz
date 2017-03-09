@@ -179,14 +179,14 @@ Styling information for the README.md can be found [here](https://guides.github.
 
 **AS-Blöcke:**  
 - [x] 06.03.2017  
-- [ ] 07.03.2017  
-- [ ] 08.03.2017 - **IHK Zwischenprüfung**  
-- [ ] 09.03.2017  
-- [ ] 10.03.2017  
+- [x] 07.03.2017  
+- [x] 08.03.2017 - **IHK Zwischenprüfung**  
+- [x] 09.03.2017  
+- [x] 10.03.2017  
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt|
+**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt, Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
