@@ -8,3 +8,5 @@ C:\Users\user\Desktop\fa54_quiz_grp_2\as-fa54-quiz\quiz\quiz\bin\Debug\quiz.exe
 C:\Users\user\Desktop\fa54_quiz_grp_2\as-fa54-quiz\quiz\quiz\bin\Debug\quiz.pdb
 C:\Users\user\Desktop\fa54_quiz_grp_2\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.exe
 C:\Users\user\Desktop\fa54_quiz_grp_2\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.pdb
+C:\Users\user\Desktop\fa54\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.exe
+C:\Users\user\Desktop\fa54\as-fa54-quiz\quiz\quiz\obj\Debug\quiz.pdb
