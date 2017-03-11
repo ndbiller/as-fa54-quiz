@@ -10,8 +10,6 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 # Table of Contents
 
-
-
 ---  
 
 # Documentation
@@ -36,7 +34,7 @@ The second draft of our object relations (*14.02.2017*). Second draft of UML cre
 
 ![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")    
 
-## Project Design Pattern
+---  
 
 We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.  
 
@@ -126,6 +124,7 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Krankgeschrieben |
+
 
 ---  
 
