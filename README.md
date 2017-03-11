@@ -8,11 +8,15 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 ---  
 
+# Table of Contents
+
+---  
+
+# Documentation
+
 ## Project Outline
 
 The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
-
----  
 
 ## Contributor Roles
 
@@ -20,28 +24,19 @@ The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).
 - Andreas Biller - Frontend  
 - Severin Pflüger - Backend  
 
----  
-
 ## UML Drafts
+
+The first draft of our object relations (*13.02.2017*). Can be found [here](/uml/2017-02-13_uml.dia). Created with [Dia](http://dia-installer.de/).  
 
 ![UML 1.0](/img/2017-02-13_uml.png?raw=true "UML 1.0")  
 
-The first draft of our projects class relations. *13.02.2017*    
+The second draft of our object relations (*14.02.2017*). Second draft of UML created from [2017-02-14_uml.txt](/uml/2017-02-14_uml.txt) with [PlantUML](http://plantuml.com/). Documentation can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf). Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed.  
 
-![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")  
-
-The second draft of our projects class relations. *14.02.2017*  
-
-Our very first draft of the UML can be found [here](/uml/2017-02-13_uml.dia). Created with [Dia](http://dia-installer.de/).  
-Second draft of UML created from [2017-02-14_uml.txt](/uml/2017-02-14_uml.txt) with [PlantUML](http://plantuml.com/).  
-Documentation can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf).  
-Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed.  
+![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")    
 
 ---  
 
-## Project Design Pattern
-
-We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.
+We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.  
 
 ![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
@@ -51,9 +46,165 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 ---  
 
-## Project Management
+# Ergebnisprotokolle
 
-### Git Workflow
+## Protokoll 1 - 13.02.2017 - 15.02.2017
+
+**Protokollnummer:** | 1
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 13.02.2017 - 15.02.2017
+
+**AS-Blöcke:**  
+- [x] 13.02.2017  
+- [x] 14.02.2017  
+- [x] 15.02.2017   
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Dokumentation und Protokollierung begonnen|
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
+
+---  
+
+## Protokoll 2 - 16.02.2017 - 17.02.2017
+
+**Protokollnummer:** | 2
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 16.02.2017 - 17.02.2017
+
+**AS-Blöcke:**   
+- [x] 16.02.2017  
+- [x] 17.02.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
+
+---  
+
+## Protokoll 3 - 06.03.2017 - 07.03.2017
+
+**Protokollnummer:** | 3
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 06.03.2017 - 07.03.2017
+
+**AS-Blöcke:**  
+- [x] 06.03.2017  
+- [x] 07.03.2017   
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Krankgeschrieben |
+
+
+---  
+
+## Protokoll 4 - 09.03.2017 - 10.03.2017
+
+**Protokollnummer:** | 4
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 09.03.2017 - 10.03.2017
+
+**AS-Blöcke:**  
+- [x] 09.03.2017  
+- [x] 10.03.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt, Änderung der Protokolle von Wöchentlich auf alle 2 Tage |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: Embedded Datenbank angelegt |
+
+---  
+
+## Protokoll 5 - 27.03.2017 - 28.03.2017
+
+**Protokollnummer:** | 5
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 27.03.2017 - 28.03.2017
+
+**AS-Blöcke:**  
+- [ ] 27.03.2017  
+- [ ] 28.03.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+---  
+
+# Working with Git
+
+## Kanban Board
+
+Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
+
+## Kanban Board Workflow
+
+- Create issues for tasks.  
+- Add labels and assign someone to issues.  
+- Add issues as cards to **new**.  
+- Create a local working branch for an issue assigned to you.  
+- Move the card to **in progress** when you work at it.  
+- If your work is done, move the card to **test**.  
+- Write some tests and test your code.  
+- If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
+- After reviewing the branch in the pull request is finished the card can be moved to **done**.  
+- We'll regularly merge all pull requests for cards in done with the master adding the following to the merge message using the issue number like this #11 to reference and close it:
+  ```
+  fix <#issue>
+  ```
+- Then delete the merged branch, switch to the local master branch and pull the updated master to our local master branch.
+- Now create a new working branch from the updated local master and start working on another issue.
+
+## Git Workflow
 
 Clone the project locally...  
 
@@ -95,7 +246,7 @@ git push origin HEAD
 The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master.  
 Rinse and repeat.  
 
-### Git Cleanup
+## Cleanup
 
 You can view all your local branches with:  
 
@@ -121,155 +272,8 @@ If a working branch is obsolete but not merged with the master you can force-del
 git branch -D <branchname>
 ```
 
-### Github Markdown
+## Github Flavored Markdown
 
 Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
-
-### Kanban Board
-
-Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
-
-### Kanban Board Workflow
-
-- Create issues for tasks.  
-- Add labels and assign someone to issues.  
-- Add issues as cards to **new**.  
-- Create a local working branch for an issue assigned to you.  
-- Move the card to **in progress** when you work on it.  
-- If your work is done, move the card to **test**.  
-- Write some tests and test your code.  
-- If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
-- After reviewing the branch in the pull request is finished the card can be moved to **done**.  
-- We'll regularly merge all pull requests for cards in done with the master adding the following to the **merge message** using the issue number like this `#11` to reference and close it:  
-  ```
-  fix <#issue>
-  ```
-- Then **delete the merged branch**, **switch to the local master branch** and **pull the updated master** to our local master branch.  
-- Now **create a new working branch** from the updated local master and **start working on another issue**.  
-
----  
-
-## Ergebnisprotokolle
-
-### Protokoll 1 - 13.02.2017 - 15.02.2017
-
-**Protokollnummer:** | 1
---- | ---
-**Klassenbezeichnung:** | FA54
-**Gruppenname (Zahl):** | 2
-**Datum:** | 13.02.2017 - 15.02.2017
-
-**AS-Blöcke:**  
-- [x] 13.02.2017  
-- [x] 14.02.2017  
-- [x] 15.02.2017   
-
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Dokumentation und Protokollierung begonnen|
-
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
-
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
-
-### Protokoll 2 - 16.02.2017 - 17.02.2017
-
-**Protokollnummer:** | 2
---- | ---
-**Klassenbezeichnung:** | FA54
-**Gruppenname (Zahl):** | 2
-**Datum:** | 16.02.2017 - 17.02.2017
-
-**AS-Blöcke:**   
-- [x] 16.02.2017  
-- [x] 17.02.2017  
-
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
-
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
-
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
-
-### Protokoll 3 - 06.03.2017 - 07.03.2017
-
-**Protokollnummer:** | 3
---- | ---
-**Klassenbezeichnung:** | FA54
-**Gruppenname (Zahl):** | 2
-**Datum:** | 06.03.2017 - 07.03.2017
-
-**AS-Blöcke:**  
-- [x] 06.03.2017  
-- [x] 07.03.2017   
-
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt |
-
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen |
-
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: Krankgeschrieben |
-
-### Protokoll 4 - 09.03.2017 - 10.03.2017
-
-**Protokollnummer:** | 4
---- | ---
-**Klassenbezeichnung:** | FA54
-**Gruppenname (Zahl):** | 2
-**Datum:** | 09.03.2017 - 10.03.2017
-
-**AS-Blöcke:**  
-- [x] 09.03.2017  
-- [x] 10.03.2017  
-
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt, Änderung der Protokolle von Wöchentlich auf alle 2 Tage |
-
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: |
-
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: Embedded Datenbank angelegt |
-
-### Protokoll 5 - 27.03.2017 - 28.03.2017
-
-**Protokollnummer:** | 5
---- | ---
-**Klassenbezeichnung:** | FA54
-**Gruppenname (Zahl):** | 2
-**Datum:** | 27.03.2017 - 28.03.2017
-
-**AS-Blöcke:**  
-- [ ] 27.03.2017  
-- [ ] 28.03.2017  
-
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: |
-
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: |
-
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: |
 
 ---  
