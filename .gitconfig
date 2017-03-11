@@ -1,4 +1,9 @@
-#put this file at C:/Users/Username to use aliases
+# put this file to C:/Users/Username to use the git aliases listed below
+# add your own username and email and uncomment the user section to avoid 
+# being asked to set git config user.name and user.email on first commit
+[user]
+#    name = ndbiller
+#    email = andie.biller@gmail.com
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
@@ -12,7 +17,33 @@
 	autocrlf = true
 [credential]
 	helper = !\\\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\\\"
-[user]
-
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+    untracked = red bold
 [alias]
-	co = checkout
+    pl = pull origin HEAD
+    #############
+    a = add -A .
+    cm = commit -m
+    ps = push origin HEAD
+    #############
+    co = checkout
+    cb = checkout -b
+    #############
+    s = status
+    #############
+    b = branch
+    bd = branch -d

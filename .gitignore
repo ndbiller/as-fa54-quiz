@@ -1,4 +1,34 @@
-# Created by https://www.gitignore.io/api/csharp,visualstudio
+# manually added content #
+##########################
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Project Build results #
+#########################
+*/*/[Oo]bj/[Dd]ebug/
+*/*/[Bb]in/[Dd]ebug/
+
+# Content created by https://www.gitignore.io/api/csharp,visualstudio
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -16,15 +46,7 @@
 *.userprefs
 
 # Build results
-*/*/[Oo]bj/[Dd]ebug/
-*/*/[Bb]in/[Dd]ebug/
-quiz/quiz/[Oo]bj/[Dd]ebug/
-quiz/quiz/[Bb]in/[Dd]ebug/
-/*/*/obj/Debug/
-/*/*/bin/Debug/
-/quiz/quiz/obj/Debug/
-/quiz/quiz/bin/Debug/
-
+[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -32,7 +54,7 @@ x64/
 x86/
 bld/
 [Bb]in/
-/[Oo]bj/
+[Oo]bj/
 [Ll]og/
 
 # Visual Studio 2015 cache/options directory

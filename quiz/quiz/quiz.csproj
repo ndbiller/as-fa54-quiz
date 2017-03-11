@@ -80,8 +80,5 @@
   <ItemGroup>
     <Page Include="Window1.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="..\..\..\Binnen\Binnen\17.gif" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
