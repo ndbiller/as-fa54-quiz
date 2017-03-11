@@ -6,9 +6,13 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 *Created by: [R. Krüger](mailto:krueger.rico@web.de), [A. Biller](mailto:andie.biller@gmail.com), [S. Pflüger](mailto:sev@erratic-ink.com)*  
 
+---  
+
 ## Project Outline
 
 The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
+
+---  
 
 ## Contributor Roles
 
@@ -16,31 +20,7 @@ The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).
 - Andreas Biller - Frontend  
 - Severin Pflüger - Backend  
 
-## Kanban Board
-
-Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
-
-## Kanban Board Workflow
-
-- Create issues for tasks.  
-- Add labels and assign someone to issues.  
-- Add issues as cards to **new**.  
-- Create a local working branch for an issue assigned to you.  
-- Move the card to **in progress** when you work at it.  
-- If your work is done, move the card to **test**.  
-- Write some tests and test your code.  
-- If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
-After reviewing the branch in the pull request is finished the card can be moved to **done**.  
-We regularly merge all pull requests for cards in done with the master.  
-
-Add the following to the **merge message** using the issue number to reference and close it:  
-
-```
-fix <#issue>
-```
-
-Then we **delete the merged branch**, **switch to the local master branch** and **pull the updated master** to our local master branch.  
-Now **create a new working branch** from the updated local master and **start working on another issue**.  
+---  
 
 ## UML Drafts
 
@@ -57,17 +37,23 @@ Second draft of UML created from [2017-02-14_uml.txt](/uml/2017-02-14_uml.txt) w
 Documentation can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf).  
 Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed.  
 
-## Project Design Pattern
+---  
 
-![](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
+## Project Design Pattern
 
 We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.
 
-![](/img/MVC-basic.svg.png?raw=true "MVC design pattern")  
+![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
 This is derived from the [model-view-controller design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).  
 
-## Git Workflow
+![MVC design pattern](/img/MVC-basic.svg.png?raw=true "MVC design pattern")  
+
+---  
+
+## Project Management
+
+### Git Workflow
 
 Clone the project locally...  
 
@@ -109,7 +95,7 @@ git push origin HEAD
 The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master.  
 Rinse and repeat.  
 
-## Git Cleanup
+### Git Cleanup
 
 You can view all your local branches with:  
 
@@ -135,9 +121,33 @@ If a working branch is obsolete but not merged with the master you can force-del
 git branch -D <branchname>
 ```
 
-## Github Markdown
+### Github Markdown
 
 Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
+
+### Kanban Board
+
+Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
+
+### Kanban Board Workflow
+
+- Create issues for tasks.  
+- Add labels and assign someone to issues.  
+- Add issues as cards to **new**.  
+- Create a local working branch for an issue assigned to you.  
+- Move the card to **in progress** when you work on it.  
+- If your work is done, move the card to **test**.  
+- Write some tests and test your code.  
+- If a feature is reasonably tested, move the card to **review** and create a **pull request** for your branch.  
+- After reviewing the branch in the pull request is finished the card can be moved to **done**.  
+- We'll regularly merge all pull requests for cards in done with the master adding the following to the **merge message** using the issue number like this `#11` to reference and close it:  
+  ```
+  fix <#issue>
+  ```
+- Then **delete the merged branch**, **switch to the local master branch** and **pull the updated master** to our local master branch.  
+- Now **create a new working branch** from the updated local master and **start working on another issue**.  
+
+---  
 
 ## Ergebnisprotokolle
 
@@ -166,7 +176,6 @@ Styling information for the README.md can be found [here](https://guides.github.
 ---|
 **tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
-
 ### Protokoll 2 - 16.02.2017 - 17.02.2017
 
 **Protokollnummer:** | 2
@@ -190,7 +199,6 @@ Styling information for the README.md can be found [here](https://guides.github.
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
-
 
 ### Protokoll 3 - 06.03.2017 - 07.03.2017
 
@@ -216,7 +224,6 @@ Styling information for the README.md can be found [here](https://guides.github.
 ---|
 **tasks**: Krankgeschrieben |
 
-
 ### Protokoll 4 - 09.03.2017 - 10.03.2017
 
 **Protokollnummer:** | 4
@@ -241,7 +248,6 @@ Styling information for the README.md can be found [here](https://guides.github.
 ---|
 **tasks**: Embedded Datenbank angelegt |
 
-
 ### Protokoll 5 - 27.03.2017 - 28.03.2017
 
 **Protokollnummer:** | 5
@@ -265,3 +271,5 @@ Styling information for the README.md can be found [here](https://guides.github.
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
+
+---  
