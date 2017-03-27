@@ -53,8 +53,8 @@ namespace quiz
         {
             InitializeComponent();
             //example answers
-            myQuestionaire.Questions[0].Selected = 1;
-            myQuestionaire.Questions[1].Selected = 3;
+            myQuestionaire.Questions[0].AnswerSelected = 1;
+            myQuestionaire.Questions[1].AnswerSelected = 3;
             myQuestionaire.Evaluate(50);
 
         }

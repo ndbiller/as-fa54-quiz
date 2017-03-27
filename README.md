@@ -190,7 +190,7 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, gitignore geupdated um mdf Datenbank in Github zu speichern |
+**tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, updated gitignore um mdf Datenbank in Github zu speichern, Eventhandling für Propertychange in Quiz eingebaut |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
