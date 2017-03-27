@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BinnenschifffahrtModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="BinnenschifffahrtModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Während der Generierung sind Fehler aufgetreten:
-Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\DESKTOP\FA54\AS-FA54-QUIZ\QUIZ\QUIZ\BINNENSCHIFFFAHRT.MDF.db_ddladmin.T_Fragebogen_unter_Maschine' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\DESKTOP\SCHIFF\AS-FA54-QUIZ\QUIZ\QUIZ\BINNENSCHIFFFAHRT.MDF.db_ddladmin.T_Fragebogen_unter_Maschine' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
         <EntityType Name="T_Fragebogen_unter_Maschine">
           <Key>
             <PropertyRef Name="FragebogenNr" />
@@ -43,9 +43,9 @@ Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\DESKTOP\FA54\AS-FA54-QUIZ\QUIZ\Q
           <EntitySet Name="T_SBF_Binnen" EntityType="Self.T_SBF_Binnen" Schema="db_ddladmin" store:Type="Tables" />
           <EntitySet Name="T_Fragebogen_unter_Maschine" EntityType="Self.T_Fragebogen_unter_Maschine" store:Type="Tables" store:Schema="db_ddladmin">
             <DefiningQuery>SELECT 
-[T_Fragebogen_unter_Maschine].[FragebogenNr] AS [FragebogenNr], 
-[T_Fragebogen_unter_Maschine].[F_Id_SBF_Binnen] AS [F_Id_SBF_Binnen]
-FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine]</DefiningQuery>
+    [T_Fragebogen_unter_Maschine].[FragebogenNr] AS [FragebogenNr], 
+    [T_Fragebogen_unter_Maschine].[F_Id_SBF_Binnen] AS [F_Id_SBF_Binnen]
+    FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="F_Id_SBF_Binnen" Association="Self.F_Id_SBF_Binnen">
             <End Role="T_SBF_Binnen" EntitySet="T_SBF_Binnen" />
@@ -56,7 +56,7 @@ FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BinnenschifffahrtModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Schema Namespace="BinnenschifffahrtModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="T_SBF_Binnen">
           <Key>
             <PropertyRef Name="P_Id" />
@@ -103,7 +103,7 @@ FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BinnenschifffahrtModelStoreContainer" CdmEntityContainer="BinnenschifffahrtEntities">
           <EntitySetMapping Name="T_SBF_Binnen">
             <EntityTypeMapping TypeName="BinnenschifffahrtModel.T_SBF_Binnen">
@@ -131,7 +131,7 @@ FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -142,7 +142,7 @@ FROM [db_ddladmin].[T_Fragebogen_unter_Maschine] AS [T_Fragebogen_unter_Maschine
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
       </DesignerInfoPropertySet>
     </Options>
