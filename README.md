@@ -185,12 +185,12 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Datum:** | 27.03.2017 - 28.03.2017
 
 **AS-Blöcke:**  
-- [ ] 27.03.2017  
+- [x] 27.03.2017  
 - [ ] 28.03.2017  
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: |
+**tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, gitignore geupdated um mdf Datenbank in Github zu speichern |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
