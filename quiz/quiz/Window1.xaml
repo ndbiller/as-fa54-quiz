@@ -4,6 +4,9 @@
 	Title="quiz"
 	Height="300"
 	Width="300">
+	<Window.Resources>
+		
+	</Window.Resources>
 	<Grid
 		x:Name="myGrid">
 		<TextBlock
