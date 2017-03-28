@@ -7,8 +7,7 @@
 	<Window.Resources>
 		
 	</Window.Resources>
-	<Grid
-		x:Name="myGrid">
+	<Grid x:Name="myGrid">
 		<TextBlock
 			x:Name="Question"
 			Text="Question"
