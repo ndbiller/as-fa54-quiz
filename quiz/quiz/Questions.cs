@@ -14,7 +14,7 @@ using System.Text;
 namespace quiz
 {
 	/// <summary>
-	/// Description of Class1.
+	/// Description of Questions.
 	/// </summary>
 	public class Questions : List<Question>
 	{

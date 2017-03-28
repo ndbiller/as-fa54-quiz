@@ -186,11 +186,38 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **AS-Blöcke:**  
 - [x] 27.03.2017  
-- [ ] 28.03.2017  
+- [x] 28.03.2017  
 
 **Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, updated gitignore um mdf Datenbank in Github zu speichern, Eventhandling für Propertychange in Quiz eingebaut |
+**tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, updated gitignore um mdf Datenbank in Github zu speichern, Eventhandling für Propertychanges in Quiz einbauen, view_test zur Erklärung von DataBinding und INotifyPropertyChanged für Teammitglieder erstellt |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: krank |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+
+---  
+
+## Protokoll 5 - 29.03.2017 - 30.03.2017
+
+**Protokollnummer:** | 6
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 29.03.2017 - 30.03.2017
+
+**AS-Blöcke:**  
+- [ ] 29.03.2017  
+- [ ] 30.03.2017  
+
+**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: TODO: Tests, Commands, Implementierung von view_test in quiz |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|

@@ -7,7 +7,7 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:local="clr-namespace:view_test"
 		xmlns:models="clr-namespace:view_test.Models"
-		Title="view_test"
+		Title="data binding"
 		Height="480"
 		Width="640"
 		VerticalAlignment="Center"
@@ -18,6 +18,9 @@
 	</Window.Resources>
 	<Grid x:Name="mainGrid">
 		<StackPanel	VerticalAlignment="Bottom">
+			<!-- here we bind the textblock text to the Property QuestionText of the elements DataContext set in Window1.xaml.cs -->
+			<TextBlock x:Name="txt_question"
+					   Text="{Binding QuestionText}"/>
 			<!-- here we bind the buttons content to the Properties Answer1 to Answer3 of the elements DataContext set in Window1.xaml.cs -->
 			<Button	x:Name="btn_answer1"
 					Content="{Binding Answer1}"/>

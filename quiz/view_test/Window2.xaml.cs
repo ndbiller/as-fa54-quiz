@@ -2,7 +2,7 @@
  * Created by SharpDevelop.
  * User: nd
  * Date: 28/03/2017
- * Time: 16:14
+ * Time: 20:43
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -15,37 +15,34 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-
-// add the Models folder to the view context
-using view_test.Models;
+using view_test.ViewModels;
 
 namespace view_test
 {
 	/// <summary>
-	/// Interaction logic for Window1.xaml
-	/// Commented to showcase view and model interactions in wpf to backend and database specialists
+	/// Interaction logic for Window2.xaml
 	/// </summary>
-	public partial class Window1 : Window
+	public partial class Window2 : Window
 	{
-		public Window1()
+		MainViewModel main = new MainViewModel();
+		
+		public Window2()
 		{
 			InitializeComponent();
-			
-			// instantiate the object
-			Question question = new Question();
-			
-			// bind the object to the view elements DataContext
-			txt_question.DataContext = question;
-			btn_answer1.DataContext = question;
-			btn_answer2.DataContext = question;
-			btn_answer3.DataContext = question;
+			DataContext = main;
 		}
 		
 		// here we have subscribed events for Window1
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			// executes this when window has loaded event fires
-			mainGrid.Background = Brushes.Crimson;
+		}
+		
+		void SubmitClicked(object sender, RoutedEventArgs e)
+		{
+			main.SetBackground(Brushes.Orange);
 		}
 	}
 }
+
+// more infos on commands: https://www.youtube.com/watch?v=8WfD2cFRymM&list=PLKShHgmYjjFwmuUZ46GxeSTA2zKZF-8nv&index=4#t=1116.613265

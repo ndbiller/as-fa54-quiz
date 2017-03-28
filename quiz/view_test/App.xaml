@@ -1,7 +1,8 @@
-﻿<Application x:Class="view_test.App"
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	StartupUri="Window1.xaml">
+﻿<!-- This is our main entry point for the application and defines what window is loaded at startup -->
+<Application x:Class="view_test.App"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 StartupUri="Window2.xaml">
 	<Application.Resources>
 		 
 	</Application.Resources>
