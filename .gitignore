@@ -1,8 +1,10 @@
+##########################
 # manually added content #
 ##########################
 
 # OS generated files #
 ######################
+
 .DS_Store*
 ehthumbs.db
 Icon?
@@ -10,12 +12,14 @@ Thumbs.db
 
 # Temporary files #
 ###################
+
 *.swp
 *.swo
 *~
 
 # Compiled source #
 ###################
+
 *.com
 *.class
 *.dll
@@ -25,10 +29,24 @@ Thumbs.db
 
 # Project Build results #
 #########################
+
 */*/[Oo]bj/[Dd]ebug/
 */*/[Bb]in/[Dd]ebug/
 
-# Content created by https://www.gitignore.io/api/csharp,visualstudio
+# SQL Server files (need to be there for our quiz database) #
+#############################################################
+
+# *.mdf
+# *.ldf
+
+
+#####################################################################
+#####################################################################
+
+
+# Content created by https://www.gitignore.io/api/csharp,visualstudio                      #
+# (edit if something required is missing or uploaded files lead to binary merge conflicts) #
+############################################################################################
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -249,10 +267,6 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
-# SQL Server files
-#*.mdf
-*.ldf
-
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
@@ -341,9 +355,8 @@ __pycache__/
 
 # Visual Studio profiler
 
-# TFS 2012 Local Workspace
-
-# Guidance Automation Toolkit
+# TFS 2012 Local Wop     
+    $       e Automation Toolkit
 
 # ReSharper is a .NET coding add-in
 
@@ -369,7 +382,8 @@ __pycache__/
 
 # Publish Web Output
 # TODO: Comment the next line if you want to checkin your web deploy settings
-# but database connection strings (with potential passwords) will be unencrypted
+# but databap     
+    $     ngs (with potential passwords) will be unencrypted
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
