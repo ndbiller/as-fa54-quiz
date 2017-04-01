@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 
-namespace quiz
+namespace quiz.Models
 {
 	// This class implements INotifyPropertyChanged
 	// to support one-way and two-way bindings

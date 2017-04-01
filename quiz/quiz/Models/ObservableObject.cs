@@ -9,7 +9,7 @@
 using System;
 using System.ComponentModel;
 
-namespace quiz
+namespace quiz.Models
 {
 	/// <summary>
 	/// Description of ObservableObject.

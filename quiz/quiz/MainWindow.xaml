@@ -4,11 +4,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:quiz"
         mc:Ignorable="d"
         d:DesignWidth="800"
         d:DesignHeight="450"
         WindowStyle="None"
-        Title="MainWindow">
+        Title="MainWindow" 
+        Loaded="MainWindowLoaded">
     <Border Margin="10">
         <StackPanel x:Name="mainStack">
             <Grid x:Name="mainWindowTitle">
@@ -20,9 +22,10 @@
                 
                 <TextBlock 
                     Text="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
-                    FontSize="18" 
+                    FontSize="16" 
                     FontWeight="Bold" 
-                    Grid.ColumnSpan="2" />
+                    Grid.ColumnSpan="2" 
+                    VerticalAlignment="Center" />
 
                 <Grid Grid.Column="2">
                     <Grid.ColumnDefinitions>
@@ -42,17 +45,21 @@
                                 FontSize="16" 
                                 FontWeight="Bold" 
                                 Margin="0,0,5,0"
-                                Grid.Column="0" />
+                                Grid.Column="0" 
+                                Click="MinimizeClicked" />
                         <Button Content="X" 
                                 FontSize="16" 
                                 FontWeight="Bold" 
                                 Margin="5,0,0,0"
-                                Grid.Column="1" />
+                                Grid.Column="1" 
+                                Click="ExitClicked" />
                     </Grid>
                 </Grid>
             </Grid>
             
-            <Frame x:Name="mainFrame" />
+            <Frame x:Name="MainFrame" 
+                   Margin="0,5,0,0" 
+                   Content=""/>
         </StackPanel>
     </Border>
 </Window>

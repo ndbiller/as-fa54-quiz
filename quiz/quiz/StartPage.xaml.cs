@@ -7,6 +7,10 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Data;
+using System.Xml;
+using System.Configuration;
+using quiz.Models;
 
 namespace quiz
 {
@@ -15,5 +19,9 @@ namespace quiz
 	/// </summary>
 	public partial class StartPage : Page
 	{
-	}
+        public StartPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

@@ -16,6 +16,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Linq;
+using quiz.Models;
 
 namespace quiz
 {
@@ -47,24 +48,31 @@ namespace quiz
             testQuestion2
         };
         Questionaire myQuestionaire = new Questionaire(myQuestions);
-        
-        
+
         public MainWindow()
         {
             InitializeComponent();
-            // instantiate the object
-            Question question = new Question();
-
-            // bind the object to the view elements DataContext
-            //txt_question.DataContext = question;
-            //btn_answer1.DataContext = question;
-            //btn_answer2.DataContext = question;
-            //btn_answer3.DataContext = question;
 
             //example answers
             //myQuestionaire.Questions[0].AnswerSelected = 1;
             //myQuestionaire.Questions[1].AnswerSelected = 3;
             //myQuestionaire.Evaluate(50);
+        }
+
+        private void MainWindowLoaded(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new StartPage();
+        }
+
+        private void MinimizeClicked(object sender, RoutedEventArgs e)
+        {
+            // TODO: minimize window
+        }
+
+        private void ExitClicked(object sender, RoutedEventArgs e)
+        {
+            // TODO: stop all running programm processes
+            // TODO: save user progress
         }
     }
 }
