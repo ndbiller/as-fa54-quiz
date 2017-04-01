@@ -10,7 +10,7 @@
         d:DesignHeight="450"
         WindowStyle="None"
         Title="MainWindow" 
-        Loaded="MainWindowLoaded">
+        Loaded="MainWindowLoaded" Closing="Window_Closing">
     <Border Margin="10">
         <StackPanel x:Name="mainStack">
             <Grid x:Name="mainWindowTitle">

@@ -16,6 +16,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Linq;
+using System.ComponentModel;
 using quiz.Models;
 
 namespace quiz
@@ -27,9 +28,9 @@ namespace quiz
 
     public partial class MainWindow : Window
     {
-//        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
-//IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
-//comboBox1.DataSource= fragenQuery.ToList();
+        //        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
+        //IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
+        //comboBox1.DataSource= fragenQuery.ToList();
 
         //habe den projekt ausgabetyp erstmal auf konsole geändert, um debugging zu erleichtern
         //DUMMY QUESTIONS
@@ -71,8 +72,25 @@ namespace quiz
 
         private void ExitClicked(object sender, RoutedEventArgs e)
         {
-            // TODO: stop all running programm processes
+            // stop all running programm processes
+            this.Close();
+
             // TODO: save user progress
+        }
+
+        // Method to handle the Window.Closing event.
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
+                                           MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (response == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }
