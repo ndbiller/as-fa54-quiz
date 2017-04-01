@@ -200,10 +200,9 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 ---|
 **tasks**: |
 
-
 ---  
 
-## Protokoll 5 - 29.03.2017 - 30.03.2017
+## Protokoll 6 - 29.03.2017 - 30.03.2017
 
 **Protokollnummer:** | 6
 --- | ---
@@ -212,16 +211,42 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Datum:** | 29.03.2017 - 30.03.2017
 
 **AS-Blöcke:**  
-- [ ] 29.03.2017  
-- [ ] 30.03.2017  
+- [x] 29.03.2017  
+- [x] 30.03.2017  
 
 **Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: TODO: Tests, Commands, Implementierung von view_test in quiz |
+**tasks**: NUnit Test-Framework eingebunden, Datenbank wieder hinzugefügt, gitignore angepasst, Weitere Recherche: WPF, XAML Objects, Events, Actions, Delegates, ICommand, Data Binding, MVVM-Design Pattern |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
+**tasks**: krank |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
 **tasks**: |
+
+---  
+
+## Protokoll 7 - 31.03.2017 - 01.04.2017
+
+**Protokollnummer:** | 7
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 31.03.2017 - 01.04.2017
+
+**AS-Blöcke:**  
+- [x] 31.03.2017  
+- [x] 01.04.2017  
+
+**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: TODO: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Views erstellen, Bilder einbinden, Frameswitch implementieren, Settings-View, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: krank |
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
