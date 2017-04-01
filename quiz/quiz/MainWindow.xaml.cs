@@ -72,7 +72,7 @@ namespace quiz
 
         private void ExitClicked(object sender, RoutedEventArgs e)
         {
-            // stop all running programm processes
+            // close the app window to call the window closing event
             this.Close();
 
             // TODO: save user progress
@@ -89,6 +89,7 @@ namespace quiz
             }
             else
             {
+                // stop all running programm processes
                 Application.Current.Shutdown();
             }
         }
