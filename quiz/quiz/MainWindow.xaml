@@ -1,14 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Window	x:Class="quiz.MainWindow" 
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+<Window	x:Class="quiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
         mc:Ignorable="d"
         d:DesignWidth="800"
-        d:DesignHeight="450">
-    <Grid x:Name="mainGrid">
-        <Frame x:Name="mainFrame" />
-    </Grid>
+        d:DesignHeight="450"
+        WindowStyle="None"
+        Title="MainWindow">
+    <Border Margin="10">
+        <StackPanel x:Name="mainStack">
+            <Grid x:Name="mainWindowTitle">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock 
+                    Text="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
+                    FontSize="18" 
+                    FontWeight="Bold" 
+                    Grid.ColumnSpan="2" />
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid x:Name="mainWindowControls" 
+                          Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="_" 
+                                FontSize="16" 
+                                FontWeight="Bold" 
+                                Margin="0,0,5,0"
+                                Grid.Column="0" />
+                        <Button Content="X" 
+                                FontSize="16" 
+                                FontWeight="Bold" 
+                                Margin="5,0,0,0"
+                                Grid.Column="1" />
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+            <Frame x:Name="mainFrame" />
+        </StackPanel>
+    </Border>
 </Window>

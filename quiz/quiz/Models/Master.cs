@@ -5,12 +5,11 @@ using System.Text;
 
 namespace quiz
 {
-    class Master
+    class Master : ObservableObject
     {
-        string WindowTitle { get; set; }
+        public string WindowTitle { get; set; }
         decimal PassThreshhold { get; set; }
         IList<int> PreviousQuestionaires { get; set; }
         IList<Question> QuestionsForQuestionaire { get; set; }
-
     }
 }
