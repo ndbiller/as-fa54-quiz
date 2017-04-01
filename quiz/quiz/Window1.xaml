@@ -4,8 +4,10 @@
 	Title="quiz"
 	Height="300"
 	Width="300">
-	<Grid
-		x:Name="myGrid">
+	<Window.Resources>
+		
+	</Window.Resources>
+	<Grid x:Name="myGrid">
 		<TextBlock
 			x:Name="Question"
 			Text="Question"

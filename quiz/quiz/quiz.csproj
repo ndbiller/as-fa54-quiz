@@ -4,12 +4,13 @@
     <ProjectGuid>{20C6DA96-E980-446C-8403-240A70AC2E6A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>quiz</RootNamespace>
     <AssemblyName>quiz</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -44,9 +45,6 @@
     <Optimize>True</Optimize>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -91,6 +89,7 @@
       <SubType>Code</SubType>
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Questions.cs" />
     <Compile Include="Binnenschifffahrt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +105,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
     </Compile>
+
     <Compile Include="Master.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
@@ -126,6 +126,7 @@
     <Page Include="Window1.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models" />
     <Content Include="Binnenschifffahrt.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
