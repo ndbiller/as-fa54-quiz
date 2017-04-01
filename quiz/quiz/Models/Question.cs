@@ -13,11 +13,16 @@ namespace quiz
 	public class Question : INotifyPropertyChanged
     {
 		
-		int ID { get; set; }
-        string QuestionText { get; set; }
-        IList<string> Answers { get; set; }
-        int CorrectAnswer { get; set; }
-        
+		public int ID { get; set; }
+        public string QuestionText { get; set; }
+        public IList<string> Answers { get; set; }
+        public int CorrectAnswer { get; set; }
+        // temporary, for the dummy question
+        public string Answer1 { get; set; }
+        public string Answer2 { get; set; }
+        public string Answer3 { get; set; }
+
+
         private int selected;
         // Declare the event
       	public event PropertyChangedEventHandler PropertyChanged;
@@ -41,6 +46,15 @@ namespace quiz
 		  }
 		}
 
+
+        public Question()
+        {
+            QuestionText = "Is this working?";
+            Answer1 = "Yes.";
+            Answer2 = "No.";
+            Answer3 = "Maybe.";
+        }
+
         public Question(int id, string questionText, IList<string> answers, int correctAnswer)
         {
             ID = id;
@@ -57,14 +71,11 @@ namespace quiz
             {
                 Console.WriteLine("Answer Correct");
                 return true;
-
             }
-
             else
             {
                 Console.WriteLine("Answer Inorrect");
                 return false;
-
             }
         }
 

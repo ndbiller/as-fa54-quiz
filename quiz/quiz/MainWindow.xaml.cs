@@ -24,7 +24,7 @@ namespace quiz
     /// </summary>
     /// 
 
-    public partial class Window1 : Window
+    public partial class MainWindow : Window
     {
 //        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
 //IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
@@ -49,14 +49,22 @@ namespace quiz
         Questionaire myQuestionaire = new Questionaire(myQuestions);
         
         
-        public Window1()
+        public MainWindow()
         {
             InitializeComponent();
-            //example answers
-            myQuestionaire.Questions[0].AnswerSelected = 1;
-            myQuestionaire.Questions[1].AnswerSelected = 3;
-            myQuestionaire.Evaluate(50);
+            // instantiate the object
+            Question question = new Question();
 
+            // bind the object to the view elements DataContext
+            //txt_question.DataContext = question;
+            //btn_answer1.DataContext = question;
+            //btn_answer2.DataContext = question;
+            //btn_answer3.DataContext = question;
+
+            //example answers
+            //myQuestionaire.Questions[0].AnswerSelected = 1;
+            //myQuestionaire.Questions[1].AnswerSelected = 3;
+            //myQuestionaire.Evaluate(50);
         }
     }
 }
