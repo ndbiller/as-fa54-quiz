@@ -13,7 +13,7 @@
 
     <!-- Start Page -->
     <StackPanel>
-        <Grid Margin="0 25">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -103,7 +103,8 @@
                             FontSize="18"
                             Grid.Column="1" 
                             Padding="5"
-                            Margin="5 7" />
+                            Margin="5 7" 
+                            Click="SettingsClicked" />
                 </Grid>
             </StackPanel>
             

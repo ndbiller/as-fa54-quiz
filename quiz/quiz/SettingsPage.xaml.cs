@@ -14,19 +14,14 @@ using quiz.Models;
 
 namespace quiz
 {
-	/// <summary>
-	/// Interaction logic for StartPage.xaml
-	/// </summary>
-	public partial class StartPage : Page
+    /// <summary>
+    /// Interaction logic for SettingsPage.xaml
+    /// </summary>
+    public partial class SettingsPage : Page
 	{
-        public StartPage()
+        public SettingsPage()
         {
             InitializeComponent();
-        }
-
-        private void SettingsClicked(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SettingsPage());
         }
     }
 }

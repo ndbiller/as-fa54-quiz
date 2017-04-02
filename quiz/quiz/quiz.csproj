@@ -113,6 +113,9 @@
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Questionaire.cs" />
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="T_Fragebogen_unter_Maschine.cs">
       <DependentUpon>Binnenschifffahrt.tt</DependentUpon>
     </Compile>
@@ -128,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="StartPage.xaml">
       <SubType>Designer</SubType>
     </Page>
