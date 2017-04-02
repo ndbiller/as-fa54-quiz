@@ -9,8 +9,9 @@
         d:DesignWidth="800"
         d:DesignHeight="450"
         WindowStyle="None"
-        Title="MainWindow" 
-        Loaded="MainWindowLoaded" Closing="Window_Closing">
+        Title="{Binding ElementName=MainFrame, Path=Content.Title}" 
+        Loaded="MainWindowLoaded" 
+        Closing="Window_Closing">
     <Border Margin="10">
         <StackPanel x:Name="mainStack">
             <Grid x:Name="mainWindowTitle"
@@ -22,12 +23,12 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 
-                <TextBlock 
-                    Text="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
-                    FontSize="20" 
-                    FontWeight="Bold" 
-                    Grid.ColumnSpan="3" 
-                    VerticalAlignment="Center" />
+                <TextBlock x:Name="AppTitle"
+                           Text="{Binding Title,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}" 
+                           FontSize="20" 
+                           FontWeight="Bold" 
+                           Grid.ColumnSpan="3" 
+                           VerticalAlignment="Center" />
 
                 <Grid Grid.Column="3">
                     <Grid.ColumnDefinitions>

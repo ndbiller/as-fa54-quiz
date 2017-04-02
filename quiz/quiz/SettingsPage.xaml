@@ -9,10 +9,151 @@
       mc:Ignorable="d"
       d:DesignWidth="800"
       d:DesignHeight="400"
-      Title="SettingsPage">
+      Title="Konfiguration">
 
     <!-- Settings Page -->
     <StackPanel>
-        <TextBlock>settings</TextBlock>
+        
+        <!-- Name des Programms -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" 
+                       Text="Name des Programms" 
+                       FontSize="15"
+                       FontWeight="Bold" />
+            <TextBox Grid.Column="1" 
+                     Text="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
+                     FontSize="15" />
+        </Grid>
+
+        <!-- Prozent Bestanden -->
+        <Grid Margin="0 25 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" 
+                       Text="Prüfungsbogen bestanden mit ... Prozent" 
+                       FontSize="15"
+                       FontWeight="Bold" />
+            <TextBox Grid.Column="1" 
+                     Text="95"
+                     FontSize="15" />
+        </Grid>
+
+        <!-- Delete History -->
+        <Grid Margin="0 25 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" 
+                       Text="Historie löschen" 
+                       FontSize="15"
+                       FontWeight="Bold" />
+            <Button Grid.Column="1"
+                    Content="löschen" 
+                    FontSize="15"
+                    FontWeight="Bold" />
+        </Grid>
+        
+        <!-- Weitere Settings -->
+        <TextBlock Margin="0 25 0 0"
+                   Text="Weitere optionale&#10;Konfigurationsmöglichkeiten ..."
+                   FontSize="15"
+                   FontWeight="Bold" />
+
+        <!-- Save Button -->
+        <Grid Margin="0 25 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1"
+                    Content="Speichern und zurück&#10;zum Programm"
+                    FontSize="15"
+                    FontWeight="Bold" 
+                    Click="Button_Click" />
+        </Grid>
+
+        <!-- Line -->
+        <Border Background="#424242"
+                Height="5"
+                Margin="0 25 0 0" />
+
+        <!-- Adress Row -->
+        <Grid Margin="0 25 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- Logo -->
+                <Image Width="100"
+                       Height="100"
+                       Grid.Column="0" 
+                       VerticalAlignment="Top">
+                    <Image.Source>
+                        <BitmapImage UriSource="Images/logo.png" />
+                    </Image.Source>
+                </Image>
+                
+                <!-- Firma -->
+                <TextBlock Grid.Column="1" 
+                           Text="Developer&#10;ABC GmbH"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" />
+            </Grid>
+
+            <!-- Team -->
+            <TextBlock Grid.Column="1" 
+                       Text="Datenbank Spezialist (Name)&#10;Frontend Spezialist (Name)&#10;Backend Spezialist (Name)"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center" />
+            
+            <Grid Grid.Column="2"
+                  Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Adresse -->
+                <TextBlock Text="Segelschule OSZ IMT GmbH&#10;Marine Weg 6b&#10;54321 Berlin"
+                           FontSize="15"
+                           FontWeight="Bold"
+                           Grid.Column="0" 
+                           Grid.ColumnSpan="2" 
+                           VerticalAlignment="Center" />
+
+                <!-- Logo Kunde -->
+                <Image Width="100"
+                       Height="100"
+                       Grid.Column="2" 
+                       VerticalAlignment="Top">
+                    <Image.Source>
+                        <BitmapImage UriSource="Images/logo_kunde.png" />
+                    </Image.Source>
+                </Image>
+            </Grid>
+        </Grid>
     </StackPanel>
 </Page>
