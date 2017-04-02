@@ -24,6 +24,11 @@ namespace quiz
             InitializeComponent();
         }
 
+        private void StartClicked(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new QuestionairePage());
+        }
+
         private void SettingsClicked(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SettingsPage());

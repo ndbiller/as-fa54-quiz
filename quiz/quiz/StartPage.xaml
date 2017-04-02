@@ -93,7 +93,8 @@
                             FontSize="18" 
                             Grid.Column="1"
                             Padding="5"
-                            Margin="5 7" />
+                            Margin="5 7"
+                            Click="StartClicked" />
                 </Grid>
 
                 <!-- Konfiguration einstellen-->

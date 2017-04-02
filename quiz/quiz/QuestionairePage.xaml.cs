@@ -17,16 +17,11 @@ namespace quiz
     /// <summary>
     /// Interaction logic for SettingsPage.xaml
     /// </summary>
-    public partial class SettingsPage : Page
+    public partial class QuestionairePage : Page
 	{
-        public SettingsPage()
+        public QuestionairePage()
         {
             InitializeComponent();
-        }
-
-        private void SaveClicked(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new StartPage());
         }
     }
 }
