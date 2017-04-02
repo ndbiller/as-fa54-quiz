@@ -149,8 +149,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Binnenschifffahrt.mdf</DependentUpon>
     </Content>
-    <Content Include="Images\logo.png" />
-    <Content Include="Images\logo_kunde.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logo_kunde.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -193,6 +193,7 @@
       <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
       <LastGenOutput>Binnenschifffahrt.cs</LastGenOutput>
     </None>
+    <Resource Include="Fonts\fontawesome-webfont.ttf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

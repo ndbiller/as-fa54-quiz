@@ -13,7 +13,7 @@
 
     <!-- Settings Page -->
     <StackPanel>
-        
+
         <!-- Name des Programms -->
         <Grid>
             <Grid.ColumnDefinitions>
@@ -62,7 +62,7 @@
                     FontSize="15"
                     FontWeight="Bold" />
         </Grid>
-        
+
         <!-- Weitere Settings -->
         <TextBlock Margin="0 25 0 0"
                    Text="Weitere optionale&#10;Konfigurationsmöglichkeiten ..."
@@ -96,23 +96,19 @@
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
 
-            
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- Logo -->
                 <Image Width="100"
                        Height="100"
                        Grid.Column="0" 
-                       VerticalAlignment="Top">
-                    <Image.Source>
-                        <BitmapImage UriSource="Images/logo.png" />
-                    </Image.Source>
-                </Image>
-                
+                       VerticalAlignment="Top" Source="Images/logo.png"/>
+
                 <!-- Firma -->
                 <TextBlock Grid.Column="1" 
                            Text="Developer&#10;ABC GmbH"
@@ -127,7 +123,7 @@
                        FontSize="15"
                        FontWeight="Bold"
                        VerticalAlignment="Center" />
-            
+
             <Grid Grid.Column="2"
                   Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -148,11 +144,7 @@
                 <Image Width="100"
                        Height="100"
                        Grid.Column="2" 
-                       VerticalAlignment="Top">
-                    <Image.Source>
-                        <BitmapImage UriSource="Images/logo_kunde.png" />
-                    </Image.Source>
-                </Image>
+                       VerticalAlignment="Top" Source="Images/logo_kunde.png"/>
             </Grid>
         </Grid>
     </StackPanel>

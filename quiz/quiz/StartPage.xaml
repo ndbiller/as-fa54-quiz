@@ -41,14 +41,10 @@
                 <Image Width="100"
                        Height="100"
                        Grid.Column="2" 
-                       VerticalAlignment="Top">
-                    <Image.Source>
-                        <BitmapImage UriSource="Images/logo_kunde.png" />
-                    </Image.Source>
-                </Image>
+                       VerticalAlignment="Top" Source="Images/logo_kunde.png"/>
             </Grid>
         </Grid>
-        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -71,7 +67,7 @@
                     <ComboBoxItem Content="Fragebogen 4" />
                     <ComboBoxItem Content="Fragebogen 5" />
                 </ComboBox>
-                
+
                 <!-- loslegen -->
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -83,7 +79,15 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <!-- TODO: Arrow Glyph here Grid.Column="1" Padding="5" Margin="5 7"-->
+
+                        <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
+                        <TextBlock FontFamily="{StaticResource FontAwesome}" 
+                                   Text="&#xf061;"
+                                   FontSize="32"
+                                   Grid.Column="1" 
+                                   HorizontalAlignment="Center"
+                                   Padding="5" 
+                                   Margin="5 7" />
                     </Grid>
                     <Button Content="loslegen" 
                             FontSize="18" 
@@ -98,7 +102,15 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="5*" />
                     </Grid.ColumnDefinitions>
-                    <!-- TODO: Wrench Glyph here Grid.Column="1" Padding="5" Margin="5 7"-->
+
+                    <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
+                    <TextBlock FontFamily="{StaticResource FontAwesome}" 
+                                   Text="&#xf0ad;"
+                                   FontSize="32"
+                                   Grid.Column="0" 
+                                   HorizontalAlignment="Center"
+                                   Padding="5" 
+                                   Margin="5 7" />
                     <Button Content="Konfiguration einstellen" 
                             FontSize="18"
                             Grid.Column="1" 
@@ -107,7 +119,7 @@
                             Click="SettingsClicked" />
                 </Grid>
             </StackPanel>
-            
+
             <!-- History -->
             <StackPanel Grid.Column="1"
                         Grid.ColumnSpan="2">
