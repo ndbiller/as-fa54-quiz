@@ -145,7 +145,7 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
-**tasks**: Krankgeschrieben |
+**tasks**: krank |
 
 
 ---  
@@ -240,13 +240,120 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 31.03.2017  
 - [x] 01.04.2017  
 
-**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: TODO: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Views erstellen, Bilder einbinden, Frameswitch implementieren, Settings-View, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
+**tasks**: Questionaire View erstellt, View Pages in Frame switch Method implementiert, Quit Method implementiert, Settings-View ertellt, Start View erstellt, Font für Icons eingebunden, Project Files reorganized, View Bugfixes |
 
 **Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: krank |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+---  
+
+## Protokoll 8 - 07.04.2017 - 09.04.2017  
+
+**Protokollnummer:** | 8
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 07.04.2017 - 09.04.2017
+
+**Wochenend-Blöcke:**  
+- [x] 07.04.2017  
+- [ ] 08.04.2017  
+- [ ] 09.04.2017  
+
+**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: TODO: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Data Binding in Views erstellen, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+---  
+
+## Protokoll 9 - 14.04.2017 - 16.04.2017  
+
+**Protokollnummer:** | 9
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 14.04.2017 - 16.04.2017
+
+**Wochenend-Blöcke:**  
+- [ ] 14.04.2017  
+- [ ] 15.04.2017  
+- [ ] 16.04.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+---  
+
+## Protokoll 10 - 21.04.2017 - 23.04.2017  
+
+**Protokollnummer:** | 10
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 21.04.2017 - 23.04.2017
+
+**Wochenend-Blöcke:**  
+- [ ] 21.04.2017  
+- [ ] 22.04.2017  
+- [ ] 23.04.2017  
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
+---  
+
+## Protokoll 11 - 24.04.2017 - 25.04.2017  
+
+**Protokollnummer:** | 11
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 24.04.2017 - 25.04.2017
+
+**AS-Blöcke:**  
+- [ ] 24.04.2017  
+- [ ] 25.04.2017    
+
+**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
 
 **Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
@@ -317,8 +424,9 @@ Then push the commit of your working branch to the project repository.
 git push origin HEAD
 ```
 
-The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master.  
-Rinse and repeat.  
+The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master. Rinse and repeat.  
+
+**Workflow-Update:** If you know what you are doing you may push your commits directly to the the master. To do this finish your changes in yoour branch, switch to the master, pull the remote master to add changes made by teammembers to it, then merge your branch into the master and resolve any conflicts that may occur, then push the updated master back to github. If you know how to do this you should be good enough to work this way. If not, **google it** or ask someone who knows how to (*and learn working in a more efficient way with git*).  
 
 ## Cleanup
 
