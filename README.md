@@ -83,15 +83,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 14.02.2017  
 - [x] 15.02.2017   
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Klassendiagramm erstellt, Klassendiagramm überarbeitet, Versionskontrolle eingerichtet, Git-Workflow festgelegt, Kanban-Board für Projekt erstellt, Projektrollen verteilt, Dokumentation und Protokollierung begonnen|
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Klassendiagramm erstellt, Versionskontrolle eingerichtet, Projektrollen verteilt, Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung begonnen |
 
@@ -109,15 +109,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 16.02.2017  
 - [x] 17.02.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Aufgabenpackete festgelegt, Informationen zum Themengebiet gesammelt, Dokumentation und Protokollierung fortgesetzt |
 
@@ -135,15 +135,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 06.03.2017  
 - [x] 07.03.2017   
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Implementierung begonnen, View zur Ausgabe der Testklassen erstellt |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: Simple Quiz Auswertung, Zwei Fragen gemockt, um Solve() und Evaluate() zu testen |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: krank |
 
@@ -162,15 +162,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 09.03.2017  
 - [x] 10.03.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Ausgabe der Testdaten im View, gitignore zur Vermeidung von Mergekonflikten angelegt, gitconfig für Aliase angelegt, Änderung der Protokolle von Wöchentlich auf alle 2 Tage |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: Embedded Datenbank angelegt |
 
@@ -188,15 +188,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 27.03.2017  
 - [x] 28.03.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Verbindung zu den Daten aus dem Backend herstellen, Datenausgabe im View, updated gitignore um mdf Datenbank in Github zu speichern, Eventhandling für Propertychanges in Quiz einbauen, view_test zur Erklärung von DataBinding und INotifyPropertyChanged für Teammitglieder erstellt |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: krank |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -214,15 +214,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 29.03.2017  
 - [x] 30.03.2017  
 
-**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke zu erledigende Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: NUnit Test-Framework eingebunden, Datenbank wieder hinzugefügt, gitignore angepasst, Weitere Recherche: WPF, XAML Objects, Events, Actions, Delegates, ICommand, Data Binding, MVVM-Design Pattern |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: krank |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -240,15 +240,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [x] 31.03.2017  
 - [x] 01.04.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Questionaire View erstellt, View Pages in Frame switch Method implementiert, Quit Method implementiert, Settings-View ertellt, Start View erstellt, Font für Icons eingebunden, Project Files reorganized, View Bugfixes |
+**tasks**: Questionaire View Page erstellt, View Pages in Main Window Frame anzeigen, Page Switch Methode implementiert, Quit Application Methode implementiert, Settings View Page erstellt, Start View Page erstellt, Fontawesome für Icons eingebunden, Project Files reorganized, Some View Bugfixes |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: krank |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -267,15 +267,16 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [ ] 08.04.2017  
 - [ ] 09.04.2017  
 
-**Diese Woche zu erledigende Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: TODO: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Data Binding in Views erstellen, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
+**tasks**: |  
+**TODO**: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Data Binding in Views erstellen, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -294,15 +295,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [ ] 15.04.2017  
 - [ ] 16.04.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -321,15 +322,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [ ] 22.04.2017  
 - [ ] 23.04.2017  
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -347,15 +348,15 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 - [ ] 24.04.2017  
 - [ ] 25.04.2017    
 
-**Diese Woche erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Woche erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
