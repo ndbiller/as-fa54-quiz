@@ -12,9 +12,15 @@
         Title="{Binding ElementName=MainFrame, Path=Content.Title}" 
         Loaded="MainWindowLoaded" 
         Closing="Window_Closing">
-    
+
+    <!-- Main Window -->
+    <!-- Content Border -->
     <Border Margin="10">
+
+        <!-- Content Stack -->
         <StackPanel x:Name="mainStack">
+
+            <!-- Row Title & Window Buttons -->
             <Grid x:Name="mainWindowTitle"
                   Margin="0 0 0 25">
                 <Grid.ColumnDefinitions>
@@ -23,7 +29,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
+
+                <!-- Title -->
                 <TextBlock x:Name="AppTitle"
                            Text="{Binding Title,RelativeSource={RelativeSource FindAncestor,AncestorType=Window}}" 
                            FontSize="20" 
@@ -31,6 +38,7 @@
                            Grid.ColumnSpan="3" 
                            VerticalAlignment="Center" />
 
+                <!-- Columns Empty Space & Buttons -->
                 <Grid Grid.Column="3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
@@ -38,6 +46,7 @@
                         <ColumnDefinition Width="2*" />
                     </Grid.ColumnDefinitions>
 
+                    <!-- Columns Buttons -->
                     <Grid x:Name="mainWindowControls" 
                           Grid.Column="2">
                         <Grid.ColumnDefinitions>
@@ -45,12 +54,15 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
+                        <!-- Button Minimize -->
                         <Button Content="_" 
                                 FontSize="20" 
                                 FontWeight="Bold" 
                                 Margin="0 0 5 0"
                                 Grid.Column="0" 
                                 Click="MinimizeClicked" />
+
+                        <!-- Button Quit -->
                         <Button Content="X" 
                                 FontSize="16" 
                                 FontWeight="Bold" 
@@ -60,7 +72,8 @@
                     </Grid>
                 </Grid>
             </Grid>
-            
+
+            <!-- Page Content Frame -->
             <Frame x:Name="MainFrame" 
                    Margin="0 5 0 0" 
                    Content=""

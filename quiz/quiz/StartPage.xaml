@@ -13,6 +13,8 @@
 
     <!-- Start Page -->
     <StackPanel>
+
+        <!-- Row Adresse & Logo Kunde -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -21,6 +23,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
+            <!-- Adresse & Logo Kunde -->
             <Grid Grid.Column="2"
                   Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -37,14 +40,16 @@
                            Grid.ColumnSpan="2" 
                            VerticalAlignment="Center" />
 
-                <!-- Logo -->
+                <!-- Logo Kunde -->
                 <Image Width="100"
                        Height="100"
                        Grid.Column="2" 
-                       VerticalAlignment="Top" Source="Images/logo_kunde.png"/>
+                       VerticalAlignment="Top" 
+                       Source="Images/logo_kunde.png" />
             </Grid>
         </Grid>
 
+        <!-- Row Dropdown & Icons & Buttons & History & their respective contents -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -52,15 +57,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!-- Dropdown & Buttons -->
+            <!-- Column Dropdown Button & Dropdown Content & Icons & Buttons -->
             <StackPanel Grid.Column="0">
 
-                <!-- Dropdown -->
+                <!-- Column Dropdown Button & Dropdown Content & Icons & Buttons -->
+                <!-- Dropdown Button -->
                 <ComboBox SelectedIndex="0" 
                           FontSize="18"
                           Padding="5"
                           Margin="5,7">
+
+                    <!-- Dropdown Content -->
                     <ComboBoxItem Content="Fragebogen auswählen:" />
+                    <!-- TODO: fill with dynamic content -->
                     <ComboBoxItem Content="Fragebogen 1" />
                     <ComboBoxItem Content="Fragebogen 2" />
                     <ComboBoxItem Content="Fragebogen 3" />
@@ -68,27 +77,32 @@
                     <ComboBoxItem Content="Fragebogen 5" />
                 </ComboBox>
 
-                <!-- loslegen -->
+                <!-- Column Row Empty Space & Icon Caret Right & Button loslegen -->
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
+
+                    <!-- Columns Empty Space & Icon Caret Right -->
                     <Grid Grid.Column="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
+                        <!-- Icon Caret Right-->
                         <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
                         <TextBlock FontFamily="{StaticResource FontAwesome}" 
-                                   Text="&#xf061;"
+                                   Text="&#xf054;"
                                    FontSize="32"
                                    Grid.Column="1" 
                                    HorizontalAlignment="Center"
                                    Padding="5" 
                                    Margin="5 7" />
                     </Grid>
+
+                    <!-- Button loslegen -->
                     <Button Content="loslegen" 
                             FontSize="18" 
                             Grid.Column="1"
@@ -97,13 +111,14 @@
                             Click="StartClicked" />
                 </Grid>
 
-                <!-- Konfiguration einstellen-->
+                <!-- Column Row Icon Wrench & Button Konfiguration einstellen-->
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="5*" />
                     </Grid.ColumnDefinitions>
 
+                    <!-- Icon Wrench -->
                     <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
                     <TextBlock FontFamily="{StaticResource FontAwesome}" 
                                    Text="&#xf0ad;"
@@ -112,6 +127,8 @@
                                    HorizontalAlignment="Center"
                                    Padding="5" 
                                    Margin="5 7" />
+
+                    <!-- Button Konfiguration einstellen-->
                     <Button Content="Konfiguration einstellen" 
                             FontSize="18"
                             Grid.Column="1" 
@@ -121,19 +138,25 @@
                 </Grid>
             </StackPanel>
 
-            <!-- History -->
+            <!-- Column History Title & History Content Box & History Content -->
             <StackPanel Grid.Column="1"
                         Grid.ColumnSpan="2">
+
+                <!-- History Title -->
                 <TextBlock Text="Historie" 
                            Background="#424242" 
                            Foreground="#fefefe"
                            FontSize="20" 
                            Margin="5 5 5 0"
                            Padding="7 5 7 7" />
-                <ListBox Height="100"
+
+                <!-- History Content Box -->
+                <ListBox Height="110"
                          FontSize="18"
-                         Margin="5 0 5 0"
-                         Padding="5">
+                         Margin="5 0"
+                         Padding="2 5">
+
+                    <!-- History Content -->
                     <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
                     <ListBoxItem Content="Sportführerschein Binnen (Fragebogen 10) - bestanden" 
                                  Padding="2 5" />

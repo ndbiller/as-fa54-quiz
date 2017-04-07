@@ -65,9 +65,13 @@ namespace quiz
             MainFrame.Content = new StartPage();
         }
 
+        // TODO: maximize button and method, views should behave correctly no matter the screensize (windowed or fullscreen or other resolutions / resized ) used 
+
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {
-            // TODO: minimize window
+            // TODO: minimize window here
+            // TODO: remove temporary function to go to Results Page once questions from db are loaded and answers get validated correctly
+            MainFrame.Content = new ResultsPage();
         }
 
         private void ExitClicked(object sender, RoutedEventArgs e)

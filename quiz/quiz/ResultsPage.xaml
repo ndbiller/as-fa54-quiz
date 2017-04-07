@@ -13,6 +13,84 @@
 
     <!-- Results Page -->
     <StackPanel>
+        
+        <!-- Arrow Down Icon & Title & Falsch beantwortete Fragen -->
+        <StackPanel>
+            <Grid Background="#424242" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="11.5*" />
+                </Grid.ColumnDefinitions>
 
+                <!-- Arrow Down Icon -->
+                <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
+                <TextBlock FontFamily="{StaticResource FontAwesome}" 
+                           Text="&#xf078;"
+                           FontSize="20"
+                           Background="#424242" 
+                           Foreground="#fefefe"
+                           Margin="5 5 5 0"
+                           Padding="7 5 7 7" 
+                           Grid.Column="0" />
+
+                <!-- Title -->
+                <TextBlock Text="Falsch beantwortete Fragen:" 
+                           Background="#424242" 
+                           Foreground="#fefefe"
+                           FontSize="20" 
+                           Margin="5 5 5 0"
+                           Padding="7 5 7 7"
+                           Grid.Column="1" />
+            </Grid>
+            
+            <!-- Falsch beantwortete Fragen -->
+            <ListBox MaxHeight="106"
+                     FontSize="18"
+                     Padding="7 0">
+                <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
+                <ListBoxItem Content="1. Frage: Welce Seite wird als Luvseite bezeichnet?" 
+                             Padding="5" />
+                <ListBoxItem Content="FALSCH: Die Seite in Fahrtrichtung rechts." 
+                             Padding="5" />
+                <ListBoxItem Content="RICHTIG: Die dem Wind zugekehrte Seite." 
+                             Padding="5" />
+            </ListBox>
+        </StackPanel>
+
+        <!-- Anzahl Fragen Richtig/Falsch -->
+        <TextBlock Text="29/30 Fragen richtig beantwortet." 
+                   FontSize="25" 
+                   Margin="5 15 5 0"
+                   Padding="5" />
+
+        <!-- Result -->
+        <TextBlock Text="Herzlichen Glückwunsch,&#10;Sie haben bestanden." 
+                   FontSize="25" 
+                   Margin="5 15 5 0"
+                   Padding="5" />
+
+        <!-- Back Button & Logo Kunde -->
+        <Grid Margin="0 15 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Back Button -->
+            <Button Content="Zurück zum Hauptprogramm"
+                    FontSize="15"
+                    Margin="25 0 25 5"
+                    Grid.Column="1"
+                    VerticalAlignment="Bottom" 
+                    Click="BackToMainClicked" />
+
+            <!-- Logo Kunde -->
+            <Image Width="100"
+                   Height="100"
+                   Grid.Column="2"
+                   VerticalAlignment="Bottom" 
+                   Source="Images/logo_kunde.png"/>
+        </Grid>
     </StackPanel>
 </Page>

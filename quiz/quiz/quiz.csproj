@@ -116,6 +116,9 @@
     <Compile Include="QuestionairePage.xaml.cs">
       <DependentUpon>QuestionairePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResultsPage.xaml.cs">
+      <DependentUpon>ResultsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="QuestionairePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResultsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="SettingsPage.xaml">

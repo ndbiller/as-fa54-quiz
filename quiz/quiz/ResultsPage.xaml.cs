@@ -23,5 +23,11 @@ namespace quiz
         {
             InitializeComponent();
         }
+
+        private void BackToMainClicked(object sender, RoutedEventArgs e)
+        {
+            // TODO: Save Result in History
+            NavigationService.Navigate(new StartPage());
+        }
     }
 }
