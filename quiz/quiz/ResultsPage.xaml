@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="quiz.ResultsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"	
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:quiz"
+      xmlns:models="clr-namespace:quiz.Models"
+      mc:Ignorable="d"
+      d:DesignWidth="800"
+      d:DesignHeight="400"
+      Title="Auswertung">
+
+    <!-- Results Page -->
+    <StackPanel>
+
+    </StackPanel>
+</Page>
