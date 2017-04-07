@@ -426,7 +426,7 @@ git push origin HEAD
 
 The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master. Rinse and repeat.  
 
-**Workflow-Update:** If you know what you are doing you may push your commits directly to the the master. To do this finish your changes in yoour branch, switch to the master, pull the remote master to add changes made by teammembers to it, then merge your branch into the master and resolve any conflicts that may occur, then push the updated master back to github. If you know how to do this you should be good enough to work this way. If not, **google it** or ask someone who knows how to (*and learn working in a more efficient way with git*).  
+**Workflow-Update:** If you know what you are doing you may push your commits directly to the the master. To do this finish your changes in your branch, switch to the master, pull the remote master to add changes made by teammembers to it, then merge your branch into the master and resolve any conflicts that may occur, then push the updated master back to github. If you know how to do this you should be good enough to work this way. If not, **google it** or ask someone who knows how to (*and learn working in a more efficient way with git*).  
 
 ## Cleanup
 
