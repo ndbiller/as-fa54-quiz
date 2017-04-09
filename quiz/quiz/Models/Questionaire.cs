@@ -8,7 +8,7 @@ namespace quiz.Models
     class Questionaire
     {
         int Id { get; set; }
-        decimal results { get; set; }
+        decimal Results { get; set; }
         public IList<Question> Questions { get; set; }
 
         public Questionaire(IList<Question> questions)
@@ -26,11 +26,11 @@ namespace quiz.Models
                     i++;
                 }
             }
-            results = ((i / Questions.Count) * 100);
-            Console.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + results + "%.");
+            Results = ((i / Questions.Count) * 100);
+            Console.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + Results + "%.");
             
 
-            if (results >= passThreshhold)
+            if (Results >= passThreshhold)
             {
                 Console.WriteLine("You passed since you got more than " + passThreshhold + "% correctly");
                 return true;

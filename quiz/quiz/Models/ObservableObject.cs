@@ -14,7 +14,7 @@ namespace quiz.Models
 	/// <summary>
 	/// Description of ObservableObject.
 	/// Inherit from this to be able to react to Property changes
-	/// Add the Method OnPropertyChanged to the setter and use the Property name as an argument
+	/// Add the Method OnPropertyChanged to the setter of Properties that should be observered in views
 	/// </summary>
 	public class ObservableObject : INotifyPropertyChanged
 	{

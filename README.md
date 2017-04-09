@@ -269,13 +269,13 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **Wochenend-Blöcke:**  
 - [x] 07.04.2017  
-- [ ] 08.04.2017  
+- [x] 08.04.2017  
 - [ ] 09.04.2017  
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: |  
-**TODO**: Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Data Binding in Views erstellen, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
+**tasks**: Results View Page erstellt, Question Data Binding zwischen View und Dummy Question Object im Backend hergestellt, Question View Model erstellt, Projektzustand erreicht, bei dem Teammitglieder ihre Fortschritte im View sehen können, Code kommentiert, Beispielprojekt entfernt |  
+**TODO**: Funktionalität herstellen, Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|

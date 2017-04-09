@@ -18,46 +18,29 @@ using System.Windows.Media;
 using System.Linq;
 using System.ComponentModel;
 using quiz.Models;
+using quiz.Viewmodels;
 
 namespace quiz
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
+    /// Basicaly the entrypoint for our app (after App.xaml)
     /// </summary>
     /// 
 
     public partial class MainWindow : Window
     {
-        //        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
-        //IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
-        //comboBox1.DataSource= fragenQuery.ToList();
+        // private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
+        // IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
+        // comboBox1.DataSource= fragenQuery.ToList();
 
-        //habe den projekt ausgabetyp erstmal auf konsole geändert, um debugging zu erleichtern
-        //DUMMY QUESTIONS
-        static List<string> answers = new List<string>()
-        {
-            "oOoOoOoo",
-            "aAaAaAaAaaa",
-            "uUuUuUuUuUuu",
-            "kukukukukuu"
-        };
-        static Question testQuestion1 = new Question(1, "What does the fox say?", answers, 2);
-        static Question testQuestion2 = new Question(1, "What does the other fox say?", answers, 3);
-        static List<Question> myQuestions = new List<Question>()
-        {
-            testQuestion1,
-            testQuestion2
-        };
-        Questionaire myQuestionaire = new Questionaire(myQuestions);
+        // create the main viewmodel and set it as data context for the views in constructor
+        MainViewModel main = new MainViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
-
-            //example answers
-            //myQuestionaire.Questions[0].AnswerSelected = 1;
-            //myQuestionaire.Questions[1].AnswerSelected = 3;
-            //myQuestionaire.Evaluate(50);
+            DataContext = main;
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
@@ -70,6 +53,7 @@ namespace quiz
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {
             // TODO: minimize window here
+
             // TODO: remove temporary function to go to Results Page once questions from db are loaded and answers get validated correctly
             MainFrame.Content = new ResultsPage();
         }

@@ -135,6 +135,8 @@
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Viewmodels\MainViewModel.cs" />
+    <Compile Include="Viewmodels\QuestionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="QuestionairePage.xaml">
@@ -211,8 +213,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Viewmodels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
