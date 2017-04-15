@@ -92,6 +92,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ObservableObject.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Questions.cs" />
     <Compile Include="Binnenschifffahrt.Context.cs">
       <AutoGen>True</AutoGen>

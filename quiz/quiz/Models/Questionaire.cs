@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -19,25 +20,25 @@ namespace quiz.Models
         public bool Evaluate(decimal passThreshhold)
         {
             decimal i = 0;
-            foreach (Question q in Questions)
+            foreach (Question question in Questions)
             {
-                if(q.Solve())
+                if(question.Solve())
                 {
                     i++;
                 }
             }
             Results = ((i / Questions.Count) * 100);
-            Console.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + Results + "%.");
+            Trace.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + Results + "%.");   // Debug
             
 
             if (Results >= passThreshhold)
             {
-                Console.WriteLine("You passed since you got more than " + passThreshhold + "% correctly");
+                Trace.WriteLine("You passed since you got more than " + passThreshhold + "% correctly");            // Debug
                 return true;
             }
             else
             {
-                Console.WriteLine("You failed since you got less than " + passThreshhold + "% correctly");
+                Trace.WriteLine("You failed since you got less than " + passThreshhold + "% correctly");            // Debug
                 return false;
             }
         }

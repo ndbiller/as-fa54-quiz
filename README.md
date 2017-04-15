@@ -307,8 +307,7 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
 ---|  
-**tasks**: Antworten aus Liste anzeigen, |  
-**TODO**: Funktionalität herstellen, Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |  
+**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus View an User übergeben, |  
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
 ---|  
@@ -317,6 +316,10 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |  
 ---|  
 **tasks**: |  
+
+**TODO:** |  
+---|  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Fragen aus Fragebogen generieren, Frage vor u. zurück, Auswertung am Ende, Darstellung History), User in Datei speichern, User laden, Bilder einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |  
 
 ---  
 

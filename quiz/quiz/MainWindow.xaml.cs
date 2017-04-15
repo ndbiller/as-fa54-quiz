@@ -19,6 +19,7 @@ using System.Linq;
 using System.ComponentModel;
 using quiz.Models;
 using quiz.Viewmodels;
+using System.Diagnostics;
 
 namespace quiz
 {
@@ -35,12 +36,20 @@ namespace quiz
         // comboBox1.DataSource= fragenQuery.ToList();
 
         // create the main viewmodel and set it as data context for the views in constructor
-        MainViewModel main = new MainViewModel();
+        public MainViewModel MainVM { get; set; }
 
         public MainWindow()
         {
+            MainVM = new MainViewModel();
             InitializeComponent();
-            DataContext = main;
+            DataContext = MainVM;
+
+            // Debug
+            foreach (SelectedAnswer answer in MainVM.History)
+                Trace.WriteLine("MainWindow(MainVM.History): " + answer.ToString());
+            foreach (SelectedAnswer answer in MainVM.User.AnswerHistory)
+                Trace.WriteLine("MainWindow(MainVM.User.AnswerHistory): " + answer.ToString());
+            MainVM.User.ToCSV();
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)

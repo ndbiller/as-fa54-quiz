@@ -10,6 +10,7 @@ using System;
 using System.Diagnostics;
 using quiz.Models;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace quiz.Viewmodels
 {
@@ -21,14 +22,7 @@ namespace quiz.Viewmodels
     public class QuestionViewModel : ObservableObject
 	{
         private Question question;
-        private int id;
-		private string questionText;
-        private string answer1;
-        private string answer2;
-        private string answer3;
-        private string answer4;
-        private List<string> answerList;
-        private int correctAnswer;
+        private ObservableCollection<Answer> answers;
         private int answerSelected;
 
         public Question Question
@@ -38,6 +32,15 @@ namespace quiz.Viewmodels
             {
                 question = value;
                 OnPropertyChanged("Question");
+            }
+        }
+        public ObservableCollection<Answer> Answers
+        {
+            get { return answers; }
+            set
+            {
+                answers = value;
+                OnPropertyChanged("Answers");
             }
         }
         public int AnswerSelected
@@ -50,87 +53,27 @@ namespace quiz.Viewmodels
             }
         }
 
-        // below setter property change events probably not needed, could be turned to properties to shorten the class, needs testing
-        public int ID
-        {
-            get { return id; }
-            set
-            {
-                id = value;
-                OnPropertyChanged("ID");
-}
-        }
-        public string QuestionText
-        {
-			get { return questionText; }
-			set
-			{
-                questionText = value;
-				OnPropertyChanged("QuestionText");
-			}
-		}
-        public string Answer1
-        {
-            get { return answer1; }
-            set
-            {
-                answer1 = value;
-                OnPropertyChanged("Answer1");
-            }
-        }
-        public string Answer2
-        {
-            get { return answer2; }
-            set
-            {
-                answer2 = value;
-                OnPropertyChanged("Answer2");
-            }
-        }
-        public string Answer3
-        {
-            get { return answer3; }
-            set
-            {
-                answer3 = value;
-                OnPropertyChanged("Answer3");
-            }
-        }
-        public string Answer4
-        {
-            get { return answer4; }
-            set
-            {
-                answer4 = value;
-                OnPropertyChanged("Answer4");
-            }
-        }
-        public List<string> AnswerList
-        {
-            get { return answerList; }
-            set
-            {
-                answerList = value;
-                OnPropertyChanged("AnswerList");
-            }
-        }
-        public int CorrectAnswer
-        {
-            get { return correctAnswer; }
-            set
-            {
-                correctAnswer = value;
-                OnPropertyChanged("CorrectAnswer");
-            }
-        }
-
         public QuestionViewModel()
         {
             // Instantiate the Question for the view
             Question = new Question();
+            // Fill the observable collection with Answer objects
+            Answers = new ObservableCollection<Answer>();
+            for (int i = 0; i < Question.AnswerList.Count; i++)
+            {
+                Answers.Add(new Answer() { Index = i, Text = Question.AnswerList[i]});
+            }
 
             // Debug
-            Trace.WriteLine(Question.QuestionText);
+            foreach(Answer answer in Answers)
+                Trace.WriteLine("QuestionViewModel(Answers[" + answer.Index + "]): " + answer.Text);
         }
 	}
+
+    // Answer class for the observable object Answers
+    public class Answer
+    {
+        public int Index { get; set; }
+        public string Text { get; set; }
+    }
 }

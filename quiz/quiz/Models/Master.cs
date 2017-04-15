@@ -5,7 +5,7 @@ using System.Text;
 
 namespace quiz.Models
 {
-    class Master : ObservableObject
+    class Master
     {
         public string WindowTitle { get; set; }
         decimal PassThreshhold { get; set; }
