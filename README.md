@@ -15,6 +15,7 @@ Quiz with multiple choice questions to prepare students getting their driving li
 * [Documentation](#documentation)
   * [Project Outline](#project-outline)
   * [Contributor Roles](#contributor-roles)
+  * [Kanban Board](#kanban-board)
   * [UML Drafts](#uml-drafts)
 * [Ergebnisprotokolle](#ergebnisprotokolle)
   * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
@@ -29,13 +30,13 @@ Quiz with multiple choice questions to prepare students getting their driving li
   * [Protokoll 10 \- 21\.04\.2017 \- 23\.04\.2017](#protokoll-10---21042017---23042017)
   * [Protokoll 11 \- 24\.04\.2017 \- 25\.04\.2017](#protokoll-11---24042017---25042017)
 * [Working with Git](#working-with-git)
-  * [Kanban Board](#kanban-board)
   * [Kanban Board Workflow](#kanban-board-workflow)
   * [Git Workflow](#git-workflow)
   * [Cleanup](#cleanup)
   * [Github Flavored Markdown](#github-flavored-markdown)
+  * [TOC\-Creation](#toc-creation)
 
-*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)*
+(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)*)  
 
 ---  
 
@@ -47,9 +48,13 @@ The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).
 
 ## Contributor Roles
 
-- Rico Krüger - Datenbanken  
-- Andreas Biller - Frontend  
-- Severin Pflüger - Backend  
+- [Rico Krüger](mailto:krueger.rico@web.de) - Datenbanken  
+- [Andreas Biller](mailto:andie.biller@gmail.com) - Frontend  
+- [Severin Pflüger](mailto:sev@erratic-ink.com) - Backend  
+
+## Kanban Board
+
+Taskmanagement for the project: [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).  
 
 ## UML Drafts
 
@@ -270,12 +275,11 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Wochenend-Blöcke:**  
 - [x] 07.04.2017  
 - [x] 08.04.2017  
-- [ ] 09.04.2017  
+- [x] 09.04.2017  
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Results View Page erstellt, Question Data Binding zwischen View und Dummy Question Object im Backend hergestellt, Question View Model erstellt, Projektzustand erreicht, bei dem Teammitglieder ihre Fortschritte im View sehen können, Code kommentiert, Beispielprojekt entfernt |  
-**TODO**: Funktionalität herstellen, Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
@@ -296,21 +300,22 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 **Datum:** | 14.04.2017 - 16.04.2017
 
 **Wochenend-Blöcke:**  
-- [ ] 14.04.2017  
-- [ ] 15.04.2017  
+- [x] 14.04.2017  
+- [x] 15.04.2017  
 - [ ] 16.04.2017  
 
-**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
----|
-**tasks**: |
+**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
+---|  
+**tasks**: Antworten aus Liste anzeigen, |  
+**TODO**: Funktionalität herstellen, Push-Script zum Testen erstellen, Unit-Tests schreiben, Commands implementieren, Implementierung von view_test in quiz, Bilder einbinden, Bebnutzerdaten speichern, Fragen aus Datenbank auslesen, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |  
 
-**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: |
+**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
+---|  
+**tasks**: |  
 
-**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
----|
-**tasks**: |
+**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |  
+---|  
+**tasks**: |  
 
 ---  
 
@@ -368,10 +373,6 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 ---  
 
 # Working with Git
-
-## Kanban Board
-
-Manage your tasks [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). 
 
 ## Kanban Board Workflow
 
@@ -463,5 +464,15 @@ git branch -D <branchname>
 ## Github Flavored Markdown
 
 Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
+
+## TOC-Creation
+
+You can create a new table of contents in your console with the included golang script in your git bash by running:  
+
+```
+./gh-md-toc README.md
+```
+
+Copy and paste the output into this README.md, then commit the update to github.
 
 ---  
