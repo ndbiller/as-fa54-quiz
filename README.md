@@ -1,8 +1,4 @@
-﻿# AS - FA54 - Gruppe 2 - Quiz
-
-Quiz with multiple choice questions to prepare students getting their driving licence for sportboats in inland waters.  
-
-(C#, Mysql, Windows, Github)  
+﻿# AS - FA54 - Gruppe 2 - Quiz 
 
 *Created by: [R. Krüger](mailto:krueger.rico@web.de), [A. Biller](mailto:andie.biller@gmail.com), [S. Pflüger](mailto:sev@erratic-ink.com)*  
 
@@ -17,6 +13,7 @@ Quiz with multiple choice questions to prepare students getting their driving li
   * [Contributor Roles](#contributor-roles)
   * [Kanban Board](#kanban-board)
   * [UML Drafts](#uml-drafts)
+  * [Software Design Pattern](#software-design-pattern)
 * [Ergebnisprotokolle](#ergebnisprotokolle)
   * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
   * [Protokoll 2 \- 16\.02\.2017 \- 17\.02\.2017](#protokoll-2---16022017---17022017)
@@ -44,6 +41,8 @@ Quiz with multiple choice questions to prepare students getting their driving li
 
 ## Project Outline
 
+Quiz with multiple choice questions to prepare students getting their driving licence for sportboats in inland waters.  
+
 The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
 
 ## Contributor Roles
@@ -67,6 +66,8 @@ The second draft of our object relations (*14.02.2017*). Second draft of UML cre
 ![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")    
 
 ---  
+
+## Software Design Pattern
 
 We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.  
 
