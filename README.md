@@ -53,9 +53,9 @@
     * [Add Required Namespace Shortcut](#add-required-namespace-shortcut)
     * [Implement Interface Shortcut](#implement-interface-shortcut)
     * [Got More?](#got-more)
-  * [Credits](#credits)
+* [Credits](#credits)
 
-(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go) because we can't be bothered with updating this table manually every time someone adds more stuff to the chapters here*)  
+(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go) because with all this work to be done we just can't be bothered updating this table of contents manually every time someone adds more stuff to the chapters in here*)  
 
 ---  
 
@@ -95,8 +95,6 @@ The first draft of our projects object relations was done quickly and without kn
 
 We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the basic key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
 
----  
-
 ### Model Responsibilities
 
 In general, model is the simplest one to understand. It is the client side data model that supports the views in the application.  
@@ -125,8 +123,6 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 - The other key responsibility of a ViewModel is to encapsulate the interaction logic for a view, but it does not mean that all of the logic of the application should go into ViewModel.  
 - It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.  
 - ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.  
-
----  
 
 ### Advantages
 
@@ -407,7 +403,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
 ---|  
-**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus dem View ans QuestionViewModel und dann von da aus an das Model und den User übergeben, Commands mit ICommand implementiert, Dokumentation erweitert |  
+**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus dem View ans QuestionViewModel und dann von da aus an das Model übergeben, Commands mit ICommand implementiert, Dokumentation erweitert |  
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
 ---|  
@@ -599,8 +595,6 @@ git branch -D <branchname>
 
 Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
 
----  
-
 ### Table-Of-Content-Script
 
 You can create a new table of contents from the html-headers of the chapters in this `README.md` file in your console with the included golang script. Just execute it in your git bash by running:  
@@ -655,7 +649,7 @@ I'm sure there's more. Feel free to also add your own favorite little time saver
 
 ---  
 
-## Credits
+# Credits
 
 > “It's so quiet this high up, the feeling you get  
 > is that you're one of those space monkeys.  

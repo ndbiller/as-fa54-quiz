@@ -1,30 +1,42 @@
-﻿/*
- * Created by SharpDevelop.
- * User: nd
- * Date: 03/28/2017
- * Time: 21:31
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using quiz.Models;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using quiz.Viewmodels.Commands;
+using System;
 
 namespace quiz.Viewmodels
 {
     /// <summary>
-    /// Description of QuestionViewModel.
+    /// Description of QuestionViewModel. Handles the presentation logic.
     /// This class inherits from ObservableObject to enable one and two-way binding between the UI elements and the question model
-    /// It handles the presentation logic
     /// </summary>
     public class QuestionViewModel : ObservableObject
 	{
+        // field holds the model
         private Question question;
-        private ObservableCollection<Answer> answers;
         private int answerSelected;
+        // TODO: remove once all functionality is on question model answer list
+        private ObservableCollection<Answer> answers;
 
+        // viewmodel constructor (hook the model up to the viewmodel)
+        public QuestionViewModel()
+        {
+            // create a new question model
+            Question = new Question();
+
+            // TODO: remove later, fills the observable collection with Answer objects
+            Answers = new ObservableCollection<Answer>();
+            for (int i = 0; i < Question.AnswerList.Count; i++)
+            {
+                Answers.Add(new Answer() { Index = i, Text = Question.AnswerList[i] });
+            }
+            // Debug
+            foreach (Answer answer in Answers)
+                Trace.WriteLine("QuestionViewModel(Answers[" + answer.Index + "]): " + answer.Text);
+        }
+
+        // properties to display changes in the view
         public Question Question
         {
             get { return question; }
@@ -53,27 +65,20 @@ namespace quiz.Viewmodels
             }
         }
 
-        public QuestionViewModel()
+        // ICommand property provides specific implementation for each action.
+        // the delegate will forward to methods defined here in the viewmodel.
+        public ICommand AnswerClickedCommand
         {
-            // Instantiate the Question for the view
-            Question = new Question();
-            // Fill the observable collection with Answer objects
-            Answers = new ObservableCollection<Answer>();
-            for (int i = 0; i < Question.AnswerList.Count; i++)
+            get
             {
-                Answers.Add(new Answer() { Index = i, Text = Question.AnswerList[i]});
+                return new DelegatingCommand(o => AnswerClicked((int)o));
             }
-
-            // Debug
-            foreach(Answer answer in Answers)
-                Trace.WriteLine("QuestionViewModel(Answers[" + answer.Index + "]): " + answer.Text);
         }
-	}
-
-    // Answer class for the observable object Answers
-    public class Answer
-    {
-        public int Index { get; set; }
-        public string Text { get; set; }
+        // links to AnswerClicked method in Question model 
+        public void AnswerClicked(int o)
+        {
+            Question.AnswerClicked(o);
+            OnPropertyChanged("AnswerSelected");
+        }
     }
 }

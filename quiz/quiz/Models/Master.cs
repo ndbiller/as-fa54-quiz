@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace quiz.Models
 {
@@ -9,7 +6,7 @@ namespace quiz.Models
     {
         public string WindowTitle { get; set; }
         decimal PassThreshhold { get; set; }
-        IList<int> PreviousQuestionaires { get; set; }
-        IList<Question> QuestionsForQuestionaire { get; set; }
+        List<int> PreviousQuestionaires { get; set; }
+        List<Question> QuestionsForQuestionaire { get; set; }
     }
 }

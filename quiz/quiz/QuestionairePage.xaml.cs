@@ -1,19 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Diagnostics;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Data;
-using System.Xml;
-using System.Configuration;
-using System.ComponentModel;
-using quiz.Models;
 using quiz.Viewmodels;
+using System;
 
 namespace quiz
 {
@@ -37,6 +25,16 @@ namespace quiz
             Trace.WriteLine("QuestionairePage(QuestionVM.Answers.Count): " + QuestionVM.Answers.Count);
             bool result = QuestionVM.Question.Solve();
             Trace.WriteLine("result: " + result.ToString());
+        }
+
+        private void AnswerClicked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var test = sender as RadioButton;
+            string str = test.Tag.ToString();
+            int i = Int32.Parse(str);
+            // Debug
+            Trace.WriteLine("click! sender as RadioButton = test.Tag: "+ i +" ... " + test.Tag.GetType());
+            QuestionVM.AnswerClicked(i);
         }
     }
 }

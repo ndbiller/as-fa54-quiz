@@ -18,16 +18,16 @@
         <!-- Template for Answer 1 - n -->
         <DataTemplate x:Key="answerTemplate">
             <StackPanel Grid.Column="0"
-                            Orientation="Horizontal"
-                            Margin="0 10 0 0">
+                        Orientation="Horizontal"
+                        Margin="0 10 0 0">
                 <RadioButton GroupName="Answer" 
-                                 Tag="{Binding Index}"
-                                 VerticalAlignment="Center" />
+                             Tag="{Binding Index}"
+                             VerticalAlignment="Center" Click="AnswerClicked" />
                 <TextBlock Text="{Binding Text}"
-                               Margin="10 0 0 0" 
-                               FontSize="15"
-                               FontWeight="Bold"
-                               VerticalAlignment="Center" />
+                           Margin="10 0 0 0" 
+                           FontSize="15"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" />
             </StackPanel>
         </DataTemplate>
     </Page.Resources>

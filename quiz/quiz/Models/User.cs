@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace quiz.Models
 {
-	public class User
+    // user object to hold / save settings and answers (= questionaire history)
+    public class User
     {
-        // TODO: create an user object to hold / save settings and answers (= questionaire history)
-
         // Properties
         public string Name { get; set; }
 

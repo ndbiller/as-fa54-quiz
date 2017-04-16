@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.ComponentModel;
 using System.Diagnostics;
 
 namespace quiz.Models
@@ -47,6 +44,14 @@ namespace quiz.Models
             AnswerList = answers;
             CorrectAnswer = correctAnswer;
             AnswerSelected = -1;
+        }
+
+        public void AnswerClicked(int index)
+        {
+            AnswerSelected = index;
+
+            // Debug
+            Trace.WriteLine("New Answer selected! Value is now " + AnswerSelected);
         }
 
         public bool Solve()

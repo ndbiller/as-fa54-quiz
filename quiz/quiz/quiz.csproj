@@ -93,7 +93,7 @@
     </Compile>
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\Questions.cs" />
+    <Compile Include="Models\Answer.cs" />
     <Compile Include="Binnenschifffahrt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +136,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Viewmodels\Commands\DelegatingCommand .cs" />
     <Compile Include="Viewmodels\MainViewModel.cs" />
     <Compile Include="Viewmodels\QuestionViewModel.cs" />
   </ItemGroup>

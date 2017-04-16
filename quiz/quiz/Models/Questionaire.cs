@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 
 namespace quiz.Models
 {
@@ -10,9 +7,9 @@ namespace quiz.Models
     {
         int Id { get; set; }
         decimal Results { get; set; }
-        public IList<Question> Questions { get; set; }
+        public List<Question> Questions { get; set; }
 
-        public Questionaire(IList<Question> questions)
+        public Questionaire(List<Question> questions)
         {
             Questions = questions;
         }
@@ -29,8 +26,6 @@ namespace quiz.Models
             }
             Results = ((i / Questions.Count) * 100);
             Trace.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + Results + "%.");   // Debug
-            
-
             if (Results >= passThreshhold)
             {
                 Trace.WriteLine("You passed since you got more than " + passThreshhold + "% correctly");            // Debug

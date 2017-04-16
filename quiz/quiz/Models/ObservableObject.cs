@@ -1,13 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: nd
- * Date: 28/03/2017
- * Time: 20:19
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace quiz.Models
 {
