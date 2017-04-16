@@ -13,7 +13,14 @@
   * [Contributor Roles](#contributor-roles)
   * [Kanban Board](#kanban-board)
   * [UML Drafts](#uml-drafts)
-  * [Software Design Pattern](#software-design-pattern)
+  * [Software Design Pattern \- MVVM](#software-design-pattern---mvvm)
+    * [Model Responsibilities](#model-responsibilities)
+    * [View Responsibilities](#view-responsibilities)
+    * [ViewModel Responsibilities](#viewmodel-responsibilities)
+    * [Advantages](#advantages)
+      * [Maintainability](#maintainability)
+      * [Testability](#testability)
+      * [Extensibility](#extensibility)
 * [Ergebnisprotokolle](#ergebnisprotokolle)
   * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
   * [Protokoll 2 \- 16\.02\.2017 \- 17\.02\.2017](#protokoll-2---16022017---17022017)
@@ -32,6 +39,12 @@
   * [Cleanup](#cleanup)
   * [Github Flavored Markdown](#github-flavored-markdown)
   * [TOC\-Creation](#toc-creation)
+  * [Visual Studio Shortcuts](#visual-studio-shortcuts)
+    * [Console\.WriteLine() Shortcut](#consolewriteline-shortcut)
+    * [Basic Constructor Shortcut](#basic-constructor-shortcut)
+    * [Add Required Namespace Shortcut](#add-required-namespace-shortcut)
+    * [Implement Interface Shortcut](#implement-interface-shortcut)
+    * [Got More?](#got-more)
 
 (*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)*)  
 
@@ -67,15 +80,59 @@ The second draft of our object relations (*14.02.2017*). Second draft of UML cre
 
 ---  
 
-## Software Design Pattern
-
-We will use the [model-view-viewmodel design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) for our project.  
+## Software Design Pattern - MVVM
 
 ![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
-This is derived from the [model-view-controller design pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).  
+We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
 
-![MVC design pattern](/img/MVC-basic.svg.png?raw=true "MVC design pattern")  
+### Model Responsibilities
+
+In general, model is the simplest one to understand. It is the client side data model that supports the views in the application.  
+
+- It is composed of objects with properties and some variables to contain data in memory.  
+- Some of those properties may reference other model objects and create the object graph which as a whole is the model objects.  
+- Model objects should raise property change notifications which in WPF means data binding.  
+- The last responsibility is validation which is optional, but you can embed the validation information on the model objects by using the WPF data binding validation features via interfaces like INotifyDataErrorInfo/IDataErrorInfo  
+
+### View Responsibilities
+
+The main purpose and responsibilities of views is to define the structure of what the user sees on the screen. The structure can contain static and dynamic parts.  
+
+- Static parts are the XAML hierarchy that defines the controls and layout of controls that a view is composed of.  
+- Dynamic part is like animations or state changes that are defined as part of the View.  
+- The primary goal of MVVM is that there should be no code behind in the view.  
+- It’s impossible that there is no code behind in view. In view you at least need the constructor and a call to initialize component.  
+- The idea is that the event handling, action and data manipulation logic code shouldn’t be in the code behind in View.  
+- There are also other kinds of code that have to go in the code behind any code that's required to have a reference to UI element is inherently view code.  
+
+### ViewModel Responsibilities
+
+ViewModel is the main point of MVVM application. The primary responsibility of the ViewModel is to provide data to the view, so that view can put that data on the screen.  
+
+- It also allows the user to interact with data and change the data.  
+- The other key responsibility of a ViewModel is to encapsulate the interaction logic for a view, but it does not mean that all of the logic of the application should go into ViewModel.  
+- It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.  
+- ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.  
+
+### Advantages
+
+#### Maintainability
+
+- A clean separation of different kinds of code should make it easier to go into one or several of those more granular and focused parts and make changes without worrying.  
+- That means you can remain agile and keep moving out to new releases quickly.  
+
+#### Testability
+
+- With MVVM each piece of code is more granular and if it is implemented right your external and internal dependences are in separate pieces of code from the parts with the core logic that you would like to test.  
+- That makes it a lot easier to write unit tests against a core logic.  
+- Make sure it works right when written and keeps working even when things change in maintenance.  
+
+#### Extensibility
+
+- It sometimes overlaps with maintainability, because of the clean separation boundaries and more granular pieces of code.  
+- You have a better chance of making any of those parts more reusable.  
+- It has also the ability to replace or add new pieces of code that do similar things into the right places in the architecture.  
 
 ---  
 
@@ -307,7 +364,7 @@ This is derived from the [model-view-controller design pattern](https://en.wikip
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
 ---|  
-**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus View an User übergeben, |  
+**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus View an Question und User übergeben, |  
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
 ---|  
@@ -477,6 +534,46 @@ You can create a new table of contents in your console with the included golang 
 ./gh-md-toc README.md
 ```
 
-Copy and paste the output into this README.md, then commit the update to github.
+Copy and paste the output into this README.md, then commit the update to github.  
+
+## Visual Studio Shortcuts
+
+Make your life easier with these handy shortcuts while working in visual studio:  
+
+### Console.WriteLine() Shortcut
+
+Enter the following, followed by a double tab. You'll get a quick `Console.WriteLine();` But for debuggimg our WPF-Application you should rather use Trace.WriteLine() or Debug.WriteLine() and a breakpoint at the same line.  
+
+```
+cw
+```
+
+### Basic Constructor Shortcut
+
+Type the following, followed by a double tab to create a standard constructor for the class you currently write in.  
+
+```
+ctor
+```
+
+### Add Required Namespace Shortcut
+
+Want to use a `private List<T> somename` without first looking up and including the needed collections namespace? Just write the name or command and when visual studio complains about it (with a red wiggly line under the word) press the following key combination (**control** and **dot**) to quickly open up and select from the quick actions menu. Do that by hitting **enter**. There's your `using System.Collections.Generic;`. And the compiler warning is gone.  
+
+```
+"CTRL" + "."
+```
+
+### Implement Interface Shortcut
+
+Want to implement an interface in your class? Maybe inherit from `ICommand`? Just write its name next to the classname like you would, do the above trick to get rid of the initial compiler warning by adding the namespace. Still not satisfied? Hit the combination of **control** and **dot** one more time, again followed by **enter**. There are your basic interface fields and methods, ready to throw `NotImplementedException()` exceptions until you decide what they should really do.  
+
+```
+"CTRL" + "."
+```
+
+### Got More?
+
+I'm sure there's more. Feel free to add your own favorite time savers for coding here, so all of us can share them.  
 
 ---  
