@@ -12,7 +12,7 @@
   * [Project Outline](#project-outline)
   * [Contributor Roles](#contributor-roles)
   * [Kanban Board](#kanban-board)
-  * [UML Drafts](#uml-drafts)
+  * [UML \- First Draft](#uml---first-draft)
   * [Software Design Pattern \- MVVM](#software-design-pattern---mvvm)
     * [Model Responsibilities](#model-responsibilities)
     * [View Responsibilities](#view-responsibilities)
@@ -21,38 +21,41 @@
       * [Maintainability](#maintainability)
       * [Testability](#testability)
       * [Extensibility](#extensibility)
-* [Frontend Design](#frontend-design)
-* [Backend Development](#backend-development)
-* [Database Integration](#database-integration)
-* [Test Couverage](#test-couverage)
-* [Final Touches](#final-touches)
-* [Ergebnisprotokolle](#ergebnisprotokolle)
-  * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
-  * [Protokoll 2 \- 16\.02\.2017 \- 17\.02\.2017](#protokoll-2---16022017---17022017)
-  * [Protokoll 3 \- 06\.03\.2017 \- 07\.03\.2017](#protokoll-3---06032017---07032017)
-  * [Protokoll 4 \- 09\.03\.2017 \- 10\.03\.2017](#protokoll-4---09032017---10032017)
-  * [Protokoll 5 \- 27\.03\.2017 \- 28\.03\.2017](#protokoll-5---27032017---28032017)
-  * [Protokoll 6 \- 29\.03\.2017 \- 30\.03\.2017](#protokoll-6---29032017---30032017)
-  * [Protokoll 7 \- 31\.03\.2017 \- 01\.04\.2017](#protokoll-7---31032017---01042017)
-  * [Protokoll 8 \- 07\.04\.2017 \- 09\.04\.2017](#protokoll-8---07042017---09042017)
-  * [Protokoll 9 \- 14\.04\.2017 \- 16\.04\.2017](#protokoll-9---14042017---16042017)
-  * [Protokoll 10 \- 21\.04\.2017 \- 23\.04\.2017](#protokoll-10---21042017---23042017)
-  * [Protokoll 11 \- 24\.04\.2017 \- 25\.04\.2017](#protokoll-11---24042017---25042017)
-* [Working with Git](#working-with-git)
+  * [Frontend Design](#frontend-design)
+  * [Backend Development](#backend-development)
+  * [Database Integration](#database-integration)
+  * [Test Couverage](#test-couverage)
+  * [Final Touches](#final-touches)
+  * [Ergebnisprotokolle](#ergebnisprotokolle)
+    * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
+    * [Protokoll 2 \- 16\.02\.2017 \- 17\.02\.2017](#protokoll-2---16022017---17022017)
+    * [Protokoll 3 \- 06\.03\.2017 \- 07\.03\.2017](#protokoll-3---06032017---07032017)
+    * [Protokoll 4 \- 09\.03\.2017 \- 10\.03\.2017](#protokoll-4---09032017---10032017)
+    * [Protokoll 5 \- 27\.03\.2017 \- 28\.03\.2017](#protokoll-5---27032017---28032017)
+    * [Protokoll 6 \- 29\.03\.2017 \- 30\.03\.2017](#protokoll-6---29032017---30032017)
+    * [Protokoll 7 \- 31\.03\.2017 \- 01\.04\.2017](#protokoll-7---31032017---01042017)
+    * [Protokoll 8 \- 07\.04\.2017 \- 09\.04\.2017](#protokoll-8---07042017---09042017)
+    * [Protokoll 9 \- 14\.04\.2017 \- 16\.04\.2017](#protokoll-9---14042017---16042017)
+    * [Protokoll 10 \- 21\.04\.2017 \- 23\.04\.2017](#protokoll-10---21042017---23042017)
+    * [Protokoll 11 \- 24\.04\.2017 \- 25\.04\.2017](#protokoll-11---24042017---25042017)
+* [Project Workflow Guides](#project-workflow-guides)
   * [Kanban Board Workflow](#kanban-board-workflow)
   * [Git Workflow](#git-workflow)
-  * [Cleanup](#cleanup)
-  * [Github Flavored Markdown](#github-flavored-markdown)
-  * [TOC\-Creation](#toc-creation)
-  * [Visual Studio Shortcuts](#visual-studio-shortcuts)
+  * [Continuous\-Integration\-Script / Updated Workflow](#continuous-integration-script--updated-workflow)
+  * [Test\-Driven\-Development Workflow](#test-driven-development-workflow)
+  * [Branch Cleanup Workflow](#branch-cleanup-workflow)
+  * [Documentation Workflow](#documentation-workflow)
+    * [Github Flavored Markdown](#github-flavored-markdown)
+    * [Table\-Of\-Content\-Script](#table-of-content-script)
+  * [Visual Studio Workflow / Shortcuts](#visual-studio-workflow--shortcuts)
     * [Console\.WriteLine() Shortcut](#consolewriteline-shortcut)
     * [Basic Constructor Shortcut](#basic-constructor-shortcut)
     * [Add Required Namespace Shortcut](#add-required-namespace-shortcut)
     * [Implement Interface Shortcut](#implement-interface-shortcut)
     * [Got More?](#got-more)
-* [Credits](#credits)
+  * [Credits](#credits)
 
-(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go) because we can't be bothered with updating this table manually every time someone adds more to chapters here*)  
+(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go) because we can't be bothered with updating this table manually every time someone adds more stuff to the chapters here*)  
 
 ---  
 
@@ -62,21 +65,27 @@
 
 C# / WPF / MVVM / Windows - Quiz application with multiple choice questions to prepare students trying to get their drivers licence for sportboats in inland waters for their test. The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
 
+---  
+
 ## Contributor Roles
 
 - [Rico Krüger](mailto:krueger.rico@web.de) - Datenbanken  
 - [Andreas Biller](mailto:andie.biller@gmail.com) - Frontend  
 - [Severin Pflüger](mailto:sev@erratic-ink.com) - Backend  
 
+---  
+
 ## Kanban Board
 
-The taskmanagement for our work on the project can be done [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). Our teams workflow guidlines for the use of the board, creating issues, working with github, pushing with continuous integration scripts, test-driven-development, using markdown and some helpfull IDE shortcuts are listed at the bottom of this guide.  
+The task management of our work on the project is done [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). The workflow guidlines of our team for the use of the board, creating issues, working with github, pushing with continuous integration scripts, try test-driven-development, using markdown and some helpfull IDE shortcuts are listed at the [bottom](#project-workflow-guides) of this guide.  
 
-## UML Drafts
+---  
+
+## UML - First Draft
 
 ![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")  
 
-The first draft of our projects object relations was done quickly and withouth knowing the first thing about how to write a windows application, use embedded databases in C# or work with object oriented design patterns or as a team with separated responsibilities towards a common goal. Needles to say, it wasn't very good. Still, here's the [picture](/img/2017-02-13_uml.png) and here's the [file](/uml/2017-02-13_uml.dia). Made with [Dia](http://dia-installer.de/). The second draft of our UML was finished shortly after that. This second draft was created from this textfile [here](/uml/2017-02-14_uml.txt) with the help of [PlantUML](http://plantuml.com/). Documentation for PlantUML can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf). This tool requires the [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed on your system, but is well worth it. Try it.  
+The first draft of our projects object relations was done quickly and without knowing the first thing about how to write a windows application, use embedded databases in C#, work with object oriented design patterns, use lambdas and delegates, how tho bind data to views or work as a team with separated responsibilities towards on a common codebase using github. Needles to say, it wasn't very good. Still, here's the [picture](/img/2017-02-13_uml.png) and here's the [file](/uml/2017-02-13_uml.dia). Made with [Dia](http://dia-installer.de/). The second first draft of our apps UML shown above was finished shortly thereafter. This draft was created from this simple textfile [here](/uml/2017-02-14_uml.txt) with the help of [PlantUML](http://plantuml.com/). Documentation for PlantUML can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf). Requires the [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed on your system, but is well worth it. Give it a try sometimes.  
 
 ---  
 
@@ -85,6 +94,8 @@ The first draft of our projects object relations was done quickly and withouth k
 ![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
 We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the basic key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
+
+---  
 
 ### Model Responsibilities
 
@@ -115,6 +126,8 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 - It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.  
 - ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.  
 
+---  
+
 ### Advantages
 
 #### Maintainability
@@ -134,31 +147,41 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 - You have a better chance of making any of those parts more reusable.  
 - It has also the ability to replace or add new pieces of code that do similar things into the right places in the architecture.  
 
-# Frontend Design
+---  
+
+## Frontend Design
 
 **TODO:** Describe the design process from first view drafts to finished product and the many pitfalls along the way. Maybe elaborate, how little help our teacher was. Add lots of screenshot to make it look pretty.  
 
-# Backend Development
+---  
+
+## Backend Development
 
 **TODO:** Write about our apps main model object relations and their development process. Also a good spot to add our apps updated class diagram and show how our app evolved from our first draft, once work on it is finally done.  
 
-# Database Integration
+---  
+
+## Database Integration
 
 **TODO:** Write about the way we implement and how we query for the data in the embeded database we use. Show how we switch them and how we save our user data. Maybe some database alternatives we could have used.  
 
-# Test Couverage
+---  
+
+## Test Couverage
 
 **TODO:** Write about our projects test coverage, the framework used and give a short overview about CI/TDD and show some principles / best practices of test-driven-development and continuous integration here.  
 
-# Final Touches
+---  
+
+## Final Touches
 
 **TODO:** Finish the documentation, link some sources and references, add some screenshots, spellcheck and proofread it, make a presentation, take a vacation... in short, get this shit done. And then move on to something that's more fun. And praise the sun!  
 
 ---  
 
-# Ergebnisprotokolle
+## Ergebnisprotokolle
 
-## Protokoll 1 - 13.02.2017 - 15.02.2017
+### Protokoll 1 - 13.02.2017 - 15.02.2017
 
 **Protokollnummer:** | 1
 --- | ---
@@ -185,7 +208,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 2 - 16.02.2017 - 17.02.2017
+### Protokoll 2 - 16.02.2017 - 17.02.2017
 
 **Protokollnummer:** | 2
 --- | ---
@@ -211,7 +234,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 3 - 06.03.2017 - 07.03.2017
+### Protokoll 3 - 06.03.2017 - 07.03.2017
 
 **Protokollnummer:** | 3
 --- | ---
@@ -238,7 +261,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 4 - 09.03.2017 - 10.03.2017
+### Protokoll 4 - 09.03.2017 - 10.03.2017
 
 **Protokollnummer:** | 4
 --- | ---
@@ -264,7 +287,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 5 - 27.03.2017 - 28.03.2017
+### Protokoll 5 - 27.03.2017 - 28.03.2017
 
 **Protokollnummer:** | 5
 --- | ---
@@ -290,7 +313,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 6 - 29.03.2017 - 30.03.2017
+### Protokoll 6 - 29.03.2017 - 30.03.2017
 
 **Protokollnummer:** | 6
 --- | ---
@@ -316,7 +339,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 7 - 31.03.2017 - 01.04.2017
+### Protokoll 7 - 31.03.2017 - 01.04.2017
 
 **Protokollnummer:** | 7
 --- | ---
@@ -342,7 +365,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 8 - 07.04.2017 - 09.04.2017  
+### Protokoll 8 - 07.04.2017 - 09.04.2017  
 
 **Protokollnummer:** | 8
 --- | ---
@@ -369,7 +392,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 9 - 14.04.2017 - 16.04.2017  
+### Protokoll 9 - 14.04.2017 - 16.04.2017  
 
 **Protokollnummer:** | 9
 --- | ---
@@ -396,7 +419,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 10 - 21.04.2017 - 23.04.2017  
+### Protokoll 10 - 21.04.2017 - 23.04.2017  
 
 **Protokollnummer:** | 10
 --- | ---
@@ -427,7 +450,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Protokoll 11 - 24.04.2017 - 25.04.2017  
+### Protokoll 11 - 24.04.2017 - 25.04.2017  
 
 **Protokollnummer:** | 11
 --- | ---
@@ -453,7 +476,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-# Working with Git
+# Project Workflow Guides
 
 ## Kanban Board Workflow
 
@@ -472,6 +495,8 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
   ```
 - Then delete the merged branch, switch to the local master branch and pull the updated master to our local master branch.
 - Now create a new working branch from the updated local master and start working on another issue.
+
+---  
 
 ## Git Workflow
 
@@ -514,9 +539,33 @@ git push origin HEAD
 
 The code will be reviewed by us regularly and if all is well and the tests were green the working branches will be merged into the master. Rinse and repeat.  
 
-**Workflow-Update:** If you know what you are doing you may push your commits directly to the the master. To do this finish your changes in your branch, switch to the master, pull the remote master to add changes made by teammembers to it, then merge your branch into the master and resolve any conflicts that may occur. Then push the updated master back to github. If you know how to do this you should be good to go. If not, **google it** or ask someone who knows how to do it (*learning to work in a more efficient way with git*).  
+---  
 
-## Cleanup
+## Continuous-Integration-Script / Updated Workflow
+
+To work in this way you need to merge your changes locally into the local master and then push this updated master to the remote running the test suit in the process. Finish your changes in your local branch, switch to the local master, pull the remote master into it (to add all possible changes made by other members of the team), then merge your branch into your master and resolve all conflicts that may occur. Only then push your updated local master back to the remote master at github. If you know (or research) how to do this you should be good to go. If not, stick to the workflow described above.  
+If you know what you are doing you may push your merged commits directly to the master if you are using the continuous integration script. This scrip will hook into the git push command and first run all the unit tests of our project and if a test fails (i. e. you broke something or the tests need to be improved further) will exit and stop the push. You then can try to fix either your code or the tests to push to the master, or you just check your changes out to a new branch and push that, so we all can have a look at the problem and try to fix it.  
+
+---  
+
+## Test-Driven-Development Workflow
+
+**TODO:** Describe this better.
+
+1. write a failing test  
+2. write code/refactor it until test is green  
+3. update tests or write another failing test for a new feature  
+4. rinse and repeat   
+
+---  
+
+## Branch Cleanup Workflow
+
+You can view all branching commits with a fancy ascii graph in your console with:  
+
+```
+git log --graph
+```
 
 You can view all your local branches with:  
 
@@ -542,21 +591,29 @@ If a working branch is obsolete but not merged with the master you can force-del
 git branch -D <branchname>
 ```
 
-## Github Flavored Markdown
+---  
+
+## Documentation Workflow 
+
+### Github Flavored Markdown
 
 Styling information for the README.md can be found [here](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).  
 
-## TOC-Creation
+---  
 
-You can create a new table of contents in your console with the included golang script in your git bash by running:  
+### Table-Of-Content-Script
+
+You can create a new table of contents from the html-headers of the chapters in this `README.md` file in your console with the included golang script. Just execute it in your git bash by running:  
 
 ```
 ./gh-md-toc README.md
 ```
 
-Copy and paste the output into this README.md, then commit the update to github.  
+Then copy and paste the output into the space where the old Table sits, shift + tab it to the left side and save the updated `README.md` file. Then commit the changes to github.  
 
-## Visual Studio Shortcuts
+---  
+
+## Visual Studio Workflow / Shortcuts
 
 Make your life easier with these handy shortcuts while working in visual studio:  
 
@@ -598,7 +655,7 @@ I'm sure there's more. Feel free to also add your own favorite little time saver
 
 ---  
 
-# Credits
+## Credits
 
 > “It's so quiet this high up, the feeling you get  
 > is that you're one of those space monkeys.  
@@ -607,3 +664,5 @@ I'm sure there's more. Feel free to also add your own favorite little time saver
 > You don't understand any of it, and then you just die.”  
 
 **Chuck Palahniuk, Fight Club**  
+
+---  
