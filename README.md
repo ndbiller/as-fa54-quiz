@@ -21,6 +21,11 @@
       * [Maintainability](#maintainability)
       * [Testability](#testability)
       * [Extensibility](#extensibility)
+* [Frontend Design](#frontend-design)
+* [Backend Development](#backend-development)
+* [Database Integration](#database-integration)
+* [Test Couverage](#test-couverage)
+* [Final Touches](#final-touches)
 * [Ergebnisprotokolle](#ergebnisprotokolle)
   * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
   * [Protokoll 2 \- 16\.02\.2017 \- 17\.02\.2017](#protokoll-2---16022017---17022017)
@@ -85,7 +90,7 @@ The second draft of our object relations (*14.02.2017*). Second draft of UML cre
 
 ![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
-We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
+We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the basic key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
 
 ### Model Responsibilities
 
@@ -134,6 +139,26 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 - It sometimes overlaps with maintainability, because of the clean separation boundaries and more granular pieces of code.  
 - You have a better chance of making any of those parts more reusable.  
 - It has also the ability to replace or add new pieces of code that do similar things into the right places in the architecture.  
+
+# Frontend Design
+
+**TODO:** Describe the design process from first view drafts to finished product and the many pitfalls along the way. Maybe elaborate, how little help our teacher was.  
+
+# Backend Development
+
+**TODO:** Write about our apps main model object relations and their development process. Also a good spot to add our apps updated class diagram once work on it is finally done.  
+
+# Database Integration
+
+**TODO:** Write about the way we implement and how we query for the data in the embeded database we use. alternatives?  
+
+# Test Couverage
+
+**TODO:** Write about our projects test coverage, the framework used and give a short overview about CI/TDD and show some principles / best practices of test-driven-development and continuous integration here.  
+
+# Final Touches
+
+**TODO:** Finish the documentation, link some sources and references, add some screenshots, make a presentation, take a vacation... in short, get this shit done. And then move on to something that's more fun. And praise the sun!  
 
 ---  
 
