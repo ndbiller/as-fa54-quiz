@@ -45,6 +45,7 @@
     * [Add Required Namespace Shortcut](#add-required-namespace-shortcut)
     * [Implement Interface Shortcut](#implement-interface-shortcut)
     * [Got More?](#got-more)
+* [Credits](#credits)
 
 (*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)*)  
 
@@ -542,7 +543,7 @@ Make your life easier with these handy shortcuts while working in visual studio:
 
 ### Console.WriteLine() Shortcut
 
-Enter the following, followed by a double tab. You'll get a quick `Console.WriteLine();` But for debuggimg our WPF-Application you should rather use Trace.WriteLine() or Debug.WriteLine() and a breakpoint at the same line.  
+Enter the following, followed by a double tab. You'll get a quick `Console.WriteLine();` for debugging your code. For our application you should rather use `Trace.WriteLine()` or `Debug.WriteLine()` and set a breakpoint on the same line, though.  
 
 ```
 cw
@@ -566,7 +567,7 @@ Want to use a `private List<T> somename` without first looking up and including 
 
 ### Implement Interface Shortcut
 
-Want to implement an interface in your class? Maybe inherit from `ICommand`? Just write its name next to the classname like you would, do the above trick to get rid of the initial compiler warning by adding the namespace. Still not satisfied? Hit the combination of **control** and **dot** one more time, again followed by **enter**. There are your basic interface fields and methods, ready to throw `NotImplementedException()` exceptions until you decide what they should really do.  
+Want to implement an interface in your class? Maybe inherit from `ICommand`? Just write its name next to the classname, like you would normally do. Then do the previous shortcut again and rid yourself of the initial compiler warning, adding the namespace. You're still not satisfied? Hit **control** and **dot** once more followed by **enter**. And thereyou are, your basic interface has methods, ready to throw `NotImplementedException()` exceptions. Pretty neat.  
 
 ```
 "CTRL" + "."
@@ -574,6 +575,16 @@ Want to implement an interface in your class? Maybe inherit from `ICommand`? Jus
 
 ### Got More?
 
-I'm sure there's more. Feel free to add your own favorite time savers for coding here, so all of us can share them.  
+I'm sure there's more. Feel free to also add your own favorite little time savers here, so all of us can share them.   
 
 ---  
+
+# Credits
+
+> “It's so quiet this high up, the feeling you get  
+> is that you're one of those space monkeys.  
+> You do the little job you're trained to do.  
+> Pull a lever. Push a button.  
+> You don't understand any of it, and then you just die.”  
+
+**Chuck Palahniuk, Fight Club**  
