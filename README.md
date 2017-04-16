@@ -52,7 +52,7 @@
     * [Got More?](#got-more)
 * [Credits](#credits)
 
-(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)*)  
+(*Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go) because we can't be bothered with updating this table manually every time someone adds more to chapters here*)  
 
 ---  
 
@@ -60,9 +60,7 @@
 
 ## Project Outline
 
-Quiz with multiple choice questions to prepare students getting their driving licence for sportboats in inland waters.  
-
-The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
+C# / WPF / MVVM / Windows - Quiz application with multiple choice questions to prepare students trying to get their drivers licence for sportboats in inland waters for their test. The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).  
 
 ## Contributor Roles
 
@@ -72,17 +70,13 @@ The project requirements can be found [here](/pdf/Lernsituation.pdf?raw=true).
 
 ## Kanban Board
 
-Taskmanagement for the project: [here](https://github.com/ndbiller/as-fa54-quiz/projects/2).  
+The taskmanagement for our work on the project can be done [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). Our teams workflow guidlines for the use of the board, creating issues, working with github, pushing with continuous integration scripts, test-driven-development, using markdown and some helpfull IDE shortcuts are listed at the bottom of this guide.  
 
 ## UML Drafts
 
-The first draft of our object relations (*13.02.2017*). Can be found [here](/uml/2017-02-13_uml.dia). Created with [Dia](http://dia-installer.de/).  
+![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")  
 
-![UML 1.0](/img/2017-02-13_uml.png?raw=true "UML 1.0")  
-
-The second draft of our object relations (*14.02.2017*). Second draft of UML created from [2017-02-14_uml.txt](/uml/2017-02-14_uml.txt) with [PlantUML](http://plantuml.com/). Documentation can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf). Requires [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed.  
-
-![UML 1.1](/img/2017-02-14_uml.png?raw=true "UML 1.1")    
+The first draft of our projects object relations was done quickly and withouth knowing the first thing about how to write a windows application, use embedded databases in C# or work with object oriented design patterns or as a team with separated responsibilities towards a common goal. Needles to say, it wasn't very good. Still, here's the [picture](/img/2017-02-13_uml.png) and here's the [file](/uml/2017-02-13_uml.dia). Made with [Dia](http://dia-installer.de/). The second draft of our UML was finished shortly after that. This second draft was created from this textfile [here](/uml/2017-02-14_uml.txt) with the help of [PlantUML](http://plantuml.com/). Documentation for PlantUML can be found [here](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf). This tool requires the [Java Runtime Environment](https://www.java.com/en/download/) and [Graphviz](http://www.graphviz.org/) to be installed on your system, but is well worth it. Try it.  
 
 ---  
 
