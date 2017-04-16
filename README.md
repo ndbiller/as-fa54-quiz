@@ -142,15 +142,15 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 # Frontend Design
 
-**TODO:** Describe the design process from first view drafts to finished product and the many pitfalls along the way. Maybe elaborate, how little help our teacher was.  
+**TODO:** Describe the design process from first view drafts to finished product and the many pitfalls along the way. Maybe elaborate, how little help our teacher was. Add lots of screenshot to make it look pretty.  
 
 # Backend Development
 
-**TODO:** Write about our apps main model object relations and their development process. Also a good spot to add our apps updated class diagram once work on it is finally done.  
+**TODO:** Write about our apps main model object relations and their development process. Also a good spot to add our apps updated class diagram and show how our app evolved from our first draft, once work on it is finally done.  
 
 # Database Integration
 
-**TODO:** Write about the way we implement and how we query for the data in the embeded database we use. alternatives?  
+**TODO:** Write about the way we implement and how we query for the data in the embeded database we use. Show how we switch them and how we save our user data. Maybe some database alternatives we could have used.  
 
 # Test Couverage
 
@@ -158,7 +158,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 # Final Touches
 
-**TODO:** Finish the documentation, link some sources and references, add some screenshots, make a presentation, take a vacation... in short, get this shit done. And then move on to something that's more fun. And praise the sun!  
+**TODO:** Finish the documentation, link some sources and references, add some screenshots, spellcheck and proofread it, make a presentation, take a vacation... in short, get this shit done. And then move on to something that's more fun. And praise the sun!  
 
 ---  
 
@@ -386,11 +386,11 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 **Wochenend-Blöcke:**  
 - [x] 14.04.2017  
 - [x] 15.04.2017  
-- [ ] 16.04.2017  
+- [x] 16.04.2017  
 
 **Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
 ---|  
-**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus View an Question und User übergeben, |  
+**tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus dem View ans QuestionViewModel und dann von da aus an das Model und den User übergeben, Commands mit ICommand implementiert, Dokumentation erweitert |  
 
 **Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
 ---|  
@@ -399,10 +399,6 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 **Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |  
 ---|  
 **tasks**: |  
-
-**TODO:** |  
----|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Fragen aus Fragebogen generieren, Frage vor u. zurück, Auswertung am Ende, Darstellung History), User in Datei speichern, User laden, Bilder einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Test-Coverage für Dokumentation, Kanban-Board-Screenshot für Dokumentation |  
 
 ---  
 
@@ -430,6 +426,10 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 **Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
+
+**TODO:** |  
+---|  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Fragen aus Fragebogen generieren, Fragen vor u. zurück, Auswertung am Ende, Darstellung der History), User in Datei speichern, User aus Datei laden, Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
 
 ---  
 
