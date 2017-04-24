@@ -77,6 +77,8 @@ C# / WPF / MVVM / Windows - Quiz application with multiple choice questions to p
 
 ## Kanban Board
 
+**TODO:** insert picture here  
+
 The task management of our work on the project is done [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). The workflow guidlines of our team for the use of the board, creating issues, working with github, pushing with continuous integration scripts, try test-driven-development, using markdown and some helpfull IDE shortcuts are listed at the [bottom](#project-workflow-guides) of this guide.  
 
 ---  
@@ -369,20 +371,20 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 **Gruppenname (Zahl):** | 2
 **Datum:** | 07.04.2017 - 09.04.2017
 
-**Wochenend-Blöcke:**  
+**Wochenende:**  
 - [x] 07.04.2017  
 - [x] 08.04.2017  
 - [x] 09.04.2017  
 
-**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
+**Dieses Wochenende* erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: Results View Page erstellt, Question Data Binding zwischen View und Dummy Question Object im Backend hergestellt, Question View Model erstellt, Projektzustand erreicht, bei dem Teammitglieder ihre Fortschritte im View sehen können, Code kommentiert, Beispielprojekt entfernt |  
 
-**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
+**Dieses Wochenende* erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
+**Dieses Wochenende* erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -396,47 +398,46 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 **Gruppenname (Zahl):** | 2
 **Datum:** | 14.04.2017 - 16.04.2017
 
-**Wochenend-Blöcke:**  
+**Wochenende:**  
 - [x] 14.04.2017  
 - [x] 15.04.2017  
 - [x] 16.04.2017  
 
-**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |  
+**Dieses Wochenende* erledigte Aufgaben des Frontend-Entwicklers:** |  
 ---|  
 **tasks**: Antworten aus Liste anzeigen, Antwort Klasse aus Question.AnswerList im QuestionViewModel für ObservableCollection<Answer> hinzugefügt, Klasse User für Settings und History erstellt, Benutzereingaben aus dem View ans QuestionViewModel und dann von da aus an das Model übergeben, Commands mit ICommand implementiert, Dokumentation erweitert |  
 
-**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |  
+**Dieses Wochenende* erledigte Aufgaben des Backend-Entwicklers:** |  
 ---|  
 **tasks**: |  
 
-**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |  
+**Dieses Wochenende* erledigte Aufgaben des Datenbankspezialisten:** |  
 ---|  
 **tasks**: |  
 
 ---  
 
-### Protokoll 10 - 21.04.2017 - 23.04.2017  
+### Protokoll 10 - 24.04.2017 - 25.04.2017  
 
 **Protokollnummer:** | 10
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
-**Datum:** | 21.04.2017 - 23.04.2017
+**Datum:** | 24.04.2017 - 25.04.2017
 
-**Wochenend-Blöcke:**  
-- [ ] 21.04.2017  
-- [ ] 22.04.2017  
-- [ ] 23.04.2017  
+**AS-Blöcke:**  
+- [x] 24.04.2017  
+- [ ] 25.04.2017    
 
-**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: (*Schule: HTML und CSS, neues Projekt ToDo-Liste begonnen*) Zuhause: Projektplanung und Zeitplan aktualisiert,  |
+
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
----|
-**tasks**: |
-
-**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
 
@@ -446,29 +447,33 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-### Protokoll 11 - 24.04.2017 - 25.04.2017  
+### Protokoll 11 - 26.04.2017 - 27.04.2017  
 
 **Protokollnummer:** | 11
 --- | ---
 **Klassenbezeichnung:** | FA54
 **Gruppenname (Zahl):** | 2
-**Datum:** | 24.04.2017 - 25.04.2017
+**Datum:** | 26.04.2017 - 27.04.2017
 
 **AS-Blöcke:**  
-- [ ] 24.04.2017  
-- [ ] 25.04.2017    
+- [ ] 26.04.2017  
+- [ ] 27.04.2017 (Präsentation)  
 
-**Diese Blöcke erledigte Aufgaben des Frontend-Entwicklers:** |
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Blöcke erledigte Aufgaben des Backend-Entwicklers:** |
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
 **tasks**: |
 
-**Diese Blöcke erledigte Aufgaben des Datenbankspezialisten:** |
+**Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
 **tasks**: |
+
+---  
+
+* TODO: Insert Meinung über die Unterrichtsmethoden / Zeitplanung (ganzes Projekt in AS-Blöcken zu schaffen?) / usw. hier
 
 ---  
 

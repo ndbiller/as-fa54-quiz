@@ -1,9 +1,14 @@
-# put this file to C:/Users/Username to use the git aliases listed below
-# add your own username and email and uncomment the user section to avoid 
-# being asked to set git config user.name and user.email on first commit
+#####################################################################
+# working with git:                                                 #
+# -----------------                                                 #
+# put these settings in .git/config                                 #
+# use the git aliases listed below                                  #
+# add your own user.name and user.email into the user section below #
+# sets git config user.name and user.email                          #
+#####################################################################
 [user]
-#    name = ndbiller
-#    email = andie.biller@gmail.com
+    name = ndbiller
+    email = andie.biller@gmail.com
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
@@ -34,16 +39,19 @@
 	changed = yellow bold
     untracked = red bold
 [alias]
-    pl = pull origin HEAD
+	pl = pull
+    plo = pull origin HEAD
     #############
-    a = add -A .
+    st = status
+    lg = log --graph
+    aa = add -A .
     cm = commit -m
-    ps = push origin HEAD
+    ps = push
+    pso = push origin HEAD
     #############
     co = checkout
-    cb = checkout -b
+    cob = checkout -b
     #############
-    s = status
-    #############
-    b = branch
-    bd = branch -d
+    br = branch
+    brm = branch --merged
+    brd = branch -d
