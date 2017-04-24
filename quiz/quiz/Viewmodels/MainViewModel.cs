@@ -18,8 +18,8 @@ namespace quiz.Viewmodels
 
         public MainViewModel()
 		{
-            // TODO: create the object for the view and set viewmodel object to view datacontext when it gets instantiated in code behind
-            // Instantiate the User for the view
+            // Instantiate the defaultUser for the view
+            // User = new User();
             User = new User();
             History = new ObservableCollection<SelectedAnswer>();
             foreach (SelectedAnswer answer in User.AnswerHistory)
@@ -28,6 +28,19 @@ namespace quiz.Viewmodels
                 // Debug
                 Trace.WriteLine("MainViewModel: " + answer.ToString());
             }
+
+            // Debug Load and Save
+            // User.WriteCSVFile();
+            // Trace.WriteLine("...done WriteCSVFiling.");
+            // User.ReadCSVFile();
+            // Trace.WriteLine("...done ReadCSVFiling.");
+
+            // Debug
+            Trace.WriteLine("loaded user:");
+            Trace.WriteLine("QuestionID;AnswerID");
+            foreach (SelectedAnswer answer in User.AnswerHistory)
+                Trace.WriteLine(answer.QuestionID + ";" + answer.AnswerID);
+            Trace.WriteLine("done creating with params.");
         }
     }
 }

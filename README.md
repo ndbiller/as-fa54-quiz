@@ -431,7 +431,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: (*Schule: HTML und CSS, neues Projekt ToDo-Liste begonnen*) Zuhause: Projektplanung und Zeitplan aktualisiert,  |
+**tasks**: (*Schule: HTML und CSS, neues Projekt ToDo-Liste begonnen*) Zuhause: Projektplanung und Zeitplan aktualisiert, User in Datei gespeichert, User aus Datei geladen, ... |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
@@ -443,7 +443,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **TODO:** |  
 ---|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Fragen aus Fragebogen generieren, Fragen vor u. zurück, Auswertung am Ende, Darstellung der History), User in Datei speichern, User aus Datei laden, Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Fragen aus Fragebogen generieren, Fragen vor u. zurück, Auswertung am Ende, Darstellung der History), Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
 
 ---  
 

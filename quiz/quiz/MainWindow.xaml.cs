@@ -32,7 +32,6 @@ namespace quiz
                 Trace.WriteLine("MainWindow(MainVM.History): " + answer.ToString());
             foreach (SelectedAnswer answer in MainVM.User.AnswerHistory)
                 Trace.WriteLine("MainWindow(MainVM.User.AnswerHistory): " + answer.ToString());
-            MainVM.User.ToCSV();
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
