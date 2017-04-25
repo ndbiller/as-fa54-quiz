@@ -14,11 +14,11 @@ namespace quiz
 
     public partial class MainWindow : Window
     {
-        // private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
-        // IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
-        // comboBox1.DataSource= fragenQuery.ToList();
+        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
+        IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
+        comboBox1.DataSource= fragenQuery.ToList();
 
-        // create the main viewmodel and set it as data context for the views in constructor
+        create the main viewmodel and set it as data context for the views in constructor
         public MainViewModel MainVM { get; set; }
 
         public MainWindow()
