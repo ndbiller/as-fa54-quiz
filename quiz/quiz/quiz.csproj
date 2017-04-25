@@ -10,6 +10,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,7 +23,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -74,6 +74,8 @@
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xaml">
@@ -95,9 +97,6 @@
       <SubType>Code</SubType>
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ObservableObject.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\Answer.cs" />
     <Compile Include="Binnenschifffahrt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ObservableObject.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Master.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
@@ -127,18 +129,39 @@
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="T_Fragebogen_unter_Maschine.cs">
-      <DependentUpon>Binnenschifffahrt.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_SBF_Binnen.cs">
-      <DependentUpon>Binnenschifffahrt.tt</DependentUpon>
-    </Compile>
     <Compile Include="StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="T_Fragebogen_Funk_UBI.cs">
+      <DependentUpon>UBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Fragebogen_unter_Maschine.cs">
+      <DependentUpon>Binnenschifffahrt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Funk_UBI.cs">
+      <DependentUpon>UBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SBF_Binnen.cs">
+      <DependentUpon>Binnenschifffahrt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBI.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBI.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UBI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UBI.edmx</DependentUpon>
     </Compile>
     <Compile Include="Viewmodels\Commands\DelegatingCommand .cs" />
     <Compile Include="Viewmodels\MainViewModel.cs" />
@@ -162,13 +185,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Binnenschifffahrt.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Binnenschifffahrt_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Binnenschifffahrt.mdf</DependentUpon>
-    </Content>
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\logo_kunde.png" />
   </ItemGroup>
@@ -195,30 +211,62 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <EntityDeploy Include="UBI.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UBI.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UBI.edmx.diagram">
+      <DependentUpon>UBI.edmx</DependentUpon>
+    </None>
+    <Resource Include="Fonts\fontawesome-webfont.ttf" />
     <EntityDeploy Include="Binnenschifffahrt.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Binnenschifffahrt.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Binnenschifffahrt.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
-      <LastGenOutput>Binnenschifffahrt.Context.cs</LastGenOutput>
-    </None>
+    <None Include="App.Config" />
     <None Include="Binnenschifffahrt.edmx.diagram">
       <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
     </None>
-    <None Include="Binnenschifffahrt.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
-      <LastGenOutput>Binnenschifffahrt.cs</LastGenOutput>
-    </None>
-    <Resource Include="Fonts\fontawesome-webfont.ttf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Binnenschifffahrt.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Binnenschifffahrt.Context.cs</LastGenOutput>
+      <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
+    </Content>
+    <Content Include="Binnenschifffahrt.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Binnenschifffahrt.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
+      <LastGenOutput>Binnenschifffahrt.cs</LastGenOutput>
+    </Content>
+    <Content Include="Binnenschifffahrt_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Binnenschifffahrt.mdf</DependentUpon>
+    </Content>
+    <Content Include="UBI.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UBI.edmx</DependentUpon>
+      <LastGenOutput>UBI.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UBI.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UBI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UBI.edmx</DependentUpon>
+      <LastGenOutput>UBI.cs</LastGenOutput>
+    </Content>
+    <Content Include="UBI_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>UBI.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

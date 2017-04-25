@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="UBIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Während der Generierung sind Fehler aufgetreten:
+Warnung 6002: Für Tabelle/Sicht 'D:\AS-FA54-QUIZ\QUIZ\QUIZ\UBI.MDF.db_ddladmin.T_Fragebogen_Funk_UBI' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+        <EntityType Name="T_Fragebogen_Funk_UBI">
+          <Key>
+            <PropertyRef Name="FragebogenNr" />
+            <PropertyRef Name="F_id_Funk_UBI" />
+          </Key>
+          <Property Name="FragebogenNr" Type="int" Nullable="false" />
+          <Property Name="F_id_Funk_UBI" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Während der Generierung sind Fehler aufgetreten:
+Warnung 6002: Für Tabelle/Sicht 'D:\AS-FA54-QUIZ\QUIZ\QUIZ\UBI.MDF.db_ddladmin.T_Funk_UBI' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+        <EntityType Name="T_Funk_UBI">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Frage" Type="varchar" MaxLength="500" />
+          <Property Name="AntwortA" Type="varchar" MaxLength="500" />
+          <Property Name="AntwortB" Type="varchar" MaxLength="500" />
+          <Property Name="AntwortC" Type="varchar" MaxLength="500" />
+          <Property Name="AntwortD" Type="varchar" MaxLength="500" />
+          <Property Name="RichtigeAntwort" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="UBIModelStoreContainer">
+          <EntitySet Name="T_Fragebogen_Funk_UBI" EntityType="Self.T_Fragebogen_Funk_UBI" store:Type="Tables" store:Schema="db_ddladmin">
+            <DefiningQuery>SELECT 
+    [T_Fragebogen_Funk_UBI].[FragebogenNr] AS [FragebogenNr], 
+    [T_Fragebogen_Funk_UBI].[F_id_Funk_UBI] AS [F_id_Funk_UBI]
+    FROM [db_ddladmin].[T_Fragebogen_Funk_UBI] AS [T_Fragebogen_Funk_UBI]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T_Funk_UBI" EntityType="Self.T_Funk_UBI" store:Type="Tables" store:Schema="db_ddladmin">
+            <DefiningQuery>SELECT 
+    [T_Funk_UBI].[Id] AS [Id], 
+    [T_Funk_UBI].[Frage] AS [Frage], 
+    [T_Funk_UBI].[AntwortA] AS [AntwortA], 
+    [T_Funk_UBI].[AntwortB] AS [AntwortB], 
+    [T_Funk_UBI].[AntwortC] AS [AntwortC], 
+    [T_Funk_UBI].[AntwortD] AS [AntwortD], 
+    [T_Funk_UBI].[RichtigeAntwort] AS [RichtigeAntwort]
+    FROM [db_ddladmin].[T_Funk_UBI] AS [T_Funk_UBI]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UBIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_Fragebogen_Funk_UBI">
+          <Key>
+            <PropertyRef Name="FragebogenNr" />
+            <PropertyRef Name="F_id_Funk_UBI" />
+          </Key>
+          <Property Name="FragebogenNr" Type="Int32" Nullable="false" />
+          <Property Name="F_id_Funk_UBI" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Funk_UBI">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Frage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AntwortA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AntwortB" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AntwortC" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AntwortD" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RichtigeAntwort" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="UBIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Fragebogen_Funk_UBI" EntityType="Self.T_Fragebogen_Funk_UBI" />
+          <EntitySet Name="T_Funk_UBI" EntityType="Self.T_Funk_UBI" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UBIModelStoreContainer" CdmEntityContainer="UBIEntities">
+          <EntitySetMapping Name="T_Fragebogen_Funk_UBI">
+            <EntityTypeMapping TypeName="UBIModel.T_Fragebogen_Funk_UBI">
+              <MappingFragment StoreEntitySet="T_Fragebogen_Funk_UBI">
+                <ScalarProperty Name="FragebogenNr" ColumnName="FragebogenNr" />
+                <ScalarProperty Name="F_id_Funk_UBI" ColumnName="F_id_Funk_UBI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Funk_UBI">
+            <EntityTypeMapping TypeName="UBIModel.T_Funk_UBI">
+              <MappingFragment StoreEntitySet="T_Funk_UBI">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Frage" ColumnName="Frage" />
+                <ScalarProperty Name="AntwortA" ColumnName="AntwortA" />
+                <ScalarProperty Name="AntwortB" ColumnName="AntwortB" />
+                <ScalarProperty Name="AntwortC" ColumnName="AntwortC" />
+                <ScalarProperty Name="AntwortD" ColumnName="AntwortD" />
+                <ScalarProperty Name="RichtigeAntwort" ColumnName="RichtigeAntwort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

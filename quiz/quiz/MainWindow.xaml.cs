@@ -3,6 +3,9 @@ using System.ComponentModel;
 using quiz.Models;
 using quiz.Viewmodels;
 using System.Diagnostics;
+using System.Linq;
+using System.Data.Linq;
+using System.Data.Entity;
 
 namespace quiz
 {
@@ -14,11 +17,9 @@ namespace quiz
 
     public partial class MainWindow : Window
     {
-        private BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
-        IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
-        comboBox1.DataSource= fragenQuery.ToList();
+        //comboBox1.DataSource= fragenQuery.ToList();
 
-        create the main viewmodel and set it as data context for the views in constructor
+        //create the main viewmodel and set it as data context for the views in constructor
         public MainViewModel MainVM { get; set; }
 
         public MainWindow()
@@ -26,6 +27,7 @@ namespace quiz
             MainVM = new MainViewModel();
             InitializeComponent();
             DataContext = MainVM;
+            Master myMaster = new Master();
 
             // Debug
             foreach (SelectedAnswer answer in MainVM.History)

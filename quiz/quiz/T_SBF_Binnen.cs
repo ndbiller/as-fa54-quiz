@@ -14,6 +14,7 @@ namespace quiz
     
     public partial class T_SBF_Binnen
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_SBF_Binnen()
         {
             this.T_Fragebogen_unter_Maschine = new HashSet<T_Fragebogen_unter_Maschine>();
@@ -27,6 +28,7 @@ namespace quiz
         public string Antwort4 { get; set; }
         public Nullable<byte> RichtigeAntwort { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T_Fragebogen_unter_Maschine> T_Fragebogen_unter_Maschine { get; set; }
     }
 }

@@ -6,7 +6,7 @@
     <edmx:StorageModels>
       <Schema Namespace="BinnenschifffahrtModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Während der Generierung sind Fehler aufgetreten:
-Warnung 6002: Für Tabelle/Sicht 'C:\USERS\USER\DESKTOP\SCHIFF\AS-FA54-QUIZ\QUIZ\QUIZ\BINNENSCHIFFFAHRT.MDF.db_ddladmin.T_Fragebogen_unter_Maschine' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
+Warnung 6002: Für Tabelle/Sicht 'D:\AS-FA54-QUIZ\QUIZ\QUIZ\BINNENSCHIFFFAHRT.MDF.db_ddladmin.T_Fragebogen_unter_Maschine' ist kein Primärschlüssel definiert. Der Schlüssel wurde abgeleitet, und die Definition wurde als schreibgeschützte Tabelle/Sicht erstellt.-->
         <EntityType Name="T_Fragebogen_unter_Maschine">
           <Key>
             <PropertyRef Name="FragebogenNr" />
