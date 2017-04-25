@@ -53,12 +53,7 @@ namespace quiz.Models
                 List<SelectedAnswer> csv = new List<SelectedAnswer>();
                 // convert any datasource to csv based object
                 foreach (var item in AnswerHistory)
-                {
-                    SelectedAnswer temp = new SelectedAnswer();
-                    temp.QuestionID = item.QuestionID;
-                    temp.AnswerID = item.AnswerID;
-                    csv.Add(temp);                       
-                }
+                    csv.Add(new SelectedAnswer(item.QuestionID, item.AnswerID));                       
                 // give header text
                 engine.HeaderText = "QuestionID,AnswerID";
                 // save file locally
@@ -104,19 +99,19 @@ namespace quiz.Models
     [IgnoreFirst()]
     public class SelectedAnswer
     {
-        // TODO: Move this to Answer Class
+        // TODO: Move this to Answer Class? Rename to History... add questionaire id
 
         // Properties
         public int QuestionID { get; set; }
         public int AnswerID { get; set; }
 
-        public SelectedAnswer()
-        {
-            // Dummy SelectedAnswer for testing
-            // TODO: Catch NullException when constructor is empty or remove when set if both ids of previous SelectedAnswer are -1
-            QuestionID = -1;
-            AnswerID = -1;
-        }
+        //public SelectedAnswer()
+        //{
+        //    // Dummy SelectedAnswer for testing
+        //    // TODO: Catch NullException when constructor is empty or remove when set if both ids of previous SelectedAnswer are -1
+        //    QuestionID = -1;
+        //    AnswerID = -1;
+        //}
 
         public SelectedAnswer(int questionID, int answerID)
         {

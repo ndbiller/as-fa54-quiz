@@ -55,8 +55,6 @@ namespace quiz
         {
             // close the app window to call the window closing event
             this.Close();
-
-            // TODO: save user progress
         }
 
         // Method to handle the Window.Closing event.
@@ -70,6 +68,8 @@ namespace quiz
             }
             else
             {
+                // save user settings and history
+                MainVM.User.WriteCSVFile();
                 // stop all running programm processes
                 Application.Current.Shutdown();
             }

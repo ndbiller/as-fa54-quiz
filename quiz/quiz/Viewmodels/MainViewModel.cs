@@ -19,7 +19,6 @@ namespace quiz.Viewmodels
         public MainViewModel()
 		{
             // Instantiate the defaultUser for the view
-            // User = new User();
             User = new User();
             History = new ObservableCollection<SelectedAnswer>();
             foreach (SelectedAnswer answer in User.AnswerHistory)
