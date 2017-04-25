@@ -99,7 +99,7 @@ namespace quiz.Models
     [IgnoreFirst()]
     public class SelectedAnswer
     {
-        // TODO: Move this to Answer Class? Rename to History... add questionaire id
+        // TODO: Rename to History, add questionaire id, move to own file
 
         // Properties
         public int QuestionID { get; set; }
