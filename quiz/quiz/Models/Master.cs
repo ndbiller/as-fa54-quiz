@@ -10,6 +10,7 @@ namespace quiz.Models
         decimal PassThreshhold { get; set; }
         List<int> PreviousQuestionaires { get; set; }
         List<Question> QuestionsForQuestionaire { get; set; }
+        int[] ids;
 
         public Master()
         {
@@ -29,19 +30,24 @@ namespace quiz.Models
                 //Trace.WriteLine(i + frage);
                 
                 //Trace.WriteLine(i + " " + question.P_Id + " " + question.Frage);
-                if(!questionList.Contains(question))
-                {
-                    questionList.Add(question);
-                }
+                //if(!questionList.Contains(question))
+                //{
+                //    questionList.Add(question);
+                //}
             }
-
+            
             Trace.WriteLine("items: " + questionList.Count);
             foreach(var q in questionList)
             {
                 Trace.WriteLine("Q: " + q.P_Id);
 
             }
-
+            foreach(var q in result)
+            {
+                Trace.WriteLine("master" + q.F_Id_SBF_Binnen);
+            }
+            
+            ids = DataReader.GetQuestionIds(2);
             //IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Where(d=> d.P_Id);
             //foreach(int i in fragenQuery)
             //{
