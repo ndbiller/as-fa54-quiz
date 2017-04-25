@@ -12,17 +12,18 @@ namespace quiz.Viewmodels
     /// </summary>
     public class MainViewModel : ObservableObject
     {
-        // TODO: add fields and/or properties
+        // holds the displayed user
         public User User { get; set; }
-        public ObservableCollection<SelectedAnswer> History { get; set; }
+        // the displayed history
+        public ObservableCollection<History> History { get; set; }
 
         public MainViewModel()
 		{
             // Instantiate the defaultUser for the view
-            // User = new User();
             User = new User();
-            History = new ObservableCollection<SelectedAnswer>();
-            foreach (SelectedAnswer answer in User.AnswerHistory)
+            // instantiate the displayed history and load the users answer history into it
+            History = new ObservableCollection<History>();
+            foreach (History answer in User.UserHistory)
             {
                 History.Add(answer);
                 // Debug
@@ -37,9 +38,9 @@ namespace quiz.Viewmodels
 
             // Debug
             Trace.WriteLine("loaded user:");
-            Trace.WriteLine("QuestionID;AnswerID");
-            foreach (SelectedAnswer answer in User.AnswerHistory)
-                Trace.WriteLine(answer.QuestionID + ";" + answer.AnswerID);
+            Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+            foreach (History answer in User.UserHistory)
+                Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
             Trace.WriteLine("done creating with params.");
         }
     }

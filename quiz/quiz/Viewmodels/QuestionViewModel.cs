@@ -14,12 +14,12 @@ namespace quiz.Viewmodels
     /// </summary>
     public class QuestionViewModel : ObservableObject
 	{
-        // fields hold the models
+        // fields hold observable objects of the models and results of user interaction
         // selected Questionaire
         private Questionaire questionaire;
         // question to display
         private Question question;
-        // holds the selected answer of the user
+        // holds the index of the user selected answer
         private int answerSelected;
         // answers to display
         private ObservableCollection<Answer> answers;

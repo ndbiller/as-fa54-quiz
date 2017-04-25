@@ -46,6 +46,7 @@
     lg = log --graph
     aa = add -A .
     cm = commit -m
+    ca = commit -am
     ps = push
     pso = push origin HEAD
     #############

@@ -7,60 +7,61 @@ using System.Linq;
 
 namespace quiz.Models
 {
-    // user object to hold / save settings and answers (= questionaire history)
+    // user class to hold and trigger save/load of user settings and history
     [DelimitedRecord(",")]
     public class User
     {
-        // Properties
+        // Properties to hold the settings
         public string Name { get; set; }
-
-        // TODO: save question id and selected answers with user data somewhere (maybe in csv text file, with settings? user object?)
-        public List<SelectedAnswer> AnswerHistory { get; set; }
+        public string Title { get; set; }
+        public decimal PassingPercentage { get; set; }
+        public string SelectedDB { get; set; }
+        public List<History> UserHistory { get; set; }
 
         // Standard Constructor
         public User()
         {
             // TODO: if customUser.txt exists ReadCSVFile(customUser) else if defaultUser.txt exists ReadCSVFile() else
             Name = "defaultUser";
-            AnswerHistory = new List<SelectedAnswer>();
+            Title = "Sportbootführerschein Binnen (unter Antriebsmaschine)";
+            PassingPercentage = 95;
+            // könnt ihr ja abändern wie benötigt, wird hier nur für neue default user als dummy zur anzeige gesetzt
+            SelectedDB = "Binnenschifffahrt";
+            UserHistory = new List<History>();
         }
         // Constructor to load user
-        public User(string name, List<SelectedAnswer> answerHistory)
+        public User(string name, string title, decimal passingPercentage, string selectedDB, List<History> answerHistory)
         {
             Name = name;
-            AnswerHistory = answerHistory;
+            UserHistory = answerHistory;
             // Debug
             Trace.WriteLine("param ctor:");            
-            Trace.WriteLine("QuestionID;AnswerID");
-            foreach (SelectedAnswer answer in AnswerHistory)
-                Trace.WriteLine(answer.QuestionID + ";" + answer.AnswerID);
+            Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+            foreach (History answer in UserHistory)
+                Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
             Trace.WriteLine("done creating with params.");
         }
 
+        // returns username as filename
         public string Filename()
         {
-            // returns username as filename
             return Name + ".txt";
         }
 
+        // TODO: write and load other user settings
         public void WriteCSVFile()
         {
             try
             {
                 // filehelper object
-                FileHelperEngine engine = new FileHelperEngine(typeof(SelectedAnswer));
+                FileHelperEngine engine = new FileHelperEngine(typeof(History));
                 // csv object
-                List<SelectedAnswer> csv = new List<SelectedAnswer>();
+                List<History> csv = new List<History>();
                 // convert any datasource to csv based object
-                foreach (var item in AnswerHistory)
-                {
-                    SelectedAnswer temp = new SelectedAnswer();
-                    temp.QuestionID = item.QuestionID;
-                    temp.AnswerID = item.AnswerID;
-                    csv.Add(temp);                       
-                }
+                foreach (var item in UserHistory)
+                    csv.Add(new History(item.QuestionaireID, item.QuestionID, item.AnswerID));                       
                 // give header text
-                engine.HeaderText = "QuestionID,AnswerID";
+                engine.HeaderText = "QuestionaireID,QuestionID,AnswerID";
                 // save file locally
                 engine.WriteFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()),csv);
                 Trace.WriteLine("SUCCESS");
@@ -77,17 +78,17 @@ namespace quiz.Models
             {
                 // file location, better to get it from configuration
                 // create a CSV engine using FileHelpers for your CSV file
-                var engine = new FileHelperEngine(typeof(SelectedAnswer));
+                var engine = new FileHelperEngine(typeof(History));
                 // read the CSV file into your object Array
-                var answers = (SelectedAnswer[])engine.ReadFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()));
+                var answers = (History[])engine.ReadFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()));
                 if (answers.Any())
                 {
                     // process your records as per your requirements
-                    AnswerHistory = new List<SelectedAnswer>();
+                    UserHistory = new List<History>();
                     foreach (var ids in answers)
                     {
                         // add it to your database, filter them etc
-                        AnswerHistory.Add(new SelectedAnswer(ids.QuestionID, ids.AnswerID));
+                        UserHistory.Add(new History(ids.QuestionaireID, ids.QuestionID, ids.AnswerID));
                     }
                     Trace.WriteLine("SUCCESS");
                 }
@@ -96,38 +97,6 @@ namespace quiz.Models
             {
                 Trace.WriteLine("ERROR: " + ex);
             }
-        }
-    }
-
-    [DelimitedRecord(",")]
-    [IgnoreEmptyLines()]
-    [IgnoreFirst()]
-    public class SelectedAnswer
-    {
-        // TODO: Move this to Answer Class
-
-        // Properties
-        public int QuestionID { get; set; }
-        public int AnswerID { get; set; }
-
-        public SelectedAnswer()
-        {
-            // Dummy SelectedAnswer for testing
-            // TODO: Catch NullException when constructor is empty or remove when set if both ids of previous SelectedAnswer are -1
-            QuestionID = -1;
-            AnswerID = -1;
-        }
-
-        public SelectedAnswer(int questionID, int answerID)
-        {
-            QuestionID = questionID;
-            AnswerID = answerID;
-        }
-
-        new public string ToString()
-        {
-            string myString = QuestionID + ";" + AnswerID;
-            return myString;
         }
     }
 }

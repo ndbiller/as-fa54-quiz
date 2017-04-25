@@ -427,11 +427,11 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **AS-Blöcke:**  
 - [x] 24.04.2017  
-- [ ] 25.04.2017    
+- [x] 25.04.2017    
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: (*Schule: HTML und CSS, neues Projekt ToDo-Liste begonnen, JQuery eingebunden*) Zuhause: Projektplanung und Zeitplan aktualisiert, User in Datei gespeichert, User aus Datei geladen, Dummy-Fragebogen erstellt, Models Questionaire + Question + Answer erwitert,  |
+**tasks**: (*Schule: HTML und CSS, neues Projekt ToDo-Liste begonnen, JQuery eingebunden*) Zuhause: Projektplanung und Zeitplan aktualisiert, User in Datei gespeichert, User aus Datei geladen, Dummy-Fragebogen erstellt, Models Questionaire + Question + Answer erwitert, User und History fürs Speichern erweitert |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
