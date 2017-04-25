@@ -30,6 +30,9 @@
                            VerticalAlignment="Center" />
             </StackPanel>
         </DataTemplate>
+        <DataTemplate x:Key="buttonLeftTemplate">
+            
+        </DataTemplate>
     </Page.Resources>
     
     <!-- Settings Page -->
@@ -78,22 +81,19 @@
             <Grid Grid.Column="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="9*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                
-                <TextBlock FontFamily="{StaticResource FontAwesome}"
-                           Grid.Column="0"
-                           Text="&#xf053;"
-                           FontSize="15"
-                           VerticalAlignment="Bottom"
-                           Margin="10" />
-                <TextBlock Text="Zurück zur letzten Frage"
-                           Grid.Column="1"
-                           FontSize="15"
-                           FontWeight="Bold"
-                           Margin="10"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Bottom" />
+
+                <Button Grid.Column="1"   
+                        Margin="0 30"
+                        Click="BackClicked">
+                    <TextBlock FontFamily="{StaticResource FontAwesome}"                           
+                               Text="&#xf053;   Zurück zur letzten Frage"
+                               FontSize="12"
+                               VerticalAlignment="Bottom"
+                               Margin="10" />
+                </Button>
             </Grid>
 
             <!-- Progress -->
@@ -108,24 +108,21 @@
             <!-- Forward -->
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="9*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="10*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                
-                <TextBlock Text="Weiter zur nächsten Frage"
-                           FontSize="15"
-                           FontWeight="Bold"
-                           Margin="10"
-                           Grid.Column="0"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom" />
-                <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
-                <TextBlock FontFamily="{StaticResource FontAwesome}" 
-                           Text="&#xf054;"
-                           FontSize="15"
-                           VerticalAlignment="Bottom"
-                           Margin="10" 
-                           Grid.Column="1" />
+
+                <Button Grid.Column="1"
+                        Margin="0 30"
+                        Click="ForwardClicked">
+                    <!-- Font Awesome Icons (ref: http://fontawesome.io/cheatsheet/) -->
+                    <TextBlock FontFamily="{StaticResource FontAwesome}" 
+                               Text="Weiter zur nächsten Frage   &#xf054;"
+                               FontSize="12"
+                               VerticalAlignment="Bottom"
+                               Margin="10" />
+                </Button>
             </Grid>
 
             <!-- Logo Kunde -->

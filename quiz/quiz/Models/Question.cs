@@ -47,6 +47,11 @@ namespace quiz.Models
             // Debug
             Trace.WriteLine("New Answer selected! Value is now " + AnswerList.ElementAt<Answer>(index).CorrectAnswer);
         }
+        public void ForwardClicked(int nextQuestionID)
+        {
+            // Debug
+            Trace.WriteLine("nextQuestionID is " + nextQuestionID + "! ID is now " + ID);
+        }
 
         public bool Solve()
         {

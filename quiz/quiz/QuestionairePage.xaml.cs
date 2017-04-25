@@ -36,5 +36,19 @@ namespace quiz
             Trace.WriteLine("click! sender as RadioButton = test.Tag: "+ i +" ... " + test.Tag.GetType());
             QuestionVM.AnswerClicked(i);
         }
+        private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            //QuestionVM.ForwardClicked(QuestionVM.Question.ID);
+            NavigationService.Navigate(new QuestionairePage());
+            // Debug
+            Trace.WriteLine("click! FOWARD");
+        }
+        private void BackClicked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            //QuestionVM.ForwardClicked(QuestionVM.Question.ID);
+            NavigationService.Navigate(new QuestionairePage());
+            // Debug
+            Trace.WriteLine("click! BACK");
+        }
     }
 }
