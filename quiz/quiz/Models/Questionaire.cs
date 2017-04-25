@@ -8,9 +8,12 @@ namespace quiz.Models
         int Id { get; set; }
         decimal Results { get; set; }
         public List<Question> Questions { get; set; }
-
-        public Questionaire(List<Question> questions)
+        string dbName;
+        public Questionaire(int id, string dbName)
         {
+            this.dbName = dbName;
+            int questionCount = DataReader.CountQuestions(id);
+            DataReader.GetQuestion(dbName);
             Questions = questions;
         }
 
