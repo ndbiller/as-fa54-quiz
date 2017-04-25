@@ -15,12 +15,38 @@ namespace quiz.Models
         {
             BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
             UBIEntities ubi = new UBIEntities();
+            int i = 0;
 
-            IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Select(d => d.P_Id);
-            foreach(int i in fragenQuery)
+            var result = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(a=> a.FragebogenNr == 2).ToList();
+            //List<T> fragen = new List<T>;
+
+            Trace.WriteLine("Results: " + result.Count);
+            List<quiz.T_SBF_Binnen> questionList = new List<T_SBF_Binnen>();
+            foreach (var r in result)
             {
-                Trace.WriteLine("Frage " + i + " " + fragenQuery.ToString());
+                i++;
+                quiz.T_SBF_Binnen question = binnenschifffahrt.T_SBF_Binnen.Where(a => a.P_Id == r.F_Id_SBF_Binnen).SingleOrDefault();
+                //Trace.WriteLine(i + frage);
+                
+                //Trace.WriteLine(i + " " + question.P_Id + " " + question.Frage);
+                if(!questionList.Contains(question))
+                {
+                    questionList.Add(question);
+                }
             }
+
+            Trace.WriteLine("items: " + questionList.Count);
+            foreach(var q in questionList)
+            {
+                Trace.WriteLine("Q: " + q.P_Id);
+
+            }
+
+            //IQueryable<int> fragenQuery = binnenschifffahrt.T_SBF_Binnen.Where(d=> d.P_Id);
+            //foreach(int i in fragenQuery)
+            //{
+            //    Trace.WriteLine("Frage " + i + " " + fragenQuery.);
+            //}
         }
         
         
