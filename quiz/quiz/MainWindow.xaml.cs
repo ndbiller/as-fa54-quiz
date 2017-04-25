@@ -30,10 +30,10 @@ namespace quiz
             Master myMaster = new Master();
 
             // Debug
-            foreach (SelectedAnswer answer in MainVM.History)
-                Trace.WriteLine("MainWindow(MainVM.History): " + answer.ToString());
-            foreach (SelectedAnswer answer in MainVM.User.AnswerHistory)
-                Trace.WriteLine("MainWindow(MainVM.User.AnswerHistory): " + answer.ToString());
+            foreach (History answer in MainVM.History)
+                Trace.WriteLine("MainWindow( MainVM.History ): " + answer.ToString());
+            foreach (History answer in MainVM.User.UserHistory)
+                Trace.WriteLine("MainWindow( MainVM.User.UserHistory ): " + answer.ToString());
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
@@ -46,6 +46,9 @@ namespace quiz
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {
             // TODO: minimize window here
+
+            // save user settings and history
+            MainVM.User.WriteCSVFile();
 
             // TODO: remove temporary function to go to Results Page once questions from db are loaded and answers get validated correctly
             MainFrame.Content = new ResultsPage();
