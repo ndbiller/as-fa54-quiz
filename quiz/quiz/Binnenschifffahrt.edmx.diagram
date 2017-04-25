@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b29c136b459d4fe5b86d75a4bfdd90cd" Name="Diagram1">
+      <Diagram DiagramId="b29c136b459d4fe5b86d75a4bfdd90cd" Name="Diagram1" ZoomLevel="28">
         <EntityTypeShape EntityType="BinnenschifffahrtModel.T_SBF_Binnen" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BinnenschifffahrtModel.T_Fragebogen_unter_Maschine" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="BinnenschifffahrtModel.F_Id_SBF_Binnen" ManuallyRouted="false" />
