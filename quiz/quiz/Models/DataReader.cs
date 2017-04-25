@@ -13,28 +13,16 @@ namespace quiz.Models
 
         static public int[] GetQuestionIds(int id)
         {
-            //    int[] ids;
-            //    var query = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(a => a.FragebogenNr == id).ToList();
-            //    ids = new int[query.Count - 1];
-            //    for (int i = 0; i < ids.Length; i++)
-            //    {
-
-            //    }
-
-            //    Trace.WriteLine("Results: " + result.Count);
-
-            //    //result r.id -> int array
-            //    return new int[] {2, 3};
-
-            int[] query = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(no => no.FragebogenNr == id).Select(p => p.F_Id_SBF_Binnen).ToArray();
-            for (int i = 0; i < query.Length; i++)
+            List<int> query = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(no => no.FragebogenNr == id).Select(p => p.F_Id_SBF_Binnen).ToList<int>();
+            List<int> result  = new List<int>();
+            foreach (int q in query)
             {
-                Trace.WriteLine("dr" + query[i]);
+                if (!result.Contains(q))
+                {
+                    result.Add(q);
+                }
             }
-            return query;
-            //return query;
-            
-            //return new int[] { 2, 3 };
+            return result.ToArray();
         }
 
         //public static Question GetQuestion(string dbname, int id)
