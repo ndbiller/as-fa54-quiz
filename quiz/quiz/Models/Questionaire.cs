@@ -3,15 +3,17 @@ using System.Diagnostics;
 
 namespace quiz.Models
 {
-    class Questionaire
+    public class Questionaire
     {
         int Id { get; set; }
         decimal Results { get; set; }
         public List<Question> Questions { get; set; }
 
-        public Questionaire(List<Question> questions)
+        public Questionaire(int id, List<Question> questions)
         {
+            Id = id;
             Questions = questions;
+            Results = -1;
         }
 
         public bool Evaluate(decimal passThreshhold)

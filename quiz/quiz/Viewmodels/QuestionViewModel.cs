@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using quiz.Viewmodels.Commands;
 using System;
+using System.Collections.Generic;
 
 namespace quiz.Viewmodels
 {
@@ -13,27 +14,60 @@ namespace quiz.Viewmodels
     /// </summary>
     public class QuestionViewModel : ObservableObject
 	{
-        // field holds the model
+        // fields hold the models
+        // selected Questionaire
+        private Questionaire questionaire;
+        // question to display
         private Question question;
+        // holds the selected answer of the user
         private int answerSelected;
-        // TODO: remove once all functionality is on question model answer list
+        // answers to display
         private ObservableCollection<Answer> answers;
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
         {
-            // create a new question model
-            Question = new Question();
-
-            // TODO: remove later, fills the observable collection with Answer objects
+            // TODO: display the dummy
+            // TODO: exchange dummies with db created ones
+            // create the dummy questionaire
+            List<Question> dummyQuestions = new List<Question>();
+            // create the dummy questions
+            for (int qi = 0; qi < 4; qi++)
+            {
+                string dummyText = "Wie lautet die Frage Nummer " + qi;
+                List<Answer> dummyAnswers = new List<Answer>();
+                // create the dummy answers
+                for (int ai = 0; ai < 4; ai++)
+                {
+                    bool correctBool;
+                    string textAnswer;
+                    if (ai == 0)
+                    {
+                        textAnswer = "Wie lautet die Frage Nummer " + qi;
+                        correctBool = true;
+                    }
+                    else
+                    {
+                        textAnswer = "Wer läutet doi Fruge Dummer " + qi;
+                        correctBool = false;
+                    }
+                    dummyAnswers.Add(new Answer(ai, textAnswer, correctBool));
+                }
+                dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
+            }
+            // create the selected questionnaire model
+            Questionaire = new Questionaire(0, dummyQuestions);
+            // create the displayed question
+            Question = Questionaire.Questions[0];
+            // fills the observable collection with Answer objects
             Answers = new ObservableCollection<Answer>();
             for (int i = 0; i < Question.AnswerList.Count; i++)
             {
-                Answers.Add(new Answer() { Index = i, Text = Question.AnswerList[i] });
+                Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer));
             }
             // Debug
             foreach (Answer answer in Answers)
-                Trace.WriteLine("QuestionViewModel(Answers[" + answer.Index + "]): " + answer.Text);
+                Trace.WriteLine("ctor of QuestionViewModel( Question.AnswerList[" + answer.Index + "].Text ): " + answer.Text);
         }
 
         // properties to display changes in the view
@@ -62,6 +96,15 @@ namespace quiz.Viewmodels
             {
                 answerSelected = value;
                 OnPropertyChanged("AnswerSelected");
+            }
+        }
+        public Questionaire Questionaire
+        {
+            get { return questionaire; }
+            set
+            {
+                questionaire = value;
+                OnPropertyChanged("Questionaire");
             }
         }
 
