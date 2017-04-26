@@ -12,11 +12,12 @@
         public bool SelectedAnswer { get; set; }
 
         // parametrisierter ctor zum Befüllen aus DB durch ctor Question
-        public Answer(int index, string text, bool correct)
+        public Answer(int index, string text, bool correct, bool selected)
         {
             Index = index;
             Text = text;
             CorrectAnswer = correct;
+            SelectedAnswer = selected;
         }
     }
 }

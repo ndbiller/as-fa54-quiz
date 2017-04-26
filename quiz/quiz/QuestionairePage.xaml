@@ -22,7 +22,9 @@
                         Margin="0 10 0 0">
                 <RadioButton GroupName="Answer" 
                              Tag="{Binding Index}"
-                             VerticalAlignment="Center" Click="AnswerClicked" />
+                             VerticalAlignment="Center" 
+                             Click="AnswerClicked"
+                             IsChecked="{Binding SelectedAnswer}"/>
                 <TextBlock Text="{Binding Text}"
                            Margin="10 0 0 0" 
                            FontSize="15"

@@ -43,6 +43,7 @@ namespace quiz.Viewmodels
                 {
                     bool correctBool;
                     string textAnswer;
+                    bool selected = false;
                     if (ai == 0)
                     {
                         textAnswer = "Wie lautet die Frage Nummer " + qi;
@@ -53,7 +54,7 @@ namespace quiz.Viewmodels
                         textAnswer = "Wer läutet doi Fruge Dummer " + qi;
                         correctBool = false;
                     }
-                    dummyAnswers.Add(new Answer(ai, textAnswer, correctBool));
+                    dummyAnswers.Add(new Answer(ai, textAnswer, correctBool, selected));
                 }
                 dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
             }
@@ -65,8 +66,10 @@ namespace quiz.Viewmodels
             Answers = new ObservableCollection<Answer>();
             for (int i = 0; i < Question.AnswerList.Count; i++)
             {
-                Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer));
+                Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer, Question.AnswerList[i].SelectedAnswer));
             }
+
+            CompletedQuestions = 0;
             // Debug
             foreach (Answer answer in Answers)
                 Trace.WriteLine("ctor of QuestionViewModel( Question.AnswerList[" + answer.Index + "].Text ): " + answer.Text);
@@ -135,18 +138,18 @@ namespace quiz.Viewmodels
             OnPropertyChanged("AnswerSelected");
         }
 
-        public ICommand ForwardClickedCommand
-        {
-            get
-            {
-                return new DelegatingCommand(o => ForwardClicked((int)o));
-            }
-        }
-        // links to AnswerClicked method in Question model 
-        public void ForwardClicked(int o)
-        {
-            Question.ForwardClicked(o);
-            OnPropertyChanged("Question");
-        }
+        //public ICommand ForwardClickedCommand
+        //{
+        //    get
+        //    {
+        //        return new DelegatingCommand(o => ForwardClicked((int)o));
+        //    }
+        //}
+        //// links to AnswerClicked method in Question model 
+        //public void ForwardClicked(int o)
+        //{
+        //    Question.ForwardClicked(o);
+        //    OnPropertyChanged("Question");
+        //}
     }
 }
