@@ -51,19 +51,27 @@ namespace quiz.Viewmodels
                         textAnswer = "Wer läutet doi Fruge Dummer " + qi;
                         correctBool = false;
                     }
-                    dummyAnswers.Add(new Answer(ai, textAnswer, correctBool));
+                    //dummyAnswers.Add(new Answer(ai, textAnswer, correctBool));
                 }
-                dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
+                //dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
+                
             }
             // create the selected questionnaire model
-            Questionaire = new Questionaire(0, dummyQuestions);
+            //Questionaire = new Questionaire(0, dummyQuestions);
+
+            //QUICK TEST
+            questionaire = new Questionaire(2, "binnen");
+            Trace.WriteLine(questionaire.Questions[0].ID);
+            Trace.WriteLine(questionaire.Questions[0].QuestionText);
+
+
             // create the displayed question
             Question = Questionaire.Questions[0];
             // fills the observable collection with Answer objects
             Answers = new ObservableCollection<Answer>();
             for (int i = 0; i < Question.AnswerList.Count; i++)
             {
-                Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer));
+                //Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer));
             }
             // Debug
             foreach (Answer answer in Answers)

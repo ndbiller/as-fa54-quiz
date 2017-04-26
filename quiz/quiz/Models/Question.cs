@@ -10,8 +10,10 @@ namespace quiz.Models
 
         // Properties
         public int ID { get; set; }
+        public int correctAnswerID { get; set; }
         public string QuestionText { get; set; }
         public List<Answer> AnswerList { get; set; }
+        public int selectedAnswer = -1;
 
         // Dummy Question Standard Constructor to test displaying of properties and view data binding
         //public Question()
@@ -33,44 +35,54 @@ namespace quiz.Models
         //    //Trace.WriteLine("Question(AnswerList): " + AnswerList.ElementAt(3));
         //}
 
-        public Question(int id, string questionText, List<Answer> answers)
+        public Question(int id, string questionText, string answers1, string answers2, string answers3, string answers4, byte? correntAnswer)
         {
             ID = id;
             QuestionText = questionText;
-            AnswerList = answers;
+
+            //start giving indexes with 1 instead of 0 since correct answers are saved 1-4 in the db
+            AnswerList = new List<Answer>();
+            AnswerList.Add(new Answer(1, answers1));
+            AnswerList.Add(new Answer(2, answers2));
+            AnswerList.Add(new Answer(3, answers3));
+            AnswerList.Add(new Answer(4, answers4));
+
+            correctAnswerID = (int)correntAnswer;
         }
 
         public void AnswerClicked(int index)
         {
-            AnswerList.ElementAt<Answer>(index).CorrectAnswer = true;
+
+            //AnswerList.ElementAt<Answer>(index).CorrectAnswer = true;
+            selectedAnswer = AnswerList[index].Index;
 
             // Debug
-            Trace.WriteLine("New Answer selected! Value is now " + AnswerList.ElementAt<Answer>(index).CorrectAnswer);
+            //Trace.WriteLine("New Answer selected! Value is now " + AnswerList.ElementAt<Answer>(index).CorrectAnswer);
+            Trace.WriteLine("New Answer selected! Value is now :" + AnswerList[index].Text);
         }
 
         public bool Solve()
         {
-            //// Debug
-            //Trace.WriteLine("solving question...");
+            // Debug
+            Trace.WriteLine("solving question...");
 
-            //if (AnswerSelected == CorrectAnswer)
-            //{
-            //    // Debug
-            //    Trace.WriteLine("answer correct");
+            if (selectedAnswer == correctAnswerID)
+            {
+                // Debug
+                Trace.WriteLine("answer correct");
 
-            //    return true;
-            //}
-            //else
-            //{
-            //    // Debug
-            //    if (AnswerSelected > -1)
-            //        Trace.WriteLine("answer inorrect");
-            //    else
-            //        Trace.WriteLine("question not answered");
+                return true;
+            }
+            else
+            {
+                // -1 = no answer selected
+                if (selectedAnswer > -1)
+                    Trace.WriteLine("answer inorrect");
+                else
+                    Trace.WriteLine("question not answered");
 
-            //    return false;
-            //}
-            return true;
+                return false;
+            }
         }
     }
 }
