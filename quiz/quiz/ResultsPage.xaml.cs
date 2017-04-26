@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using quiz.Viewmodels;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace quiz
@@ -11,6 +12,13 @@ namespace quiz
         public ResultsPage()
         {
             InitializeComponent();
+        }
+
+        public ResultsPage(QuestionViewModel questionVM)
+        {
+            QuestionViewModel QuestionVM = questionVM;
+            InitializeComponent();
+            this.DataContext = QuestionVM;
         }
 
         private void BackToMainClicked(object sender, RoutedEventArgs e)

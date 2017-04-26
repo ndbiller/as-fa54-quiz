@@ -112,6 +112,8 @@ namespace quiz.Viewmodels
             set
             {
                 completedQuestions = value;
+                // Debug
+                Trace.WriteLine("after click! FOWARD: CompletedQuestions = " + CompletedQuestions);
                 OnPropertyChanged("CompletedQuestions");
             }
         }

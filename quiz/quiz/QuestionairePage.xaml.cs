@@ -53,6 +53,16 @@ namespace quiz
             this.DataContext = QuestionVM;
         }
 
+        public int CompletedQuestionsCount(QuestionViewModel questionVM)
+        {
+            int questionsCompleted = 0;
+            foreach (Question question in questionVM.Questionaire.Questions)
+                foreach (Answer answer in question.AnswerList)
+                    if (answer.SelectedAnswer)
+                        questionsCompleted += 1;
+            return questionsCompleted;
+        }
+
         private void AnswerClicked(object sender, System.Windows.RoutedEventArgs e)
         {
             var test = sender as RadioButton;
@@ -64,15 +74,28 @@ namespace quiz
         }
         private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
+            // zähle beantwortete fragen
+            QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
-            Trace.WriteLine("click! FOWARD");
+            Trace.WriteLine("click! FOWARD: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
+            Trace.WriteLine("click! FOWARD: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+            // wenn alle fragen beantwortet sind
+            if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
+                NavigationService.Navigate(new ResultsPage(QuestionVM));
+            else // gehe zur nächsten (unbeantworteten) Frage
+                NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
         }
         private void BackClicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
+            QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
-            Trace.WriteLine("click! BACK");
+            Trace.WriteLine("click! BACK: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
+            Trace.WriteLine("click! BACK: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+            // wenn alle fragen beantwortet sind
+            if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
+                NavigationService.Navigate(new ResultsPage(QuestionVM));
+            else // gehe zur vorherigen (oder letzten unbeantworteten) Frage
+                NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
         }
     }
 }
