@@ -18,10 +18,10 @@ namespace quiz.Models
             ID = id;
             QuestionText = CleanUpQuestion(questionText);
             AnswerList = new List<Answer>();
-            AnswerList.Add(new Answer(1, answers1, false, false));
-            AnswerList.Add(new Answer(2, answers2, false, false));
-            AnswerList.Add(new Answer(3, answers3, false, false));
-            AnswerList.Add(new Answer(4, answers4, false, false));
+            AnswerList.Add(new Answer(0, answers1, false, false));
+            AnswerList.Add(new Answer(1, answers2, false, false));
+            AnswerList.Add(new Answer(2, answers3, false, false));
+            AnswerList.Add(new Answer(3, answers4, false, false));
             foreach(Answer a in AnswerList)
             {
                 if(a.Index == (int)correntAnswer)
@@ -51,8 +51,9 @@ namespace quiz.Models
             foreach (Answer answer in AnswerList)
                 if (answer.Index != index)
                     answer.SelectedAnswer = false;
-            //fehlt hier ein else? wird nicht jede antwort dann selected answer?
-            AnswerList.ElementAt<Answer>(index).SelectedAnswer = true;
+                else
+                    answer.SelectedAnswer = true;
+
             // Debug
             foreach (Answer answer in AnswerList)
                 Trace.WriteLine("New Answer " + index + " selected! Value of Answer.SelectedAnswer at " + answer.Index + " is now " + answer.SelectedAnswer);

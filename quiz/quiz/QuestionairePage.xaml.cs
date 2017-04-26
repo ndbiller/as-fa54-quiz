@@ -22,6 +22,8 @@ namespace quiz
         {
             // the Viewmodel (and thus the Model)
             QuestionVM = questionVM;
+            Trace.WriteLine("QuestionVM.DisplayedQuestionIndex: " + QuestionVM.DisplayedQuestionIndex);
+
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
@@ -72,6 +74,7 @@ namespace quiz
             Trace.WriteLine("click! sender as RadioButton = test.Tag: "+ i +" ... " + test.Tag.GetType());
             QuestionVM.AnswerClicked(i);
         }
+
         private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
         {
             // zähle beantwortete fragen
@@ -79,38 +82,72 @@ namespace quiz
             // Debug
             Trace.WriteLine("click! FOWARD: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
             Trace.WriteLine("click! FOWARD: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+            Trace.WriteLine("click! FOWARD: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
             // wenn alle fragen beantwortet sind
             if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
-                NavigationService.Navigate(new ResultsPage(QuestionVM));
-            else // gehe zur nächsten (unbeantworteten) Frage
+                NavigationService.Navigate(new ResultsPage(QuestionVM)); // gehe zur lösung
+            else // wenn nicht alle fragen beantwortet sind
             {
-                if (QuestionVM.DisplayedQuestionIndex == QuestionVM.Questionaire.Questions.Count)
+                // wenn es nicht die letzte frage ist
+                if (QuestionVM.DisplayedQuestionIndex + 1 < QuestionVM.Questionaire.Questions.Count)
                 {
-                    int positionUnansweredQuestion = 0;
-                    foreach (Question question in QuestionVM.Questionaire.Questions)
-                        foreach (Answer answer in question.AnswerList)
-                            if (answer.SelectedAnswer)
-                                positionUnansweredQuestion += 1;
-                            else
-                                NavigationService.Navigate(new QuestionairePage(QuestionVM, positionUnansweredQuestion));
-
-                }
-                else
+                    Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+                    Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.DisplayedQuestionIndex + 1 = " + QuestionVM.DisplayedQuestionIndex + 1);
+                    // gehe zur nächsten frage
                     NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
+                }
+                else // wenn es die letzte frage ist
+                {
+                    Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+                    Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+                    // finde die position der ersten unbeantworteten frage
+                    int positionUnansweredQuestion = 0;
+                    foreach (Question question in QuestionVM.Questionaire.Questions) // gehe durch alle fragen des questionairs
+                    {
+                        bool selectedFound = false;
+                        foreach (Answer answer in question.AnswerList) // gehe durch alle antworten der frage
+                        {
+                            // wenn bereits eine antwort ausgewählt ist
+                            if (answer.SelectedAnswer)
+                            {
+                                // position hochzählen und abbruchbedingung deaktivieren
+                                positionUnansweredQuestion += 1;
+                                selectedFound = true;
+                            }
+                        }
+                        // wenn keine gewählte antwort gefunden wurde
+                        if (!selectedFound)
+                            NavigationService.Navigate(new QuestionairePage(QuestionVM, positionUnansweredQuestion)); // gehe zur position der unbeantworteten frage
+                    }
+                }
             }
-                
         }
+
         private void BackClicked(object sender, System.Windows.RoutedEventArgs e)
         {
             QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
             Trace.WriteLine("click! BACK: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
             Trace.WriteLine("click! BACK: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
-            // wenn alle fragen beantwortet sind
-            if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
-                NavigationService.Navigate(new ResultsPage(QuestionVM));
-            else // gehe zur vorherigen (oder letzten unbeantworteten) Frage
-                NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
+            Trace.WriteLine("click! BACK: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+            // wenn es nicht die erste frage ist
+            if (QuestionVM.DisplayedQuestionIndex > 0)
+            {
+                // wenn alle fragen beantwortet sind
+                if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
+                {
+                    // gehe evtl. zur lösung
+                    // NavigationService.Navigate(new ResultsPage(QuestionVM));
+                    NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
+                }
+                else // gehe zur vorherigen (oder letzten unbeantworteten) Frage
+                    NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
+            }
+            else // wenn es die erste frage ist
+            {
+                // do nothing
+                Trace.WriteLine("click! BACK impossible: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+            }
         }
     }
 }

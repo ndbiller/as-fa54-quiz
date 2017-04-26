@@ -21,10 +21,13 @@ namespace quiz
 
         //create the main viewmodel and set it as data context for the views in constructor
         public MainViewModel MainVM { get; set; }
+        public QuestionViewModel QuestionVM { get; set; }
 
         public MainWindow()
         {
             MainVM = new MainViewModel();
+            QuestionVM = new QuestionViewModel();
+            QuestionVM.User = MainVM.User;
             InitializeComponent();
             DataContext = MainVM;
             Master myMaster = new Master();
@@ -38,9 +41,7 @@ namespace quiz
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
         {
-            QuestionViewModel questionVM = new QuestionViewModel();
-            questionVM.User = MainVM.User;
-            MainFrame.Content = new StartPage(questionVM);
+            MainFrame.Content = new StartPage(QuestionVM);
         }
 
         // TODO: maximize button and method, views should behave correctly no matter the screensize (windowed or fullscreen or other resolutions / resized ) used 
