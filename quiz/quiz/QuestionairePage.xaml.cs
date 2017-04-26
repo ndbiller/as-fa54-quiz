@@ -74,9 +74,6 @@ namespace quiz
         }
         private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            // Debug
-            Trace.WriteLine("Debugging: QuestionVM.Questionaire.Questions.Count => " + QuestionVM.Questionaire.Questions.Count);
-
             // zähle beantwortete fragen
             QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
@@ -86,7 +83,22 @@ namespace quiz
             if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
                 NavigationService.Navigate(new ResultsPage(QuestionVM));
             else // gehe zur nächsten (unbeantworteten) Frage
-                NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
+            {
+                if (QuestionVM.DisplayedQuestionIndex == QuestionVM.Questionaire.Questions.Count)
+                {
+                    int positionUnansweredQuestion = 0;
+                    foreach (Question question in QuestionVM.Questionaire.Questions)
+                        foreach (Answer answer in question.AnswerList)
+                            if (answer.SelectedAnswer)
+                                positionUnansweredQuestion += 1;
+                            else
+                                NavigationService.Navigate(new QuestionairePage(QuestionVM, positionUnansweredQuestion));
+
+                }
+                else
+                    NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
+            }
+                
         }
         private void BackClicked(object sender, System.Windows.RoutedEventArgs e)
         {
