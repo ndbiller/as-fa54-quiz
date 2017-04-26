@@ -11,12 +11,29 @@ namespace quiz.Models
         static BinnenschifffahrtEntities binnenschifffahrt = new BinnenschifffahrtEntities();
         static UBIEntities ubi = new UBIEntities();
 
-        static public int[] GetQuestionIds(int dbID, int id)
+        static private Byte ConvertAnserToByte(string data)
+        {
+            switch (data)
+            {
+                case "A":
+                    return 1;
+                case "B":
+                    return 2;
+                case "C":
+                    return 3;
+                case "D":
+                    return 4;
+                default:
+                    return 0;
+            }
+        }
+
+    static public int[] GetQuestionIds(int dbID, int id)
         {
             switch (dbID)
             {
                 case 0:
-                    List<int> query = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(no => no.FragebogenNr == id).Select(p => p.F_Id_SBF_Binnen).ToList<int>();
+                    List<int> query = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(x => x.FragebogenNr == id).Select(y => y.F_Id_SBF_Binnen).ToList<int>();
                     List<int> result = new List<int>();
                     foreach (int q in query)
                     {
@@ -30,7 +47,7 @@ namespace quiz.Models
                 case 1:
                     break;
                 //dummy copy bitte durch ubi db ersetzen
-                    List<int> query2 = binnenschifffahrt.T_Fragebogen_unter_Maschine.Where(no => no.FragebogenNr == id).Select(p => p.F_Id_SBF_Binnen).ToList<int>();
+                    List<int> query2 = ubi.T_Fragebogen_Funk_UBI.Where(x => x.FragebogenNr == id).Select(y => y.F_id_Funk_UBI).ToList<int>();
                     List<int> result2 = new List<int>();
                     foreach (int q in query)
                     {
@@ -52,16 +69,18 @@ namespace quiz.Models
             switch (dbID)
             {
                 case 0:
-                    quiz.T_SBF_Binnen question = binnenschifffahrt.T_SBF_Binnen.Where(a => a.P_Id == id).SingleOrDefault();
+                    quiz.T_SBF_Binnen question = binnenschifffahrt.T_SBF_Binnen.Where(x => x.P_Id == id).SingleOrDefault();
                     return new Question(question.P_Id, question.Frage, question.Antwort1, question.Antwort2, question.Antwort3, question.Antwort4, question.RichtigeAntwort);
                 case 1:
                     //dummy copy bitte durch ubi db ersetzen
-                    quiz.T_SBF_Binnen question2 = binnenschifffahrt.T_SBF_Binnen.Where(a => a.P_Id == id).SingleOrDefault();
-                    return new Question(question2.P_Id, question2.Frage, question2.Antwort1, question2.Antwort2, question2.Antwort3, question2.Antwort4, question2.RichtigeAntwort);
+                    quiz.T_Funk_UBI question2 = ubi.T_Funk_UBI.Where(x => x.Id == id).SingleOrDefault();
+                     return new Question(question2.Id, question2.Frage, question2.AntwortA, question2.AntwortB, question2.AntwortC, question2.AntwortD, ConvertAnserToByte(question2.RichtigeAntwort));
                 default:
                     return null;
             }
 
         }
+
+
     }
 }
