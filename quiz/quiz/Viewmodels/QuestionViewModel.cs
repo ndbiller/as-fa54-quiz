@@ -28,40 +28,45 @@ namespace quiz.Viewmodels
         // index of displayed question
         private int displayedQuestionIndex;
 
+        int questionaireID = 5; //should be filled by the user
+
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
         {
-            // TODO: display the dummy
-            // TODO: exchange dummies with db created ones
-            // create the dummy questionaire
-            List<Question> dummyQuestions = new List<Question>();
-            // create the dummy questions
-            for (int qi = 0; qi < 4; qi++)
-            {
-                string dummyText = "Wie lautet die Frage Nummer " + qi;
-                List<Answer> dummyAnswers = new List<Answer>();
-                // create the dummy answers
-                for (int ai = 0; ai < 4; ai++)
-                {
-                    bool correctBool;
-                    string textAnswer;
-                    bool selected = false;
-                    if (ai == 0)
-                    {
-                        textAnswer = "Wie lautet die Frage Nummer " + qi;
-                        correctBool = true;
-                    }
-                    else
-                    {
-                        textAnswer = "Wer läutet doi Fruge Dummer " + qi;
-                        correctBool = false;
-                    }
-                    dummyAnswers.Add(new Answer(ai, textAnswer, correctBool, selected));
-                }
-                dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
-            }
+            //// TODO: display the dummy
+            //// TODO: exchange dummies with db created ones
+            //// create the dummy questionaire
+            //List<Question> dummyQuestions = new List<Question>();
+            //// create the dummy questions
+            //for (int qi = 0; qi < 4; qi++)
+            //{
+            //    string dummyText = "Wie lautet die Frage Nummer " + qi;
+            //    List<Answer> dummyAnswers = new List<Answer>();
+            //    // create the dummy answers
+            //    for (int ai = 0; ai < 4; ai++)
+            //    {
+            //        bool correctBool;
+            //        string textAnswer;
+            //        bool selected = false;
+            //        if (ai == 0)
+            //        {
+            //            textAnswer = "Wie lautet die Frage Nummer " + qi;
+            //            correctBool = true;
+            //        }
+            //        else
+            //        {
+            //            textAnswer = "Wer läutet doi Fruge Dummer " + qi;
+            //            correctBool = false;
+            //        }
+            //        dummyAnswers.Add(new Answer(ai, textAnswer, correctBool, selected));
+            //    }
+            //    dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
+            //}
             // create the selected questionnaire model
-            Questionaire = new Questionaire(0, dummyQuestions);
+            //db soltle vom user ausgewählt werden
+            //dbID 0 = binnen
+            //dbID 1 = ubi
+            Questionaire = new Questionaire(0, questionaireID);
             // create the displayed question
             Question = Questionaire.Questions[0];
             // fills the observable collection with Answer objects

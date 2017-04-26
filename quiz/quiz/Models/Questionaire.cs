@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace quiz.Models
@@ -8,13 +9,48 @@ namespace quiz.Models
         int Id { get; set; }
         decimal Results { get; set; }
         public List<Question> Questions { get; set; }
-
-        public Questionaire(int id, List<Question> questions)
+        int[] questionIDs;
+        int dbID;
+        public Questionaire(int dbID, int id)
         {
             Id = id;
-            Questions = questions;
-            Results = -1;
+            this.dbID = dbID;
+
+            Results = 0;
+            Questions = new List<Question>();
+            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
+            AddQuestion();
+
         }
+
+        int[] ShuffleIDs(int[] unshuffledQuestionIDs)
+        {
+            List<int> randomized = new List<int>();
+            List<int> original = new List<int>(unshuffledQuestionIDs);
+            Random r = new Random();
+            while (original.Count > 0)
+            {
+                int index = r.Next(original.Count);
+                randomized.Add(original[index]);
+                original.RemoveAt(index);
+            }
+
+            return randomized.ToArray();
+        }
+        int SelectNextQuestion()
+        {
+            return questionIDs[Questions.Count];
+        }
+
+        void AddQuestion()
+        {
+            if (Questions.Count < questionIDs.Length)
+            {
+                Questions.Add(DataReader.GetQuestion(dbID, SelectNextQuestion()));
+
+            }
+        }
+
 
         public bool Evaluate(decimal passThreshhold)
         {

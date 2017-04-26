@@ -12,11 +12,22 @@ namespace quiz.Models
         public string QuestionText { get; set; }
         public List<Answer> AnswerList { get; set; }
 
-        public Question(int id, string questionText, List<Answer> answers)
+        public Question(int id, string questionText, string answers1, string answers2, string answers3, string answers4, byte? correntAnswer)
         {
             ID = id;
             QuestionText = questionText;
-            AnswerList = answers;
+            AnswerList = new List<Answer>();
+            AnswerList.Add(new Answer(1, answers1, false, false));
+            AnswerList.Add(new Answer(2, answers2, false, false));
+            AnswerList.Add(new Answer(3, answers3, false, false));
+            AnswerList.Add(new Answer(4, answers4, false, false));
+            foreach(Answer a in AnswerList)
+            {
+                if(a.Index == (int)correntAnswer)
+                {
+                    a.CorrectAnswer = true;
+                }
+            }
         }
 
         public void AnswerClicked(int index)
@@ -24,8 +35,8 @@ namespace quiz.Models
             foreach (Answer answer in AnswerList)
                 if (answer.Index != index)
                     answer.SelectedAnswer = false;
+            //fehlt hier ein else? wird nicht jede antwort dann selected answer?
             AnswerList.ElementAt<Answer>(index).SelectedAnswer = true;
-
             // Debug
             foreach (Answer answer in AnswerList)
                 Trace.WriteLine("New Answer " + index + " selected! Value of Answer.SelectedAnswer at " + answer.Index + " is now " + answer.SelectedAnswer);
