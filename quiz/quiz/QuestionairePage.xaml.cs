@@ -46,7 +46,7 @@ namespace quiz
                     answersVM.Add(QuestionVM.Questionaire.Questions[questionIndex].AnswerList[i]);
                 }
                 QuestionVM.Answers = answersVM;
-                QuestionVM.CompletedQuestions = questionIndex;
+                QuestionVM.DisplayedQuestionIndex = questionIndex;
             }
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
@@ -64,13 +64,13 @@ namespace quiz
         }
         private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.CompletedQuestions + 1));
+            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
             // Debug
             Trace.WriteLine("click! FOWARD");
         }
         private void BackClicked(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.CompletedQuestions - 1));
+            NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex - 1));
             // Debug
             Trace.WriteLine("click! BACK");
         }

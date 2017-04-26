@@ -8,6 +8,7 @@ namespace quiz.Models
     {
         // Properties
         public int ID { get; set; }
+        public int DBID { get; set; }
         public string QuestionText { get; set; }
         public List<Answer> AnswerList { get; set; }
 

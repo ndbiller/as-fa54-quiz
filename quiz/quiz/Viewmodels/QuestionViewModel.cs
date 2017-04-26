@@ -19,12 +19,14 @@ namespace quiz.Viewmodels
         private Questionaire questionaire;
         // question to display
         private Question question;
-        // holds the index of the user selected answer
-        private int answerSelected;
+        //// holds the index of the user selected answer
+        //private int answerSelected;
         // answers to display
         private ObservableCollection<Answer> answers;
         // number of questions with selected answers
         private int completedQuestions;
+        // index of displayed question
+        private int displayedQuestionIndex;
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
@@ -68,8 +70,9 @@ namespace quiz.Viewmodels
             {
                 Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer, Question.AnswerList[i].SelectedAnswer));
             }
-
             CompletedQuestions = 0;
+            DisplayedQuestionIndex = 0;
+
             // Debug
             foreach (Answer answer in Answers)
                 Trace.WriteLine("ctor of QuestionViewModel( Question.AnswerList[" + answer.Index + "].Text ): " + answer.Text);
@@ -94,15 +97,6 @@ namespace quiz.Viewmodels
                 OnPropertyChanged("Answers");
             }
         }
-        public int AnswerSelected
-        {
-            get { return answerSelected; }
-            set
-            {
-                answerSelected = value;
-                OnPropertyChanged("AnswerSelected");
-            }
-        }
         public Questionaire Questionaire
         {
             get { return questionaire; }
@@ -121,6 +115,15 @@ namespace quiz.Viewmodels
                 OnPropertyChanged("CompletedQuestions");
             }
         }
+        public int DisplayedQuestionIndex
+        {
+            get { return displayedQuestionIndex; }
+            set
+            {
+                displayedQuestionIndex = value;
+                OnPropertyChanged("DisplayedQuestionIndex");
+            }
+        }
 
         // ICommand property provides specific implementation for each action.
         // the delegate will forward to methods defined here in the viewmodel.
@@ -137,19 +140,5 @@ namespace quiz.Viewmodels
             Question.AnswerClicked(o);
             OnPropertyChanged("AnswerSelected");
         }
-
-        //public ICommand ForwardClickedCommand
-        //{
-        //    get
-        //    {
-        //        return new DelegatingCommand(o => ForwardClicked((int)o));
-        //    }
-        //}
-        //// links to AnswerClicked method in Question model 
-        //public void ForwardClicked(int o)
-        //{
-        //    Question.ForwardClicked(o);
-        //    OnPropertyChanged("Question");
-        //}
     }
 }
