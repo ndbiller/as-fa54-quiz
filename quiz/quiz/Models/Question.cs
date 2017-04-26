@@ -11,11 +11,12 @@ namespace quiz.Models
         public int DBID { get; set; }
         public string QuestionText { get; set; }
         public List<Answer> AnswerList { get; set; }
+        public string pathToImage = "";
 
         public Question(int id, string questionText, string answers1, string answers2, string answers3, string answers4, byte? correntAnswer)
         {
             ID = id;
-            QuestionText = questionText;
+            QuestionText = CleanUpQuestion(questionText);
             AnswerList = new List<Answer>();
             AnswerList.Add(new Answer(1, answers1, false, false));
             AnswerList.Add(new Answer(2, answers2, false, false));
@@ -29,6 +30,21 @@ namespace quiz.Models
                 }
             }
         }
+
+        string CleanUpQuestion(string questionText)
+        {
+            if (questionText.Contains("\\Binnen\\"))
+            {
+                string[] splitQuestion = questionText.Split('{');
+                pathToImage = splitQuestion.Last().Replace("}", "");
+                Trace.WriteLine("Q: " + splitQuestion.First() + " Path: " + pathToImage);
+                return splitQuestion.First();
+
+            }
+            else
+                return questionText;
+        }
+
 
         public void AnswerClicked(int index)
         {
