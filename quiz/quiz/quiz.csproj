@@ -112,6 +112,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Binnenschifffahrt.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataReader.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Models\User.cs" />
