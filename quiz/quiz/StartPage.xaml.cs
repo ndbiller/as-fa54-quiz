@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using quiz.Viewmodels;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace quiz
@@ -8,19 +9,29 @@ namespace quiz
 	/// </summary>
 	public partial class StartPage : Page
 	{
-        public StartPage()
+        public QuestionViewModel QuestionVM { get; set; }
+
+        //public StartPage()
+        //{
+        //    QuestionVM = new QuestionViewModel();
+        //    InitializeComponent();
+        //    this.DataContext = QuestionVM;
+        //}
+        public StartPage(QuestionViewModel questionVM)
         {
+            QuestionVM = questionVM;
             InitializeComponent();
+            this.DataContext = QuestionVM;
         }
 
         private void StartClicked(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new QuestionairePage());
+            NavigationService.Navigate(new QuestionairePage(QuestionVM));
         }
 
         private void SettingsClicked(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SettingsPage());
+            NavigationService.Navigate(new SettingsPage(QuestionVM));
         }
     }
 }

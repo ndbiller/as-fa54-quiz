@@ -58,13 +58,27 @@
         </StackPanel>
 
         <!-- Anzahl Fragen Richtig/Falsch -->
-        <TextBlock Text="29/30 Fragen richtig beantwortet." 
-                   FontSize="25" 
-                   Margin="5 15 5 0"
-                   Padding="5" />
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Questionaire.AnsweredCorrectly}" 
+                       FontSize="25" 
+                       Margin="5 15 5 0"
+                       Padding="5" />
+            <TextBlock Text="/" 
+                       FontSize="25" 
+                       Margin="5 15 5 0"
+                       Padding="5" />
+            <TextBlock Text="{Binding Questionaire.Questions.Count}" 
+                       FontSize="25" 
+                       Margin="5 15 5 0"
+                       Padding="5" />
+            <TextBlock Text=" Fragen richtig beantwortet." 
+                       FontSize="25" 
+                       Margin="5 15 5 0"
+                       Padding="5" />
+        </StackPanel>
 
         <!-- Result -->
-        <TextBlock Text="Herzlichen Glückwunsch,&#10;Sie haben bestanden." 
+        <TextBlock Text="{Binding Questionaire.EvalMessage}" 
                    FontSize="25" 
                    Margin="5 15 5 0"
                    Padding="5" />

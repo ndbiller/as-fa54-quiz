@@ -27,6 +27,8 @@ namespace quiz.Viewmodels
         private int completedQuestions;
         // index of displayed question
         private int displayedQuestionIndex;
+        // the User History, Settings, etc.
+        private User user;
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
@@ -79,6 +81,15 @@ namespace quiz.Viewmodels
         }
 
         // properties to display changes in the view
+        public User User
+        {
+            get { return user; }
+            set
+            {
+                user = value;
+                OnPropertyChanged("User");
+            }
+        }
         public Question Question
         {
             get { return question; }

@@ -9,14 +9,20 @@ namespace quiz
     /// </summary>
     public partial class ResultsPage : Page
 	{
-        public ResultsPage()
-        {
-            InitializeComponent();
-        }
+        // Property for the Viewmodel
+        public QuestionViewModel QuestionVM { get; set; }
+
+        //public ResultsPage()
+        //{
+        //    InitializeComponent();
+        //}
 
         public ResultsPage(QuestionViewModel questionVM)
         {
-            QuestionViewModel QuestionVM = questionVM;
+            // viewmodel with data
+            QuestionVM = questionVM;
+            // Solve for x
+            QuestionVM.Questionaire.Evaluate(QuestionVM.User.PassingPercentage);
             InitializeComponent();
             this.DataContext = QuestionVM;
         }
@@ -24,7 +30,7 @@ namespace quiz
         private void BackToMainClicked(object sender, RoutedEventArgs e)
         {
             // TODO: Save Result in History
-            NavigationService.Navigate(new StartPage());
+            NavigationService.Navigate(new StartPage(QuestionVM));
         }
     }
 }

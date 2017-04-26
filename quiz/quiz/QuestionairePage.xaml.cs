@@ -18,10 +18,10 @@ namespace quiz
 
         // ctor for first question of a questionaire
         // TODO: questionaire selection
-        public QuestionairePage()
+        public QuestionairePage(QuestionViewModel questionVM)
         {
-            // Instantiate the Viewmodel (and thus the Model)
-            QuestionVM = new QuestionViewModel();
+            // the Viewmodel (and thus the Model)
+            QuestionVM = questionVM;
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
