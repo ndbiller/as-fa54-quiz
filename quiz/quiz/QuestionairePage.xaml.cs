@@ -74,6 +74,9 @@ namespace quiz
         }
         private void ForwardClicked(object sender, System.Windows.RoutedEventArgs e)
         {
+            // Debug
+            Trace.WriteLine("Debugging: QuestionVM.Questionaire.Questions.Count => " + QuestionVM.Questionaire.Questions.Count);
+
             // zähle beantwortete fragen
             QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug

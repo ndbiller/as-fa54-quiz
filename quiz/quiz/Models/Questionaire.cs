@@ -29,7 +29,6 @@ namespace quiz.Models
             }
         }
 
-
         public Questionaire(int id, List<Question> questions)
         {
             Id = id;
@@ -59,6 +58,7 @@ namespace quiz.Models
                 return "Herzlichen Glückwunsch,&#10;Sie haben bestanden.";
             else
                 return "Sie haben leider nicht bestanden.";
+        }
 
         public Questionaire(int dbID, int id)
         {
@@ -67,7 +67,8 @@ namespace quiz.Models
             Results = 0;
             Questions = new List<Question>();
             questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
-            AddQuestion();
+            foreach (int shuffledID in questionIDs)
+                AddQuestion();
         }
 
         int[] ShuffleIDs(int[] unshuffledQuestionIDs)
