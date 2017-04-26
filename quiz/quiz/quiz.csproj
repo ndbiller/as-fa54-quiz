@@ -252,6 +252,67 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Binnenschifffahrt.mdf</DependentUpon>
     </Content>
+    <Resource Include="Images\Binnen\107.gif" />
+    <Resource Include="Images\Binnen\108.gif" />
+    <Resource Include="Images\Binnen\110.gif" />
+    <Resource Include="Images\Binnen\111.gif" />
+    <Resource Include="Images\Binnen\112.gif" />
+    <Resource Include="Images\Binnen\113.gif" />
+    <Resource Include="Images\Binnen\114.gif" />
+    <Resource Include="Images\Binnen\115.gif" />
+    <Resource Include="Images\Binnen\116.gif" />
+    <Resource Include="Images\Binnen\120.gif" />
+    <Resource Include="Images\Binnen\121.gif" />
+    <Resource Include="Images\Binnen\122.gif" />
+    <Resource Include="Images\Binnen\123.gif" />
+    <Resource Include="Images\Binnen\124.gif" />
+    <Resource Include="Images\Binnen\125.gif" />
+    <Resource Include="Images\Binnen\127.gif" />
+    <Resource Include="Images\Binnen\129.gif" />
+    <Resource Include="Images\Binnen\131.gif" />
+    <Resource Include="Images\Binnen\132.gif" />
+    <Resource Include="Images\Binnen\145.gif" />
+    <Resource Include="Images\Binnen\146.gif" />
+    <Resource Include="Images\Binnen\147.gif" />
+    <Resource Include="Images\Binnen\148.gif" />
+    <Resource Include="Images\Binnen\149.gif" />
+    <Resource Include="Images\Binnen\150.gif" />
+    <Resource Include="Images\Binnen\151.gif" />
+    <Resource Include="Images\Binnen\152.gif" />
+    <Resource Include="Images\Binnen\153.gif" />
+    <Resource Include="Images\Binnen\154.gif" />
+    <Resource Include="Images\Binnen\155.gif" />
+    <Resource Include="Images\Binnen\157.gif" />
+    <Resource Include="Images\Binnen\17.gif" />
+    <Resource Include="Images\Binnen\18.gif" />
+    <Resource Include="Images\Binnen\180.gif" />
+    <Resource Include="Images\Binnen\183.gif" />
+    <Resource Include="Images\Binnen\185.gif" />
+    <Resource Include="Images\Binnen\186.gif" />
+    <Resource Include="Images\Binnen\188.gif" />
+    <Resource Include="Images\Binnen\189.gif" />
+    <Resource Include="Images\Binnen\19.gif" />
+    <Resource Include="Images\Binnen\192.gif" />
+    <Resource Include="Images\Binnen\193.gif" />
+    <Resource Include="Images\Binnen\196.gif" />
+    <Resource Include="Images\Binnen\198.gif" />
+    <Resource Include="Images\Binnen\199.gif" />
+    <Resource Include="Images\Binnen\20.gif" />
+    <Resource Include="Images\Binnen\201.gif" />
+    <Resource Include="Images\Binnen\202.gif" />
+    <Resource Include="Images\Binnen\204.gif" />
+    <Resource Include="Images\Binnen\21.gif" />
+    <Resource Include="Images\Binnen\22.gif" />
+    <Resource Include="Images\Binnen\23.gif" />
+    <Resource Include="Images\Binnen\24.gif" />
+    <Resource Include="Images\Binnen\243.gif" />
+    <Resource Include="Images\Binnen\244.gif" />
+    <Resource Include="Images\Binnen\25.gif" />
+    <Resource Include="Images\Binnen\26.gif" />
+    <Resource Include="Images\Binnen\27.gif" />
+    <Resource Include="Images\Binnen\28.gif" />
+    <Resource Include="Images\Binnen\29.gif" />
+    <Resource Include="Images\Binnen\30.gif" />
     <Content Include="UBI.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UBI.edmx</DependentUpon>
@@ -270,5 +331,6 @@
       <DependentUpon>UBI.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
