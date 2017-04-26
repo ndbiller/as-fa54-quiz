@@ -129,7 +129,7 @@ namespace quiz.Viewmodels
             {
                 completedQuestions = value;
                 // Debug
-                Trace.WriteLine("after click! FOWARD: CompletedQuestions = " + CompletedQuestions);
+                Trace.WriteLine("after click! FOWARD: CompletedQuestions = " + value);
                 OnPropertyChanged("CompletedQuestions");
             }
         }

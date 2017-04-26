@@ -9,7 +9,7 @@ namespace quiz.Models
         // set for display
         private int answeredCorrectly;
 
-        int Id { get; set; }
+        public int ID { get; set; }
         decimal Results { get; set; }
         public List<Question> Questions { get; set; }
         public string EvalMessage { get; set; }
@@ -31,7 +31,7 @@ namespace quiz.Models
 
         public Questionaire(int id, List<Question> questions)
         {
-            Id = id;
+            ID = id;
             Questions = questions;
             Results = -1;
             AnsweredCorrectly = AnsweredCorrectly; // does this make sense? counts twice...
@@ -62,12 +62,13 @@ namespace quiz.Models
 
         public Questionaire(int dbID, int id)
         {
-            Id = id;
+            ID = id;
             this.dbID = dbID;
             Results = 0;
             Questions = new List<Question>();
             questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
-            foreach (int shuffledID in questionIDs)
+            List<int> temp = new List<int>() { 1,2,3,4};
+            foreach (int i in temp)//(int shuffledID in questionIDs)
                 AddQuestion();
         }
 
