@@ -62,20 +62,14 @@
 
                 <!-- Column Dropdown Button & Dropdown Content & Icons & Buttons -->
                 <!-- Dropdown Button -->
-                <ComboBox SelectedIndex="0" 
+                <ComboBox SelectedValue="{Binding QuestionaireID, UpdateSourceTrigger=PropertyChanged}"
+                          ItemsSource="{Binding QuestionaireIDList}"
+                          DisplayMemberPath="{Binding ID, StringFormat=Fragebogen {0}}"
+                          SelectedIndex="0" 
                           FontSize="18"
                           Padding="5"
-                          Margin="5,7">
-
-                    <!-- Dropdown Content -->
-                    <ComboBoxItem Content="Fragebogen auswählen:" />
-                    <!-- TODO: fill with dynamic content -->
-                    <ComboBoxItem Content="Fragebogen 1" />
-                    <ComboBoxItem Content="Fragebogen 2" />
-                    <ComboBoxItem Content="Fragebogen 3" />
-                    <ComboBoxItem Content="Fragebogen 4" />
-                    <ComboBoxItem Content="Fragebogen 5" />
-                </ComboBox>
+                          Margin="5,7" 
+                          SelectedItem="IDSelected" />
 
                 <!-- Column Row Empty Space & Icon Caret Right & Button loslegen -->
                 <Grid>

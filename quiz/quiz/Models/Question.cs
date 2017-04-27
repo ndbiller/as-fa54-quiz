@@ -43,14 +43,11 @@ namespace quiz.Models
                 string[] temp = lastPart.Split('\\');
                 lastPart = temp.Last();
                 PathToImage = "Images/Binnen/" + lastPart;
-                Trace.WriteLine("Q: " + splitQuestion.First() + " Path: " + PathToImage);
                 return splitQuestion.First();
-
             }
             else
                 return questionText;
         }
-
 
         public void AnswerClicked(int index)
         {

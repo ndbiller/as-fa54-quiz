@@ -33,19 +33,24 @@ namespace quiz.Viewmodels
         private User user;
         // the wrong questions for results page
         private ObservableCollection<WrongAnswer> wrongAnswers;
-        // image
+        // image path and source (convert one to the other)
         private string pathToImage;
         private ImageSource imageSource;
-
-        int questionaireID = 5; //should be filled by the user
+        //the selected/displayed questionaire id and the list for selection
+        private int questionaireID; // = 5;
+        private List<int> questionaireIDList;
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
         {
-            // create the selected questionnaire model
-            //db soltle vom user ausgewählt werden
+            // create the questionnaire id, add to list
+            QuestionaireIDList = new List<int>();
+            QuestionaireID = 1;
+            QuestionaireIDList.Add(QuestionaireID);
+            //db sollte vom user ausgewählt werden
             //dbID 0 = binnen
             //dbID 1 = ubi
+            // create the model
             Questionaire = new Questionaire(0, questionaireID);
             // create the displayed question
             Question = Questionaire.Questions[0];
@@ -55,15 +60,15 @@ namespace quiz.Viewmodels
             {
                 Answers.Add(new Answer(i, Question.AnswerList[i].Text, Question.AnswerList[i].CorrectAnswer, Question.AnswerList[i].SelectedAnswer));
             }
-            CompletedQuestions = 0;
-            DisplayedQuestionIndex = 0;
+            // set these counters for logic and display
+            CompletedQuestions = 0; // answers selected by user, wrapping
+            DisplayedQuestionIndex = 0; // base 0 for navigation, wrapping
+            // image string path
             PathToImage = Question.PathToImage;
+            // image source from string
             ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
+            // for results page
             WrongAnswers = new ObservableCollection<WrongAnswer>();
-
-            // Debug
-            foreach (Answer answer in Answers)
-                Trace.WriteLine("ctor of QuestionViewModel( Question.AnswerList[" + answer.Index + "].Text ): " + answer.Text);
         }
 
         // properties to display changes in the view
@@ -92,6 +97,24 @@ namespace quiz.Viewmodels
             {
                 answers = value;
                 OnPropertyChanged("Answers");
+            }
+        }
+        public int QuestionaireID
+        {
+            get { return questionaireID; }
+            set
+            {
+                questionaireID = value;
+                OnPropertyChanged("QuestionaireID");
+            }
+        }
+        public List<int> QuestionaireIDList
+        {
+            get { return questionaireIDList; }
+            set
+            {
+                questionaireIDList = value;
+                OnPropertyChanged("QuestionaireIDList");
             }
         }
         public Questionaire Questionaire

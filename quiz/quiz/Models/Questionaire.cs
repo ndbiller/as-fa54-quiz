@@ -42,13 +42,9 @@ namespace quiz.Models
         {
             int i = 0;
             foreach (Question question in Questions)
-            {
                 if (question.Solve())
-                {
                     i++;
-                }
-            }
-            Trace.WriteLine("counting...");
+
             return i;
         }
 
@@ -67,8 +63,8 @@ namespace quiz.Models
             Results = 0;
             Questions = new List<Question>();
             questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
-            List<int> temp = new List<int>() { 1,2,3,4};
-            foreach (int i in temp)//(int shuffledID in questionIDs)
+            // List<int> temp = new List<int>() { 1,2,3,4}; //(int i in temp)//
+            foreach (int shuffledID in questionIDs)
                 AddQuestion();
         }
 
