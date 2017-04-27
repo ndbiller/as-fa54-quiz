@@ -42,7 +42,7 @@
                        FontSize="15"
                        FontWeight="Bold" />
             <TextBox Grid.Column="1" 
-                     Text="95"
+                     Text="{Binding User.PassingPercentage}"
                      FontSize="15" />
         </Grid>
 
