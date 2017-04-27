@@ -11,7 +11,7 @@ namespace quiz.Models
         public int DBID { get; set; }
         public string QuestionText { get; set; }
         public List<Answer> AnswerList { get; set; }
-        public string pathToImage = "";
+        public string PathToImage { get; set; }
 
         public Question(int id, string questionText, string answers1, string answers2, string answers3, string answers4, byte? correntAnswer)
         {
@@ -35,11 +35,15 @@ namespace quiz.Models
 
         string CleanUpQuestion(string questionText)
         {
+            PathToImage = "";
             if (questionText.Contains("\\Binnen\\"))
             {
                 string[] splitQuestion = questionText.Split('{');
-                pathToImage = splitQuestion.Last().Replace("}", "");
-                Trace.WriteLine("Q: " + splitQuestion.First() + " Path: " + pathToImage);
+                string lastPart = splitQuestion.Last().Replace("}", "");
+                string[] temp = lastPart.Split('\\');
+                lastPart = temp.Last();
+                PathToImage = "Image/Binnen/" + lastPart;
+                Trace.WriteLine("Q: " + splitQuestion.First() + " Path: " + PathToImage);
                 return splitQuestion.First();
 
             }

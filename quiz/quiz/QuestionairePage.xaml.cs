@@ -32,6 +32,7 @@ namespace quiz
             Trace.WriteLine("QuestionairePage(QuestionVM.Answers.Count): " + QuestionVM.Answers.Count);
             bool result = QuestionVM.Question.Solve();
             Trace.WriteLine("result: " + result.ToString());
+            Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
         // ctor for forward and back navigation
         public QuestionairePage(QuestionViewModel questionVM, int questionIndex)
@@ -53,6 +54,7 @@ namespace quiz
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
+            Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
 
         public int CompletedQuestionsCount(QuestionViewModel questionVM)

@@ -75,6 +75,12 @@
             </StackPanel>
 
             <!-- TODO: optionale Bilder einblenden in Grid.Column="1" -->
+            <!-- Logo Kunde -->
+            <Image Width="50"
+                   Height="70"
+                   Source="{Binding ImageSource}" 
+                   HorizontalAlignment="Center"
+                   Grid.Column="1"/>
         </Grid>
 
         <!-- Back & Progress & Forward & Logo -->

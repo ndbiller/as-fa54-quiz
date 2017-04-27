@@ -31,6 +31,8 @@ namespace quiz.Viewmodels
         private User user;
         // the wrong questions for results page
         private ObservableCollection<WrongAnswer> wrongAnswers;
+        // image
+        private string imageSource;
 
         int questionaireID = 5; //should be filled by the user
 
@@ -52,6 +54,7 @@ namespace quiz.Viewmodels
             }
             CompletedQuestions = 0;
             DisplayedQuestionIndex = 0;
+            ImageSource = Question.PathToImage;
             WrongAnswers = new ObservableCollection<WrongAnswer>();
 
             // Debug
@@ -112,7 +115,7 @@ namespace quiz.Viewmodels
             {
                 completedQuestions = value;
                 // Debug
-                Trace.WriteLine("after click! FOWARD: CompletedQuestions = " + value);
+                // Trace.WriteLine("after click! FOWARD: CompletedQuestions = " + value);
                 OnPropertyChanged("CompletedQuestions");
             }
         }
@@ -123,6 +126,15 @@ namespace quiz.Viewmodels
             {
                 displayedQuestionIndex = value;
                 OnPropertyChanged("DisplayedQuestionIndex");
+            }
+        }
+        public string ImageSource
+        {
+            get { return imageSource; }
+            set
+            {
+                imageSource = value;
+                OnPropertyChanged("ImageSource");
             }
         }
 
