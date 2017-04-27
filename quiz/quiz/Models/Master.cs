@@ -54,9 +54,5 @@ namespace quiz.Models
             //    Trace.WriteLine("Frage " + i + " " + fragenQuery.);
             //}
         }
-        
-        
-            
-
     }
 }
