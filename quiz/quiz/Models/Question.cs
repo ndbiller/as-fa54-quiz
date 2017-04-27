@@ -42,7 +42,7 @@ namespace quiz.Models
                 string lastPart = splitQuestion.Last().Replace("}", "");
                 string[] temp = lastPart.Split('\\');
                 lastPart = temp.Last();
-                PathToImage = "Image/Binnen/" + lastPart;
+                PathToImage = "Images/Binnen/" + lastPart;
                 Trace.WriteLine("Q: " + splitQuestion.First() + " Path: " + PathToImage);
                 return splitQuestion.First();
 

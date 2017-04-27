@@ -76,8 +76,8 @@
 
             <!-- TODO: optionale Bilder einblenden in Grid.Column="1" -->
             <!-- Logo Kunde -->
-            <Image Width="50"
-                   Height="70"
+            <Image Width="200"
+                   Height="200"
                    Source="{Binding ImageSource}" 
                    HorizontalAlignment="Center"
                    Grid.Column="1"/>

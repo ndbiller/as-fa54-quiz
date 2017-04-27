@@ -51,6 +51,8 @@ namespace quiz
                 QuestionVM.Answers = answersVM;
                 QuestionVM.DisplayedQuestionIndex = questionIndex;
             }
+            // reset image source
+            QuestionVM.PathToImage = QuestionVM.Question.PathToImage;
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
@@ -95,6 +97,7 @@ namespace quiz
                 {
                     Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
                     Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.DisplayedQuestionIndex + 1 = " + QuestionVM.DisplayedQuestionIndex + 1);
+
                     // gehe zur nächsten frage
                     NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
                 }
