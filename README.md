@@ -69,6 +69,8 @@ C# / WPF / MVVM / Windows - Quiz application with multiple choice questions to p
 
 ## Contributor Roles
 
+![UML 1.1](/img/git.png?raw=true "git log --graph")  
+
 - [Rico Krüger](mailto:krueger.rico@web.de) - Datenbanken  
 - [Andreas Biller](mailto:andie.biller@gmail.com) - Frontend  
 - [Severin Pflüger](mailto:sev@erratic-ink.com) - Backend  
@@ -77,7 +79,7 @@ C# / WPF / MVVM / Windows - Quiz application with multiple choice questions to p
 
 ## Kanban Board
 
-**TODO:** insert picture here  
+![UML 1.1](/img/kanban.png?raw=true "kanban board")  
 
 The task management of our work on the project is done [here](https://github.com/ndbiller/as-fa54-quiz/projects/2). The workflow guidlines of our team for the use of the board, creating issues, working with github, pushing with continuous integration scripts, try test-driven-development, using markdown and some helpfull IDE shortcuts are listed at the [bottom](#project-workflow-guides) of this guide.  
 
@@ -457,7 +459,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, Wrap zu unbeantworteter Frage, Navigation u. Darstellung Auswertung am Ende,  |
+**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen - Schule: 27.04.2017: Projekt Zuhause weiter fertiggestellt, krank*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, Wrap zu unbeantworteter Frage, Navigation u. Darstellung Auswertung am Ende, Bilder im View einbinden, Kanban-Board-Screenshot für Doku gemacht, Commit-History-Screenshot für Doku gemacht |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
@@ -469,7 +471,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **TODO:** |  
 ---|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Abgabedatum in Erfahrung bringen |  
 
 ---  
 
