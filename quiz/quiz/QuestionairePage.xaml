@@ -32,9 +32,6 @@
                            VerticalAlignment="Center" />
             </StackPanel>
         </DataTemplate>
-        <DataTemplate x:Key="buttonLeftTemplate">
-            
-        </DataTemplate>
     </Page.Resources>
     
     <!-- Settings Page -->
@@ -146,39 +143,6 @@
                    HorizontalAlignment="Right"
                    Grid.Column="3"/>
         </Grid>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="DisplayedQuestionIndex" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="{Binding DisplayedQuestionIndex, StringFormat=: {0}}" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="  CompletedQuestions" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="{Binding CompletedQuestions, StringFormat=: {0}}" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="  Question.ID" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="{Binding Question.ID, StringFormat=: {0}}" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="  Questionaire.Questions.Count" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-            <TextBlock Text="{Binding Questionaire.Questions.Count, StringFormat=: {0}}" 
-                       Margin="0 25 0 15"
-                       FontSize="15"
-                       FontWeight="Bold" />
-        </StackPanel>
+        
     </StackPanel>
 </Page>
