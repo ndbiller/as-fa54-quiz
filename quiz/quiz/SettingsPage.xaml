@@ -26,7 +26,7 @@
                        FontSize="15"
                        FontWeight="Bold" />
             <TextBox Grid.Column="1" 
-                     Text="Sportbootführerschein Binnen (unter Antriebsmaschine)" 
+                     Text="{Binding User.Title}" 
                      FontSize="15" />
         </Grid>
 

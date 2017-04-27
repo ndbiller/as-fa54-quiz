@@ -57,8 +57,10 @@ namespace quiz
 
         private void BackToMainClicked(object sender, RoutedEventArgs e)
         {
+            User user =  QuestionVM.User;
             // TODO: Save Result in History
-            NavigationService.Navigate(new StartPage(QuestionVM));
+            // change back to QuestionVM
+            NavigationService.Navigate(new StartPage(new QuestionViewModel() { User = user }));
         }
     }
 

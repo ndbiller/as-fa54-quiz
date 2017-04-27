@@ -15,16 +15,16 @@
     <Page.Resources>
         <!-- Template for Answer 1 - n -->
         <DataTemplate x:Key="wrongQuestionTemplate">
-            <ListBox MaxHeight="106"
-                     FontSize="18"
+            <ListBox MaxHeight="70"
+                     FontSize="12"
                      Padding="7 0">
                 <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
                 <ListBoxItem Content="{Binding Question}" 
-                                 Padding="5" />
+                                 Padding="2" />
                 <ListBoxItem Content="{Binding SelectedAnswer}" 
-                                 Padding="5" />
+                                 Padding="2" />
                 <ListBoxItem Content="{Binding RightAnswer}" 
-                                 Padding="5" />
+                                 Padding="2" />
             </ListBox>
         </DataTemplate>
     </Page.Resources>
@@ -62,11 +62,8 @@
             </Grid>
             
             <!-- Falsch beantwortete Fragen -->
-            <ListBox Height="150"
-                     Padding="7 0">
-                <ItemsControl ItemsSource="{Binding WrongAnswers}" 
+            <ItemsControl ItemsSource="{Binding WrongAnswers}" 
                           ItemTemplate="{StaticResource wrongQuestionTemplate}" />
-            </ListBox>
 
         </StackPanel>
 
