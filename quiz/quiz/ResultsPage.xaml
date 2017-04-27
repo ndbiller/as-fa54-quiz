@@ -11,7 +11,25 @@
       d:DesignHeight="400"
       Title="Auswertung">
 
-    <!-- Results Page -->
+    <!-- Page Resources -->
+    <Page.Resources>
+        <!-- Template for Answer 1 - n -->
+        <DataTemplate x:Key="wrongQuestionTemplate">
+            <ListBox MaxHeight="106"
+                     FontSize="18"
+                     Padding="7 0">
+                <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
+                <ListBoxItem Content="{Binding Question}" 
+                                 Padding="5" />
+                <ListBoxItem Content="{Binding SelectedAnswer}" 
+                                 Padding="5" />
+                <ListBoxItem Content="{Binding RightAnswer}" 
+                                 Padding="5" />
+            </ListBox>
+        </DataTemplate>
+    </Page.Resources>
+
+            <!-- Results Page -->
     <StackPanel>
         
         <!-- Arrow Down Icon & Title & Falsch beantwortete Fragen -->
@@ -44,17 +62,12 @@
             </Grid>
             
             <!-- Falsch beantwortete Fragen -->
-            <ListBox MaxHeight="106"
-                     FontSize="18"
+            <ListBox Height="150"
                      Padding="7 0">
-                <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
-                <ListBoxItem Content="1. Frage: Welce Seite wird als Luvseite bezeichnet?" 
-                             Padding="5" />
-                <ListBoxItem Content="FALSCH: Die Seite in Fahrtrichtung rechts." 
-                             Padding="5" />
-                <ListBoxItem Content="RICHTIG: Die dem Wind zugekehrte Seite." 
-                             Padding="5" />
+                <ItemsControl ItemsSource="{Binding WrongAnswers}" 
+                          ItemTemplate="{StaticResource wrongQuestionTemplate}" />
             </ListBox>
+
         </StackPanel>
 
         <!-- Anzahl Fragen Richtig/Falsch -->

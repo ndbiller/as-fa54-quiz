@@ -29,41 +29,14 @@ namespace quiz.Viewmodels
         private int displayedQuestionIndex;
         // the User History, Settings, etc.
         private User user;
+        // the wrong questions for results page
+        private ObservableCollection<WrongAnswer> wrongAnswers;
 
         int questionaireID = 5; //should be filled by the user
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
         {
-            //// TODO: display the dummy
-            //// TODO: exchange dummies with db created ones
-            //// create the dummy questionaire
-            //List<Question> dummyQuestions = new List<Question>();
-            //// create the dummy questions
-            //for (int qi = 0; qi < 4; qi++)
-            //{
-            //    string dummyText = "Wie lautet die Frage Nummer " + qi;
-            //    List<Answer> dummyAnswers = new List<Answer>();
-            //    // create the dummy answers
-            //    for (int ai = 0; ai < 4; ai++)
-            //    {
-            //        bool correctBool;
-            //        string textAnswer;
-            //        bool selected = false;
-            //        if (ai == 0)
-            //        {
-            //            textAnswer = "Wie lautet die Frage Nummer " + qi;
-            //            correctBool = true;
-            //        }
-            //        else
-            //        {
-            //            textAnswer = "Wer läutet doi Fruge Dummer " + qi;
-            //            correctBool = false;
-            //        }
-            //        dummyAnswers.Add(new Answer(ai, textAnswer, correctBool, selected));
-            //    }
-            //    dummyQuestions.Add(new Question(qi, dummyText,dummyAnswers));
-            //}
             // create the selected questionnaire model
             //db soltle vom user ausgewählt werden
             //dbID 0 = binnen
@@ -79,6 +52,7 @@ namespace quiz.Viewmodels
             }
             CompletedQuestions = 0;
             DisplayedQuestionIndex = 0;
+            WrongAnswers = new ObservableCollection<WrongAnswer>();
 
             // Debug
             foreach (Answer answer in Answers)
@@ -120,6 +94,15 @@ namespace quiz.Viewmodels
             {
                 questionaire = value;
                 OnPropertyChanged("Questionaire");
+            }
+        }
+        public ObservableCollection<WrongAnswer> WrongAnswers
+        {
+            get { return wrongAnswers; }
+            set
+            {
+                wrongAnswers = value;
+                OnPropertyChanged("WrongAnswers");
             }
         }
         public int CompletedQuestions

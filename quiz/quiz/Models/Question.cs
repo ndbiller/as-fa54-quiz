@@ -24,8 +24,10 @@ namespace quiz.Models
             AnswerList.Add(new Answer(3, answers4, false, false));
             foreach(Answer a in AnswerList)
             {
-                if(a.Index == (int)correntAnswer)
+                Trace.WriteLine("a.Index: " + a.Index + " (int)correntAnswer: " + (int)correntAnswer);
+                if (a.Index == (int)correntAnswer - 1)
                 {
+                    Trace.WriteLine("a.Index: " + a.Index + " (int)correntAnswer: " + (int)correntAnswer);
                     a.CorrectAnswer = true;
                 }
             }

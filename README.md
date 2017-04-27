@@ -435,11 +435,11 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-**tasks**: |
+**tasks**: Verbindung Backend zur Datenbank herstellen |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
-**tasks**: |
+**tasks**: Verbindung Backend zur Datenbank herstellen |
 
 ---  
 
@@ -453,28 +453,28 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **AS-Blöcke:**  
 - [x] 26.04.2017  
-- [ ] 27.04.2017 (Präsentation)  
+- [x] 27.04.2017 (Präsentation)  
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, |
+**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, Wrap zu unbeantworteter Frage, Navigation u. Darstellung Auswertung am Ende,  |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
-**tasks**: |
+**tasks**: Dummy Questionaire mit Constructor aus DB ersetzen |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Datenbankspezialisten:** |
 ---|
-**tasks**: |
+**tasks**: Fragebögen aus Datenbank auslesen, zweite Datenbank einbinden |
 
 **TODO:** |  
 ---|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Auswertung am Ende, Darstellung der History), Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Fragebögen aus Datenbank auslesen, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Bilder im View einbinden, Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, Kanban-Board-Screenshot für Doku machen, Commit-History zeigen, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
 
 ---  
 
 ```
-* TODO: Insert Meinung über die Unterrichtsmethoden / Zeitplanung (ganzes Projekt in AS-Blöcken zu schaffen?) / usw. hier
+* TODO: Insert Meinung über die Unterrichtsmethoden / Zeitplanung / Teamarbeit (ganzes Projekt in AS-Blöcken zu schaffen? Backend-Models mit Verbindung zur DB erst einen Tag vor Abgabe) / usw. hier
 ```
 
 ---  

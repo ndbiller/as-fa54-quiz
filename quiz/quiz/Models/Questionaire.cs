@@ -34,7 +34,7 @@ namespace quiz.Models
             ID = id;
             Questions = questions;
             Results = -1;
-            AnsweredCorrectly = AnsweredCorrectly; // does this make sense? counts twice...
+            AnsweredCorrectly = AnsweredCorrectly; // does this make sense? method counts twice...
             EvalMessage = "";
         }
 
@@ -55,7 +55,7 @@ namespace quiz.Models
         public string EvaluateMessage(bool result)
         {
             if (result)
-                return "Herzlichen Glückwunsch,&#10;Sie haben bestanden.";
+                return "Herzlichen Glückwunsch, Sie haben bestanden.";
             else
                 return "Sie haben leider nicht bestanden.";
         }
