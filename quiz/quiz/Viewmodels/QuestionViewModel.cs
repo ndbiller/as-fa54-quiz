@@ -5,6 +5,8 @@ using System.Windows.Input;
 using quiz.Viewmodels.Commands;
 using System;
 using System.Collections.Generic;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace quiz.Viewmodels
 {
@@ -32,7 +34,8 @@ namespace quiz.Viewmodels
         // the wrong questions for results page
         private ObservableCollection<WrongAnswer> wrongAnswers;
         // image
-        private string imageSource;
+        private string pathToImage;
+        private ImageSource imageSource;
 
         int questionaireID = 5; //should be filled by the user
 
@@ -54,7 +57,8 @@ namespace quiz.Viewmodels
             }
             CompletedQuestions = 0;
             DisplayedQuestionIndex = 0;
-            ImageSource = Question.PathToImage;
+            PathToImage = Question.PathToImage;
+            ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
             WrongAnswers = new ObservableCollection<WrongAnswer>();
 
             // Debug
@@ -128,7 +132,17 @@ namespace quiz.Viewmodels
                 OnPropertyChanged("DisplayedQuestionIndex");
             }
         }
-        public string ImageSource
+        public string PathToImage
+        {
+            get { return pathToImage; }
+            set
+            {
+                ImageSource = new BitmapImage(new Uri(@"" + value, UriKind.Relative));
+                pathToImage = value;
+                OnPropertyChanged("PathToImage");
+            }
+        }
+        public ImageSource ImageSource
         {
             get { return imageSource; }
             set
