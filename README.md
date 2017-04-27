@@ -459,7 +459,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, Wrap zu unbeantworteter Frage, Navigation u. Darstellung Auswertung am Ende, Bilder im View einbinden, Kanban-Board-Screenshot für Doku gemacht, Commit-History-Screenshot für Doku gemacht |
+**tasks**: (*Schule: 26.04.2017: Zuhause geblieben, um Projekt rechtzeitig fertigzustellen - Schule: 27.04.2017: Projekt Zuhause weiter fertiggestellt, krank*) Zuhause: Fragen aus Fragebogen generiert, Fragen vor u. zurück navigierbar, Wrap zu unbeantworteter Frage, Navigation u. Darstellung Auswertung am Ende, Bilder im View einbinden, Kanban-Board-Screenshot für Doku gemacht, Commit-History-Screenshot für Doku gemacht |
 
 **Diese Blöcke (bzw. nach der Schule*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|
@@ -471,7 +471,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **TODO:** |  
 ---|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage für Dokumentation dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Präsentation vorbereiten, Abgabedatum in Erfahrung bringen |  
+**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Abgabedatum in Erfahrung bringen |  
 
 ---  
 
