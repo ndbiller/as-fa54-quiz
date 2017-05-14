@@ -13,15 +13,15 @@
   * [Contributor Roles](#contributor-roles)
   * [Kanban Board](#kanban-board)
   * [UML \- First Draft](#uml---first-draft)
-  * [Software Design Pattern \- MVVM](#software-design-pattern---mvvm)
-    * [Model Responsibilities](#model-responsibilities)
-    * [View Responsibilities](#view-responsibilities)
-    * [ViewModel Responsibilities](#viewmodel-responsibilities)
-    * [Advantages](#advantages)
-      * [Maintainability](#maintainability)
-      * [Testability](#testability)
-      * [Extensibility](#extensibility)
   * [Frontend Design](#frontend-design)
+    * [Software Design Pattern \- MVVM](#software-design-pattern---mvvm)
+      * [Model Responsibilities](#model-responsibilities)
+      * [View Responsibilities](#view-responsibilities)
+      * [ViewModel Responsibilities](#viewmodel-responsibilities)
+      * [Advantages](#advantages)
+        * [Maintainability](#maintainability)
+        * [Testability](#testability)
+        * [Extensibility](#extensibility)
   * [Backend Development](#backend-development)
   * [Database Integration](#database-integration)
   * [Test Couverage](#test-couverage)
@@ -38,6 +38,7 @@
     * [Protokoll 9 \- 14\.04\.2017 \- 16\.04\.2017](#protokoll-9---14042017---16042017)
     * [Protokoll 10 \- 24\.04\.2017 \- 25\.04\.2017](#protokoll-10---24042017---25042017)
     * [Protokoll 11 \- 26\.04\.2017 \- 27\.04\.2017](#protokoll-11---26042017---27042017)
+    * [Protokoll 12 \- 28\.04\.2017 \- 15\.05\.2017](#protokoll-12---28042017---15052017)
 * [Project Workflow Guides](#project-workflow-guides)
   * [Kanban Board Workflow](#kanban-board-workflow)
   * [Git Workflow](#git-workflow)
@@ -495,7 +496,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **TODO:** |  
 ---|  
-**tasks**: weitere Funktionalität herstellen (Fragebogen IDs aus DB wählen und in User initialisieren, Darstellung der History, User lokal speichern und wieder laden, Datenbank wechseln), optische Bugfixes (WordWrap zu lange Fragen und Antworten, Layout für variable Bildschirmauflösungen optimieren, Antwortenliste scrollbar, Klick auf Antwort wählt Radiobutton aus, Fragenummern +1 in Display, Newlines am Antwortenende entfernen, etc.), Debug-Settings wieder ausbauen (limitiere Fragen auf n mit Eingabefeld in Settings, etc.), Push-Script zum Testen erstellen, Unit-Tests schreiben, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Projekt abgeben |  
+**tasks**: weitere Funktionalität herstellen (Fragebogen IDs aus DB wählen und in User initialisieren, Darstellung der History, User lokal speichern und wieder laden, Datenbank wechseln), optische Bugfixes (WordWrap zu lange Fragen und Antworten, Layout für variable Bildschirmauflösungen optimieren, Antwortenliste scrollbar, Klick auf Antwort wählt Radiobutton aus, Fragenummern +1 in Display, Newlines am Antwortenende entfernen, etc.), Debug-Settings wieder ausbauen (limitiere Fragen auf n mit Eingabefeld in Settings, etc.), Refactoring und Code-Cleanup, Push-Script zum Testen erstellen, Unit-Tests schreiben, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Projekt abgeben |  
 
 ---  
 
