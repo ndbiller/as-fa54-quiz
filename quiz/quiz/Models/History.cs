@@ -15,6 +15,7 @@ namespace quiz.Models
     {
         // Properties
         public int QuestionaireID { get; set; }
+        //public decimal QuestionairePercentage { get; set; }
         public int QuestionID { get; set; }
         public int AnswerID { get; set; }
 

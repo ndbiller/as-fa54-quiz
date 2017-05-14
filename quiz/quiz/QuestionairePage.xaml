@@ -10,8 +10,7 @@
       mc:Ignorable="d"
       d:DesignWidth="800"
       d:DesignHeight="400"
-      Title="{Binding User.Title}"
-      Name="questionairePage">
+      Title="{Binding User.Title}">
 
     <!-- Page Resources -->
     <Page.Resources>
@@ -42,7 +41,7 @@
             <TextBlock Text="Prüfungsbogen Nummer " 
                        FontSize="20"
                        FontWeight="Bold" />
-            <TextBlock Text="{Binding Questionaire.ID}" 
+            <TextBlock Text="{Binding QuestionaireID}" 
                        FontSize="20"
                        FontWeight="Bold" />
         </StackPanel>

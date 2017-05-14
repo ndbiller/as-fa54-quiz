@@ -62,20 +62,19 @@
 
                 <!-- Column Dropdown Button & Dropdown Content & Icons & Buttons -->
                 <!-- Dropdown Button -->
-                <ComboBox SelectedValue="{Binding QuestionaireID, UpdateSourceTrigger=PropertyChanged}"
-                          ItemsSource="{Binding QuestionaireIDList}"
-                          DisplayMemberPath="{Binding ID, StringFormat=Fragebogen {0}}"
-                          SelectedIndex="0" 
+                <ComboBox Name="cbo_IDs"
+                          ItemsSource="{Binding User.QuestionaireIDs}"
+                          SelectedValue="{Binding Path=User.SelectedQuestionaire, Mode=TwoWay}"
                           FontSize="18"
                           Padding="5"
-                          Margin="5,7" 
-                          SelectedItem="IDSelected" />
+                          Margin="5,7" />
 
                 <!-- Column Row Empty Space & Icon Caret Right & Button loslegen -->
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="134*" />
+                        <ColumnDefinition Width="110*" />
+                        <ColumnDefinition Width="23*"/>
                     </Grid.ColumnDefinitions>
 
                     <!-- Columns Empty Space & Icon Caret Right -->
@@ -102,7 +101,7 @@
                             Grid.Column="1"
                             Padding="5"
                             Margin="5 7"
-                            Click="StartClicked" />
+                            Click="StartClicked" Grid.ColumnSpan="2" />
                 </Grid>
 
                 <!-- Column Row Icon Wrench & Button Konfiguration einstellen-->
@@ -148,7 +147,8 @@
                 <ListBox Height="110"
                          FontSize="18"
                          Margin="5 0"
-                         Padding="2 5">
+                         Padding="2 5"
+                         ItemsSource="{Binding User.History}">
 
                     <!-- History Content -->
                     <!-- TODO: Listbox Template und dynamisch mit daten füllen -->

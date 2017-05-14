@@ -37,11 +37,12 @@ namespace quiz.Viewmodels
             // Trace.WriteLine("...done ReadCSVFiling.");
 
             // Debug
-            Trace.WriteLine("loaded user:");
-            Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+            Trace.WriteLine(">>> loaded user = " + User.Name);
+            Trace.WriteLine("history.headers: QuestionaireID,QuestionID,AnswerID");
             foreach (History answer in User.UserHistory)
-                Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
-            Trace.WriteLine("done creating with params.");
+                //Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
+                Trace.WriteLine("history.ToString(): " + answer.ToString());
+            Trace.WriteLine(">>> done creating with params.");
         }
     }
 }

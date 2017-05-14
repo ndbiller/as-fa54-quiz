@@ -63,23 +63,42 @@ namespace quiz.Models
             Results = 0;
             Questions = new List<Question>();
             questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
-            // List<int> temp = new List<int>() { 1,2,3,4}; //(int i in temp)//
+            foreach (int shuffledID in questionIDs)
+                AddQuestion();
+        }
+        // mit limit zum leichteren debuggen
+        public Questionaire(int dbID, int id, int limit)
+        {
+            ID = id;
+            this.dbID = dbID;
+            Results = 0;
+            Questions = new List<Question>();
+            questionIDs = ShuffleIDs(DataReader.GetQuestionIds(dbID, id));
+            // add limited number of questions for debugging
+            List <int> limitedIDs = new List<int>();
+            for (int i = 0; i < limit; i++)
+            {
+                Trace.WriteLine("testing: i = " + i.ToString());
+                limitedIDs.Add(questionIDs[i]);
+            }
+            questionIDs = limitedIDs.ToArray();
             foreach (int shuffledID in questionIDs)
                 AddQuestion();
         }
 
         int[] ShuffleIDs(int[] unshuffledQuestionIDs)
         {
-            List<int> randomized = new List<int>();
-            List<int> original = new List<int>(unshuffledQuestionIDs);
-            Random r = new Random();
-            while (original.Count > 0)
-            {
-                int index = r.Next(original.Count);
-                randomized.Add(original[index]);
-                original.RemoveAt(index);
-            }
-            return randomized.ToArray();
+            //List<int> randomized = new List<int>();
+            //List<int> original = new List<int>(unshuffledQuestionIDs);
+            //Random r = new Random();
+            //while (original.Count > 0)
+            //{
+            //    int index = r.Next(original.Count);
+            //    randomized.Add(original[index]);
+            //    original.RemoveAt(index);
+            //}
+            //return randomized.ToArray();
+            return unshuffledQuestionIDs;
         }
 
         int SelectNextQuestion()

@@ -28,10 +28,6 @@ namespace quiz
             MainVM = new MainViewModel();
             QuestionVM = new QuestionViewModel();
             QuestionVM.User = MainVM.User;
-            // add the first five questionaire ids to list
-            int[] fiveTimes = new int[] { 1, 2, 3, 4, 5 };
-            foreach (int i in fiveTimes)
-                QuestionVM.QuestionaireIDList.Add(QuestionVM.QuestionaireID = i + 1);
             InitializeComponent();
             DataContext = MainVM;
             Master myMaster = new Master();

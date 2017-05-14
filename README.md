@@ -93,13 +93,15 @@ The first draft of our projects object relations was done quickly and without kn
 
 ---  
 
-## Software Design Pattern - MVVM
+## Frontend Design
+
+### Software Design Pattern - MVVM
 
 ![MVVM design pattern](/img/MVVMPattern.png?raw=true "MVVM design pattern")  
 
 We will use the [model-view-viewmodel design pattern](https://www.tutorialspoint.com/mvvm/index.htm) for our project. For a very short but good video tutorial that explains all the basic key elements involved in using MVVM with C# and WPF, go [here](https://www.youtube.com/watch?v=UgnSYx6iU8Y).  
 
-### Model Responsibilities
+#### Model Responsibilities
 
 In general, model is the simplest one to understand. It is the client side data model that supports the views in the application.  
 
@@ -108,7 +110,7 @@ In general, model is the simplest one to understand. It is the client side data 
 - Model objects should raise property change notifications which in WPF means data binding.  
 - The last responsibility is validation which is optional, but you can embed the validation information on the model objects by using the WPF data binding validation features via interfaces like INotifyDataErrorInfo/IDataErrorInfo  
 
-### View Responsibilities
+#### View Responsibilities
 
 The main purpose and responsibilities of views is to define the structure of what the user sees on the screen. The structure can contain static and dynamic parts.  
 
@@ -119,7 +121,7 @@ The main purpose and responsibilities of views is to define the structure of wha
 - The idea is that the event handling, action and data manipulation logic code shouldn’t be in the code behind in View.  
 - There are also other kinds of code that have to go in the code behind any code that's required to have a reference to UI element is inherently view code.  
 
-### ViewModel Responsibilities
+#### ViewModel Responsibilities
 
 ViewModel is the main point of MVVM application. The primary responsibility of the ViewModel is to provide data to the view, so that view can put that data on the screen.  
 
@@ -128,28 +130,24 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 - It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.  
 - ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.  
 
-### Advantages
+#### Advantages
 
-#### Maintainability
+##### Maintainability
 
 - A clean separation of different kinds of code should make it easier to go into one or several of those more granular and focused parts and make changes without worrying.  
 - That means you can remain agile and keep moving out to new releases quickly.  
 
-#### Testability
+##### Testability
 
 - With MVVM each piece of code is more granular and if it is implemented right your external and internal dependences are in separate pieces of code from the parts with the core logic that you would like to test.  
 - That makes it a lot easier to write unit tests against a core logic.  
 - Make sure it works right when written and keeps working even when things change in maintenance.  
 
-#### Extensibility
+##### Extensibility
 
 - It sometimes overlaps with maintainability, because of the clean separation boundaries and more granular pieces of code.  
 - You have a better chance of making any of those parts more reusable.  
 - It has also the ability to replace or add new pieces of code that do similar things into the right places in the architecture.  
-
----  
-
-## Frontend Design
 
 **TODO:** Describe the design process from first view drafts to finished product and the many pitfalls along the way. Maybe elaborate, how little help our teacher was. Add lots of screenshot to make it look pretty.  
 
@@ -469,9 +467,35 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 ---|
 **tasks**: Fragebögen aus Datenbank auslesen, zweite Datenbank einbinden |
 
+---  
+
+### Protokoll 12 - 28.04.2017 - 15.05.2017  
+
+**Protokollnummer:** | 12
+--- | ---
+**Klassenbezeichnung:** | FA54
+**Gruppenname (Zahl):** | 2
+**Datum:** | 28.04.2017 - 15.05.2017
+
+**Freizeit-Blöcke:**  
+- [x] 28.04.2017 - 14.05.2017  
+- [x] 15.05.2017 (Abgabe)  
+
+**Diese Blöcke (bzw. nach der Schule/Arbeit*) erledigte Aufgaben des Frontend-Entwicklers:** |
+---|
+**tasks**: Auswahl der Fragebögen aus Dropdown-Liste ermöglicht, User Klasse für Fragebogenauswahl erweitert, Dokumentation erweitert, Debug-Fragen-Limit in den Settings hinzugefügt |
+
+**Diese Blöcke (bzw. nach der Schule/Arbeit*) erledigte Aufgaben des Backend-Entwicklers:** |
+---|
+**tasks**: |
+
+**Diese Blöcke (bzw. nach der Schule/Arbeit*) erledigte Aufgaben des Datenbankspezialisten:** |
+---|
+**tasks**: |
+
 **TODO:** |  
 ---|  
-**tasks**: Funktionalität herstellen (Fragebogen wählen, Gewählte Fragen in User speichern und laden, Darstellung der History), Push-Script zum Testen erstellen, Unit-Tests schreiben, Datenbank wechseln, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Abgabedatum in Erfahrung bringen |  
+**tasks**: weitere Funktionalität herstellen (Fragebogen IDs aus DB wählen und in User initialisieren, Darstellung der History, User lokal speichern und wieder laden, Datenbank wechseln), optische Bugfixes (WordWrap zu lange Fragen und Antworten, Layout für variable Bildschirmauflösungen optimieren, Antwortenliste scrollbar, Klick auf Antwort wählt Radiobutton aus, Fragenummern +1 in Display, Newlines am Antwortenende entfernen, etc.), Debug-Settings wieder ausbauen (limitiere Fragen auf n mit Eingabefeld in Settings, etc.), Push-Script zum Testen erstellen, Unit-Tests schreiben, Funktionalität der anderen Datenbank-Fragen in App herstellen, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Projekt abgeben |  
 
 ---  
 

@@ -69,6 +69,21 @@
                    FontSize="15"
                    FontWeight="Bold" />
 
+        <Grid Margin="0 25 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" 
+                       Text="Debug-Options > Limitiere Fragen auf n (n = Anzahl von 1 bis 30)" 
+                       FontSize="15"
+                       FontWeight="Bold" />
+            <TextBox Grid.Column="1" 
+                     Text="{Binding User.QuestionLimit}"
+                     FontSize="15" />
+        </Grid>
+
         <!-- Save Button -->
         <Grid Margin="0 25 0 0">
             <Grid.ColumnDefinitions>

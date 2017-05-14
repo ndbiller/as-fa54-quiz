@@ -58,6 +58,18 @@ namespace quiz
             this.DataContext = QuestionVM;
             Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
+        //// ctor for new userselected questionaire on start button click
+        //public QuestionairePage(User currentUser)
+        //{
+        //    User userInstace = currentUser;
+        //    QuestionVM = new QuestionViewModel(userInstace);
+        //    InitializeComponent();
+        //    // set the views data context to the model object in the viewmodel
+        //    this.DataContext = QuestionVM;
+
+        //    // Debug
+        //    Trace.WriteLine(">>> new questionaire selected: " + QuestionVM.User.SelectedQuestionaire);
+        //}
 
         public int CompletedQuestionsCount(QuestionViewModel questionVM)
         {
