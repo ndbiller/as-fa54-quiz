@@ -24,7 +24,7 @@
         * [Extensibility](#extensibility)
   * [Backend Development](#backend-development)
   * [Database Integration](#database-integration)
-  * [Test Couverage](#test-couverage)
+  * [Test Coverage](#test-coverage)
   * [Final Touches](#final-touches)
   * [Ergebnisprotokolle](#ergebnisprotokolle)
     * [Protokoll 1 \- 13\.02\.2017 \- 15\.02\.2017](#protokoll-1---13022017---15022017)
@@ -166,7 +166,7 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 ---  
 
-## Test Couverage
+## Test Coverage
 
 **TODO:** Write about our projects test coverage, the framework used and give a short overview about CI/TDD and show some principles / best practices of test-driven-development and continuous integration here.  
 
