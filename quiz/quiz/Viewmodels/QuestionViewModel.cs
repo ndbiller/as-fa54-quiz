@@ -76,7 +76,7 @@ namespace quiz.Viewmodels
             // for results page
             WrongAnswers = new ObservableCollection<WrongAnswer>();
             // display the user history
-            DisplayHistory();
+            ShowHistory();
         }
         // ctor for new userselected questionaires
         public QuestionViewModel(QuestionViewModel oldQuestionViewModel)
@@ -117,17 +117,14 @@ namespace quiz.Viewmodels
             ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
             // for results page
             WrongAnswers = new ObservableCollection<WrongAnswer>();
-            DisplayHistory();
+            ShowHistory();
         }
 
-        public void DisplayHistory()
+        public void ShowHistory()
         {
             QuestionaireHistory = new ObservableCollection<string>();
-            string result = "";
             // display the history like this: "Sportbootführerschein Binnen (Fragebogen 10) - bestanden"
-            // QuestionaireHistory.Add("Sportbootführerschein Binnen (Fragebogen 10) - bestanden");
-            QuestionaireHistory.Add(User.Title + " (Fragebogen " + Questionaire.ID + ") - " + result);
-            foreach (string questionaireResult in User.DisplayHistory())
+            foreach (string questionaireResult in User.EvaluateHistory())
                 QuestionaireHistory.Add(questionaireResult);
         }
 

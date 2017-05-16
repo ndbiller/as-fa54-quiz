@@ -37,25 +37,6 @@ namespace quiz.Models
             AnsweredCorrectly = AnsweredCorrectly; // does this make sense? method counts twice...
             EvalMessage = "";
         }
-
-        public int CountCorrect()
-        {
-            int i = 0;
-            foreach (Question question in Questions)
-                if (question.Solve())
-                    i++;
-
-            return i;
-        }
-
-        public string EvaluateMessage(bool result)
-        {
-            if (result)
-                return "Herzlichen Glückwunsch, Sie haben bestanden.";
-            else
-                return "Sie haben leider nicht bestanden.";
-        }
-
         public Questionaire(int dbID, int id)
         {
             ID = id;
@@ -84,6 +65,24 @@ namespace quiz.Models
             questionIDs = limitedIDs.ToArray();
             foreach (int shuffledID in questionIDs)
                 AddQuestion();
+        }
+
+        public int CountCorrect()
+        {
+            int i = 0;
+            foreach (Question question in Questions)
+                if (question.Solve())
+                    i++;
+
+            return i;
+        }
+
+        public string EvaluateMessage(bool result)
+        {
+            if (result)
+                return "Herzlichen Glückwunsch, Sie haben bestanden.";
+            else
+                return "Sie haben leider nicht bestanden.";
         }
 
         int[] ShuffleIDs(int[] unshuffledQuestionIDs)
@@ -139,6 +138,5 @@ namespace quiz.Models
                 return false;
             }
         }
-
     }
 }
