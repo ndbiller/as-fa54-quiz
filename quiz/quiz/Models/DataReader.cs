@@ -43,7 +43,6 @@ namespace quiz.Models
                         }
                     }
                     return result.ToArray();
-
                 case 1:
                     break;
                 //dummy copy bitte durch ubi db ersetzen
@@ -78,9 +77,6 @@ namespace quiz.Models
                 default:
                     return null;
             }
-
         }
-
-
     }
 }

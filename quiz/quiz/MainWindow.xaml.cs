@@ -30,7 +30,7 @@ namespace quiz
             MainFrame.Content = new StartPage(QuestionVM);
         }
 
-        // TODO: maximize button and method, views should behave correctly no matter the screensize (windowed or fullscreen or other resolutions / resized ) used 
+        // TODO: maximize button and method, views should behave correctly no matter the screensize used (windowed or fullscreen or other resolutions / resized ) 
 
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {

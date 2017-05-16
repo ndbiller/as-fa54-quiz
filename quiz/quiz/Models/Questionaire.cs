@@ -78,7 +78,7 @@ namespace quiz.Models
             List <int> limitedIDs = new List<int>();
             for (int i = 0; i < limit; i++)
             {
-                Trace.WriteLine("testing: i = " + i.ToString());
+                //Trace.WriteLine("testing: i = " + i.ToString());
                 limitedIDs.Add(questionIDs[i]);
             }
             questionIDs = limitedIDs.ToArray();

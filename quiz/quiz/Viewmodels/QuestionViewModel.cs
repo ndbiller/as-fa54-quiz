@@ -21,8 +21,6 @@ namespace quiz.Viewmodels
         private Questionaire questionaire;
         // question to display
         private Question question;
-        //// holds the index of the user selected answer
-        //private int answerSelected;
         // answers to display
         private ObservableCollection<Answer> answers;
         // number of questions with selected answers
@@ -87,12 +85,12 @@ namespace quiz.Viewmodels
 
             // create the questionnaire id, add to list
             QuestionaireIDList = new ObservableCollection<int>();
-            foreach (int id in oldQuestionViewModel.User.QuestionaireIDs)
-                Trace.WriteLine("userselected >>> (single id values) >>> oldQuestionViewModel.User.QuestionaireIDs = " + oldQuestionViewModel.User.QuestionaireIDs.ToString());
+            //foreach (int id in oldQuestionViewModel.User.QuestionaireIDs)
+                //Trace.WriteLine("userselected >>> (single id values) >>> oldQuestionViewModel.User.QuestionaireIDs = " + oldQuestionViewModel.User.QuestionaireIDs.ToString());
             foreach (int id in oldQuestionViewModel.User.QuestionaireIDs)
                 questionaireIDList.Add(id);
 
-            Trace.WriteLine("userselected >>> oldQuestionViewModel.User.SelectedQuestionaire = " + oldQuestionViewModel.User.SelectedQuestionaire);
+            //Trace.WriteLine("userselected >>> oldQuestionViewModel.User.SelectedQuestionaire = " + oldQuestionViewModel.User.SelectedQuestionaire);
             QuestionaireID = oldQuestionViewModel.User.SelectedQuestionaire;
             //db sollte vom user ausgewählt werden
             //dbID 0 = binnen
@@ -129,6 +127,8 @@ namespace quiz.Viewmodels
             // display the history like this: "Sportbootführerschein Binnen (Fragebogen 10) - bestanden"
             // QuestionaireHistory.Add("Sportbootführerschein Binnen (Fragebogen 10) - bestanden");
             QuestionaireHistory.Add(User.Title + " (Fragebogen " + Questionaire.ID + ") - " + result);
+            foreach (string questionaireResult in User.DisplayHistory())
+                QuestionaireHistory.Add(questionaireResult);
         }
 
         // properties to display changes in the view

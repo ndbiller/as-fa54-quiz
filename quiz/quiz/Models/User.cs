@@ -40,19 +40,30 @@ namespace quiz.Models
             // Debug
             QuestionLimit = 4;
         }
-        // Constructor with params, used to load user
-        public User(string name, string title, decimal passingPercentage, int selectedDB, List<History> answerHistory, int selectedQuestionaire, List<int> questionaireIDs, int questionLimit)
+        //// Constructor with params, used to load user
+        //public User(string name, string title, decimal passingPercentage, int selectedDB, List<History> answerHistory, int selectedQuestionaire, List<int> questionaireIDs, int questionLimit)
+        //{
+        //    Name = name;
+        //    UserHistory = answerHistory;
+        //    // Debug
+        //    //Trace.WriteLine("param ctor:");            
+        //    //Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+        //    //Trace.WriteLine("tostring-test: " + UserHistory[0].CSVHeaders());
+        //    //foreach (History answer in UserHistory)
+        //        //Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
+        //        //Trace.WriteLine("tostring-test: " + answer.ToString());
+        //    //Trace.WriteLine("done creating with params.");
+        //}
+
+        public List<string> DisplayHistory()
         {
-            Name = name;
-            UserHistory = answerHistory;
-            // Debug
-            //Trace.WriteLine("param ctor:");            
-            //Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
-            Trace.WriteLine("tostring-test: " + UserHistory[0].CSVHeaders());
-            foreach (History answer in UserHistory)
-                //Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
-                Trace.WriteLine("tostring-test: " + answer.ToString());
-            //Trace.WriteLine("done creating with params.");
+            // history auswerten
+            foreach (History element in UserHistory)
+            {
+                Trace.WriteLine(">>> >>> >>> UserHistory element.ToString() = " + element.ToString());
+            }
+
+            return new List<string>() { "test1", "test2" };
         }
 
         // returns username as filename
@@ -77,7 +88,7 @@ namespace quiz.Models
                 engine.HeaderText = UserHistory[0].CSVHeaders();
                 // save file locally
                 engine.WriteFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()),csv);
-                Trace.WriteLine("WriteCSVFile SUCCESS");
+                //Trace.WriteLine("WriteCSVFile SUCCESS");
             }
             catch (Exception ex)
             {
@@ -103,7 +114,7 @@ namespace quiz.Models
                         // add it to your database, filter them etc
                         UserHistory.Add(new History(ids.AppTitle, ids.DBID, ids.QuestionaireID, ids.QuestionaireLength, ids.QuestionairePercentage, ids.QuestionID, ids.AnswerID, ids.CorrectAnswer));
                     }
-                    Trace.WriteLine("ReadCSVFile SUCCESS");
+                    //Trace.WriteLine("ReadCSVFile SUCCESS");
                 }
             }
             catch (Exception ex)
