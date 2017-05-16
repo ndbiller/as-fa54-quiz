@@ -32,12 +32,6 @@ namespace quiz.Viewmodels
                 Trace.WriteLine("MainViewModel: " + answer.ToString());
             }
 
-            // Debug Load and Save
-            // User.WriteCSVFile();
-            // Trace.WriteLine("...done WriteCSVFiling.");
-            // User.ReadCSVFile();
-            // Trace.WriteLine("...done ReadCSVFiling.");
-
             // Debug
             Trace.WriteLine(">>> loaded user = " + User.Name);
             Trace.WriteLine("history.headers: QuestionaireID,QuestionID,AnswerID");

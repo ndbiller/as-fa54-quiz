@@ -46,12 +46,13 @@ namespace quiz.Models
             Name = name;
             UserHistory = answerHistory;
             // Debug
-            Trace.WriteLine("param ctor:");            
-            Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+            //Trace.WriteLine("param ctor:");            
+            //Trace.WriteLine("QuestionaireID,QuestionID,AnswerID");
+            Trace.WriteLine("tostring-test: " + UserHistory[0].CSVHeaders());
             foreach (History answer in UserHistory)
                 //Trace.WriteLine(answer.QuestionaireID + "," + answer.QuestionID + "," + answer.AnswerID);
                 Trace.WriteLine("tostring-test: " + answer.ToString());
-            Trace.WriteLine("done creating with params.");
+            //Trace.WriteLine("done creating with params.");
         }
 
         // returns username as filename
@@ -71,16 +72,16 @@ namespace quiz.Models
                 List<History> csv = new List<History>();
                 // convert any datasource to csv based object
                 foreach (var item in UserHistory)
-                    csv.Add(new History(item.QuestionaireID, item.QuestionID, item.AnswerID));                       
+                    csv.Add(new History(item.AppTitle, item.DBID, item.QuestionaireID, item.QuestionaireLength, item.QuestionairePercentage, item.QuestionID, item.AnswerID, item.CorrectAnswer));                       
                 // give header text
-                engine.HeaderText = "QuestionaireID,QuestionID,AnswerID";
+                engine.HeaderText = UserHistory[0].CSVHeaders();
                 // save file locally
                 engine.WriteFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()),csv);
-                Trace.WriteLine("SUCCESS");
+                Trace.WriteLine("WriteCSVFile SUCCESS");
             }
             catch (Exception ex)
             {
-                Trace.WriteLine("ERROR: " + ex);
+                Trace.WriteLine("WriteCSVFile ERROR: " + ex);
             }
         }
 
@@ -100,14 +101,14 @@ namespace quiz.Models
                     foreach (var ids in answers)
                     {
                         // add it to your database, filter them etc
-                        UserHistory.Add(new History(ids.QuestionaireID, ids.QuestionID, ids.AnswerID));
+                        UserHistory.Add(new History(ids.AppTitle, ids.DBID, ids.QuestionaireID, ids.QuestionaireLength, ids.QuestionairePercentage, ids.QuestionID, ids.AnswerID, ids.CorrectAnswer));
                     }
-                    Trace.WriteLine("SUCCESS");
+                    Trace.WriteLine("ReadCSVFile SUCCESS");
                 }
             }
             catch (Exception ex)
             {
-                Trace.WriteLine("ERROR: " + ex);
+                Trace.WriteLine("ReadCSVFile ERROR: " + ex);
             }
         }
     }

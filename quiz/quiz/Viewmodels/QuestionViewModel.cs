@@ -39,12 +39,18 @@ namespace quiz.Viewmodels
         // the selected/displayed questionaire id and the list for selection (from class user, TODO: get from db there)
         private int questionaireID;
         private ObservableCollection<int> questionaireIDList;
+        // the displayed history results
+        private ObservableCollection<string> questionaireHistory;
         // Debug-Properties
         private int questionLimit;
 
         // viewmodel constructor (hook the model up to the viewmodel)
         public QuestionViewModel()
         {
+            // Instantiate the defaultUser for the view
+            User = new User();
+            // Load defaultUser.txt if it exists
+            User.ReadCSVFile();
             // create the questionnaire id, add to list
             QuestionaireIDList = new ObservableCollection<int>();
             QuestionaireID = 1;
@@ -71,6 +77,8 @@ namespace quiz.Viewmodels
             ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
             // for results page
             WrongAnswers = new ObservableCollection<WrongAnswer>();
+            // display the user history
+            DisplayHistory();
         }
         // ctor for new userselected questionaires
         public QuestionViewModel(QuestionViewModel oldQuestionViewModel)
@@ -111,6 +119,16 @@ namespace quiz.Viewmodels
             ImageSource = new BitmapImage(new Uri(@"" + Question.PathToImage, UriKind.Relative));
             // for results page
             WrongAnswers = new ObservableCollection<WrongAnswer>();
+            DisplayHistory();
+        }
+
+        public void DisplayHistory()
+        {
+            QuestionaireHistory = new ObservableCollection<string>();
+            string result = "";
+            // display the history like this: "Sportbootführerschein Binnen (Fragebogen 10) - bestanden"
+            // QuestionaireHistory.Add("Sportbootführerschein Binnen (Fragebogen 10) - bestanden");
+            QuestionaireHistory.Add(User.Title + " (Fragebogen " + Questionaire.ID + ") - " + result);
         }
 
         // properties to display changes in the view
@@ -223,6 +241,15 @@ namespace quiz.Viewmodels
             {
                 questionLimit = value;
                 OnPropertyChanged("QuestionLimit");
+            }
+        }
+        public ObservableCollection<string> QuestionaireHistory
+        {
+            get { return questionaireHistory; }
+            set
+            {
+                questionaireHistory = value;
+                OnPropertyChanged("QuestionaireHistory");
             }
         }
 

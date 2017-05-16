@@ -57,31 +57,10 @@ namespace quiz
 
         private void BackToMainClicked(object sender, RoutedEventArgs e)
         {
-            User currentUser =  QuestionVM.User;
+            QuestionViewModel currentVM =  QuestionVM;
             // TODO: Save Result in History
             // change back to QuestionVM
-            NavigationService.Navigate(new StartPage(new QuestionViewModel() { User = currentUser }));
-        }
-    }
-
-    public class WrongAnswer
-    {
-        public string Question { get; set; }
-        public string SelectedAnswer { get; set; }
-        public string RightAnswer { get; set; }
-
-        public WrongAnswer()
-        {
-            Question = "";
-            SelectedAnswer = "";
-            RightAnswer = "";
-        }
-
-        public WrongAnswer(string question, string selectedAnswer, string rightAnswer)
-        {
-            Question = question;
-            SelectedAnswer = selectedAnswer;
-            RightAnswer = rightAnswer;
+            NavigationService.Navigate(new StartPage(new QuestionViewModel(currentVM)));
         }
     }
 }

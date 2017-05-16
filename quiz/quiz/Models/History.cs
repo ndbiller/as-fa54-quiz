@@ -14,10 +14,14 @@ namespace quiz.Models
     public class History
     {
         // Properties
+        public string AppTitle { get; set; }
+        public int DBID { get; set; }
         public int QuestionaireID { get; set; }
-        //public decimal QuestionairePercentage { get; set; }
+        public int QuestionaireLength { get; set; }
+        public decimal QuestionairePercentage { get; set; }
         public int QuestionID { get; set; }
         public int AnswerID { get; set; }
+        public int CorrectAnswer { get; set; }
 
         // ctor, used to create new defaultUser if file doesn't exist
         public History()
@@ -25,17 +29,27 @@ namespace quiz.Models
 
         }
         // param ctor, used to load defaultUser from file
-        public History(int questionaireID, int questionID, int answerID)
+        public History(string appTitle, int dbID, int questionaireID, int questionaireLength, decimal questionairePercentage, int questionID, int answerID, int correctAnswer)
         {
+            AppTitle = appTitle;
+            DBID = dbID;
             QuestionaireID = questionaireID;
+            QuestionaireLength = questionaireLength;
+            QuestionairePercentage = questionairePercentage;
             QuestionID = questionID;
             AnswerID = answerID;
+            CorrectAnswer = correctAnswer;
+        }
+
+        public string CSVHeaders()
+        {
+            return "AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer";
         }
 
         // TODO: remove, possibly not needed because of filehelper
         new public string ToString()
         {
-            return QuestionaireID + "," + QuestionID + "," + AnswerID;
+            return AppTitle + "," + DBID + "," + QuestionaireID + "," + QuestionaireLength + "," + QuestionairePercentage + "," + QuestionID + "," + AnswerID + "," + CorrectAnswer;
         }
     }
 }

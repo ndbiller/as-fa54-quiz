@@ -20,17 +20,17 @@ namespace quiz
         //comboBox1.DataSource= fragenQuery.ToList();
 
         //create the main viewmodel and set it as data context for the views in constructor
-        public MainViewModel MainVM { get; set; }
+        //public MainViewModel MainVM { get; set; }
         public QuestionViewModel QuestionVM { get; set; }
 
         public MainWindow()
         {
-            MainVM = new MainViewModel();
-            QuestionVM = new QuestionViewModel();
-            QuestionVM.User = MainVM.User;
+            //MainVM = new MainViewModel();
+            QuestionVM = new QuestionViewModel();// { User = MainVM.User };
+            //QuestionVM.User = MainVM.User;
             InitializeComponent();
-            DataContext = MainVM;
-            Master myMaster = new Master();
+            DataContext = QuestionVM;
+            //Master myMaster = new Master();
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
@@ -65,7 +65,7 @@ namespace quiz
             else
             {
                 // save user settings and history
-                MainVM.User.WriteCSVFile();
+                QuestionVM.User.WriteCSVFile();
                 // stop all running programm processes
                 Application.Current.Shutdown();
             }

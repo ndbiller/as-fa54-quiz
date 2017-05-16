@@ -148,16 +148,14 @@
                          FontSize="18"
                          Margin="5 0"
                          Padding="2 5"
-                         ItemsSource="{Binding User.History}">
-
-                    <!-- History Content -->
-                    <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
-                    <ListBoxItem Content="Sportführerschein Binnen (Fragebogen 10) - bestanden" 
-                                 Padding="2 5" />
-                    <ListBoxItem Content="Sportführerschein Binnen (Fragebogen 5) - bestanden" 
-                                 Padding="2 5" />
-                    <ListBoxItem Content="Sportführerschein Binnen (Fragebogen 1) - nicht bestanden" 
-                                 Padding="2 5" />
+                         ItemsSource="{Binding QuestionaireHistory}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
             </StackPanel>
         </Grid>

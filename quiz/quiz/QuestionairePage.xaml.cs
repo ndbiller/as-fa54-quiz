@@ -58,18 +58,6 @@ namespace quiz
             this.DataContext = QuestionVM;
             //Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
-        //// ctor for new userselected questionaire on start button click
-        //public QuestionairePage(User currentUser)
-        //{
-        //    User userInstace = currentUser;
-        //    QuestionVM = new QuestionViewModel(userInstace);
-        //    InitializeComponent();
-        //    // set the views data context to the model object in the viewmodel
-        //    this.DataContext = QuestionVM;
-
-        //    // Debug
-        //    Trace.WriteLine(">>> new questionaire selected: " + QuestionVM.User.SelectedQuestionaire);
-        //}
 
         public int CompletedQuestionsCount(QuestionViewModel questionVM)
         {
@@ -102,14 +90,18 @@ namespace quiz
             // wenn alle fragen beantwortet sind
             if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
             {
-                // add answer to user history
+                // get selected and correct answer ids
                 int selectedAnswerID = -1;
+                int correctAnswerID = -1;
                 foreach (Answer answer in QuestionVM.Answers)
+                {
                     if (answer.SelectedAnswer)
                         selectedAnswerID = answer.Index;
-
-                QuestionVM.User.UserHistory.Add(new History(QuestionVM.QuestionaireID, QuestionVM.Question.ID, selectedAnswerID));
-
+                    if (answer.CorrectAnswer)
+                        correctAnswerID = answer.Index;
+                }
+                // save AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer to history
+                QuestionVM.User.UserHistory.Add(new History(QuestionVM.User.Title, QuestionVM.User.SelectedDB, QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
                 // gehe zur lösung
                 NavigationService.Navigate(new ResultsPage(QuestionVM));
             }
@@ -120,13 +112,18 @@ namespace quiz
                 {
                     //Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
                     //Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.DisplayedQuestionIndex + 1 = " + QuestionVM.DisplayedQuestionIndex + 1);
-                    // add answer to user history
+                    // get selected and correct answer ids
                     int selectedAnswerID = -1;
+                    int correctAnswerID = -1;
                     foreach (Answer answer in QuestionVM.Answers)
+                    {
                         if (answer.SelectedAnswer)
                             selectedAnswerID = answer.Index;
-
-                    QuestionVM.User.UserHistory.Add(new History(QuestionVM.QuestionaireID, QuestionVM.Question.ID, selectedAnswerID));
+                        if (answer.CorrectAnswer)
+                            correctAnswerID = answer.Index;
+                    }
+                    // save AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer to history
+                    QuestionVM.User.UserHistory.Add(new History(QuestionVM.User.Title, QuestionVM.User.SelectedDB, QuestionVM.QuestionaireID, QuestionVM.User.QuestionLimit, QuestionVM.User.PassingPercentage, QuestionVM.Question.ID, selectedAnswerID, correctAnswerID));
                     // gehe zur nächsten frage
                     NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
                 }
