@@ -1,4 +1,6 @@
-﻿using quiz.Viewmodels;
+﻿using quiz.Models;
+using quiz.Viewmodels;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -21,6 +23,17 @@ namespace quiz
         private void SaveClicked(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new StartPage(QuestionVM));
+        }
+
+        private void DeleteClicked(object sender, RoutedEventArgs e)
+        {
+            // Delete History and History File
+            QuestionViewModel currentVM = QuestionVM;
+            currentVM.User.UserHistory = new List<History>();
+            currentVM.QuestionaireHistory.Clear();
+            currentVM.User.DeleteCSVFile();
+            // go to start page
+            NavigationService.Navigate(new StartPage(currentVM));
         }
     }
 }

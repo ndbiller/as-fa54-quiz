@@ -484,10 +484,10 @@ ViewModel is the main point of MVVM application. The primary responsibility of t
 
 **Diese Blöcke (bzw. nach der Schule/Arbeit*) erledigte Aufgaben des Frontend-Entwicklers:** |
 ---|
-**tasks**: Auswahl der Fragebögen aus Dropdown-Liste ermöglicht, User Klasse für Fragebogenauswahl erweitert, Dokumentation erweitert, Debug-Fragen-Limit in den Settings hinzugefügt, User lokal speichern und wieder laden |  
+**tasks**: Auswahl der Fragebögen aus Dropdown-Liste ermöglicht, User Klasse für Fragebogenauswahl erweitert, Dokumentation erweitert, Debug-Fragen-Limit in den Settings hinzugefügt, User lokal speichern und wieder laden, Darstellung der History, Löschen der History, |  
 **TODO:** |  
 ---|  
-weitere Funktionalität herstellen (Darstellung der History), optische Bugfixes (WordWrap zu lange Fragen und Antworten, Layout für variable Bildschirmauflösungen optimieren, Antwortenliste scrollbar, Klick auf Antwort wählt Radiobutton aus, Fragenummern +1 in Display, Newlines am Antwortenende entfernen, etc.), Debug-Settings wieder ausbauen (limitiere Fragen auf n mit Eingabefeld in Settings, etc.), Refactoring und Code-Cleanup, Push-Script zum Testen erstellen, Unit-Tests schreiben, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Projekt abgeben, JS und JQ Aufgaben lösen, JS und JQ Aufgaben abgeben |  
+optische Bugfixes (WordWrap zu lange Fragen und Antworten, Layout für variable Bildschirmauflösungen optimieren, Antwortenliste scrollbar, Klick auf Antwort wählt Radiobutton aus, Fragenummern +1 in Display, Newlines am Antwortenende entfernen, etc.), Debug-Settings wieder ausbauen (limitiere Fragen auf n mit Eingabefeld in Settings, etc.), Refactoring und Code-Cleanup, Push-Script zum Testen erstellen, Unit-Tests schreiben, Test-Coverage dokumentieren, neues UML-Diagramm der App erstellen, Doku beenden, Projekt abgeben, JS und JQ Aufgaben lösen, JS und JQ Aufgaben abgeben |  
 
 **Diese Blöcke (bzw. nach der Schule/Arbeit*) erledigte Aufgaben des Backend-Entwicklers:** |
 ---|

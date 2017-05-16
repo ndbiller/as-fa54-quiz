@@ -60,7 +60,8 @@
             <Button Grid.Column="1"
                     Content="löschen" 
                     FontSize="15"
-                    FontWeight="Bold" />
+                    FontWeight="Bold" 
+                    Click="DeleteClicked" />
         </Grid>
 
         <!-- Weitere Settings -->

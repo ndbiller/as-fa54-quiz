@@ -46,102 +46,138 @@ namespace quiz.Models
             // variables for results
             List<string> results = new List<string>();
             string displayedString = "";
-
-            // foreach logic vars, init values are -1
-            int currentDBID = -1;
-            int currentQuestionaireID = -1;
-            int currentQuestionaireLength = -1;
-
-            // used to check if there are as many answered questions per questionaire as we expected
-            int observedLength = 0;
-
-            // hold the temp results for display string
-            string tempTitle = "";
-            int tempID = -1;
+            History previousElement = new History();
+            int elementsMatch = 0;
+            decimal percentage = -1;
+            int correct = -1;
+            decimal calcResult = -1;
+            string ergebnis = "";
 
             // history auswerten, elements: AppTitle,DBID,QuestionaireID,QuestionaireLength,QuestionairePercentage,QuestionID,AnswerID,CorrectAnswer
             foreach (History element in UserHistory)
             {
-                // on first element (set to history element values if all logic vars are init value -1)
-                if (currentDBID == -1 && 
-                    currentQuestionaireID == -1 && 
-                    currentQuestionaireLength == -1)
+                // compare previous element with current element
+                // if they match
+                if (previousElement.AppTitle == element.AppTitle && 
+                    previousElement.DBID == element.DBID && 
+                    previousElement.QuestionaireID == element.QuestionaireID && 
+                    previousElement.QuestionaireLength == element.QuestionaireLength)
                 {
-                    // set to element values
-                    currentDBID = element.DBID;
-                    currentQuestionaireID = element.QuestionaireID;
-                    currentQuestionaireLength = element.QuestionaireLength;
-
-                    // set the checkup value to init
-                    observedLength = 1;
-
-                    // set the temp results
-                    tempTitle = element.AppTitle;
-                    tempID = element.QuestionaireID;
-
-                    // set the result string to set element values
-                    displayedString = tempTitle + " (Fragebogen " + tempID + ") - " + "bestanden/nicht bestanden";
-
-                    Trace.WriteLine("ONCE");
-                }
-                else // on all following elements (if even one of the logic vars is set to something else than init value -1)
-                {
-                    // set to element values
-                    currentDBID = element.DBID;
-                    currentQuestionaireID = element.QuestionaireID;
-                    currentQuestionaireLength = element.QuestionaireLength;
-
-                    Trace.WriteLine("x outside: " + currentDBID + "=" + element.DBID + "," + currentQuestionaireID + "=" + element.QuestionaireID + "," + currentQuestionaireLength + "=" + element.QuestionaireLength);
-                    // compare the logic vars with element values, if they all match it is still the same set
-                    // and compare the observedLength with QuestionaireLength and count it up if it is less
-                    if (currentDBID == element.DBID && 
-                        currentQuestionaireID == element.QuestionaireID && 
-                        currentQuestionaireLength == element.QuestionaireLength)
+                    elementsMatch += 1;
+                    if (element.AnswerID == element.CorrectAnswer)
                     {
-                        Trace.WriteLine("x inside: " + currentDBID + "="+ element.DBID + "," + currentQuestionaireID + "=" + element.QuestionaireID + "," + currentQuestionaireLength + "=" + element.QuestionaireLength);
-                        Trace.WriteLine("more outside: " + observedLength + " < " + element.QuestionaireLength);
-                        // if there are more expected elements in this set
-                        if (observedLength < element.QuestionaireLength)
+                        if (correct == -1)
                         {
-                            Trace.WriteLine("more inside: " + observedLength + " < " + element.QuestionaireLength);
-                            // increase the checkup length value
-                            observedLength += 1;
-                        }
-                        else if (observedLength == element.QuestionaireLength) // we have reached the last set element 
-                        {
-                            Trace.WriteLine("more else if: " + observedLength + "==" + element.QuestionaireLength);
-                            Trace.WriteLine("<<<<<< Add(" + displayedString + ")");
-                            // write the temp result to the result list
-                            results.Add(displayedString);
+                            correct = 1;
                         }
                         else
                         {
-                            Trace.WriteLine("more else: " + observedLength + ", " + element.QuestionaireLength);
+                            correct += 1;
                         }
                     }
-                    else // if not we are in the next set of elements
+
+                    // if previous and current are equal but current elements questionaireLength is also equal to matched elements
+                    if (elementsMatch == element.QuestionaireLength)
                     {
-                        Trace.WriteLine("x else: " + currentDBID + "=" + element.DBID + "," + currentQuestionaireID + "=" + element.QuestionaireID + "," + currentQuestionaireLength + "=" + element.QuestionaireLength);
-                        // set to element values
-                        currentDBID = element.DBID;
-                        currentQuestionaireID = element.QuestionaireID;
-                        currentQuestionaireLength = element.QuestionaireLength;
+                        // result calculation
+                        percentage = element.QuestionairePercentage / 100;
+                        calcResult = (decimal)correct / (decimal)elementsMatch;
+                        // calculate result
+                        if (calcResult >= percentage)
+                            ergebnis = "bestanden";
+                        else
+                            ergebnis = "nicht bestanden";
 
-                        // set the checkup value to init
-                        observedLength = 1;
-
-                        // set the temp results
-                        tempTitle = element.AppTitle;
-                        tempID = element.QuestionaireID;
-
-                        // set the result string to set element values
-                        displayedString = tempTitle + " (Fragebogen " + tempID + ") - " + "bestanden/nicht bestanden";
+                        // set the display string to the current elements values
+                        displayedString = element.AppTitle + " (Fragebogen " + element.QuestionaireID + ") - " + ergebnis;
+                        results.Add(displayedString);
+                        elementsMatch = 0;
+                        // reset values for result calculation
+                        correct = 0;
+                        percentage = -1;
+                        calcResult = -1;
+                        ergebnis = "";
                     }
                 }
+                // if previous has init values (e. g. first element)
+                else if (previousElement.AppTitle == "" && previousElement.DBID == -1 && previousElement.QuestionaireID == -1 && previousElement.QuestionaireLength == -1)
+                {
+                    elementsMatch = 1;
+                    if (element.AnswerID == element.CorrectAnswer)
+                    {
+                        if (correct == -1)
+                        {
+                            correct = 1;
+                        }
+                        else
+                        {
+                            correct += 1;
+                        }
+                    }
 
-                // Debug
-                Trace.WriteLine(">>> displayedString = " + displayedString);
-                Trace.WriteLine("element = " + element.ToString());
+                    // if the first elements questionaireLength is one
+                    if (elementsMatch == element.QuestionaireLength)
+                    {
+                        // result calculation
+                        percentage = element.QuestionairePercentage / 100;
+                        calcResult = (decimal)correct / (decimal)elementsMatch;
+                        // calculate result
+                        if (calcResult >= percentage)
+                            ergebnis = "bestanden";
+                        else
+                            ergebnis = "nicht bestanden";
+
+                        // set the display string to first elements values
+                        displayedString = element.AppTitle + " (Fragebogen " + element.QuestionaireID + ") - " + ergebnis;
+                        results.Add(displayedString);
+                        elementsMatch = 0;
+                        // reset values for result calculation
+                        correct = 0;
+                        percentage = -1;
+                        calcResult = -1;
+                        ergebnis = "";
+                    }
+                }
+                else // if they don't match
+                {
+                    elementsMatch = 1;
+                    if (element.AnswerID == element.CorrectAnswer)
+                    {
+                        if (correct == -1)
+                        {
+                            correct = 1;
+                        }
+                        else
+                        {
+                            correct += 1;
+                        }
+                    }
+
+                    // if the new elements questionaireLength is one
+                    if (elementsMatch == element.QuestionaireLength)
+                    {
+                        // result calculation
+                        percentage = element.QuestionairePercentage / 100;
+                        calcResult = (decimal)correct / (decimal)elementsMatch;
+                        // calculate result
+                        if (calcResult >= percentage)
+                            ergebnis = "bestanden";
+                        else
+                            ergebnis = "nicht bestanden";
+
+                        // set the display string to the elements values
+                        displayedString = element.AppTitle + " (Fragebogen " + element.QuestionaireID + ") - " + ergebnis;
+                        // add the elements displayedString
+                        results.Add(displayedString);
+                        // reset values for result calculation
+                        correct = 0;
+                        percentage = -1;
+                        calcResult = -1;
+                        ergebnis = "";
+                    }
+                }
+                // lastly set current element as previous element
+                previousElement = element;
             }
             return results;
         }
@@ -168,7 +204,6 @@ namespace quiz.Models
                 engine.HeaderText = UserHistory[0].CSVHeaders();
                 // save file locally
                 engine.WriteFile(Path.Combine(@"C: \Users\Public\Documents\" + Filename()),csv);
-                //Trace.WriteLine("WriteCSVFile SUCCESS");
             }
             catch (Exception ex)
             {
@@ -194,12 +229,27 @@ namespace quiz.Models
                         // add it to your database, filter them etc
                         UserHistory.Add(new History(ids.AppTitle, ids.DBID, ids.QuestionaireID, ids.QuestionaireLength, ids.QuestionairePercentage, ids.QuestionID, ids.AnswerID, ids.CorrectAnswer));
                     }
-                    //Trace.WriteLine("ReadCSVFile SUCCESS");
                 }
             }
             catch (Exception ex)
             {
                 Trace.WriteLine("ReadCSVFile ERROR: " + ex);
+            }
+        }
+
+        public void DeleteCSVFile()
+        {
+            string file = @"C: \Users\Public\Documents\" + Filename();
+            if (Directory.Exists(Path.GetDirectoryName(file)))
+            {
+                try
+                {
+                    File.Delete(file);
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine("DeleteCSVFile ERROR: " + ex);
+                } 
             }
         }
     }

@@ -23,10 +23,17 @@ namespace quiz.Models
         public int AnswerID { get; set; }
         public int CorrectAnswer { get; set; }
 
-        // ctor, used to create new defaultUser if file doesn't exist
+        // ctor, used for Histoy Evaluation in User
         public History()
         {
-
+            AppTitle = "";
+            DBID = -1;
+            QuestionaireID = -1;
+            QuestionaireLength = -1;
+            QuestionairePercentage = -1;
+            QuestionID = -1;
+            AnswerID = -1;
+            CorrectAnswer = -1;
         }
         // param ctor, used to load defaultUser from file
         public History(string appTitle, int dbID, int questionaireID, int questionaireLength, decimal questionairePercentage, int questionID, int answerID, int correctAnswer)
