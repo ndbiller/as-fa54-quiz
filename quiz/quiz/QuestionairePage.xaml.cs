@@ -22,17 +22,17 @@ namespace quiz
         {
             // the Viewmodel (and thus the Model)
             QuestionVM = questionVM;
-            Trace.WriteLine("QuestionVM.DisplayedQuestionIndex: " + QuestionVM.DisplayedQuestionIndex);
+            //Trace.WriteLine("QuestionVM.DisplayedQuestionIndex: " + QuestionVM.DisplayedQuestionIndex);
 
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
 
             // Debug
-            Trace.WriteLine("QuestionairePage(QuestionVM.Answers.Count): " + QuestionVM.Answers.Count);
+            //Trace.WriteLine("QuestionairePage(QuestionVM.Answers.Count): " + QuestionVM.Answers.Count);
             bool result = QuestionVM.Question.Solve();
-            Trace.WriteLine("result: " + result.ToString());
-            Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
+            //Trace.WriteLine("result: " + result.ToString());
+            //Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
         // ctor for forward and back navigation
         public QuestionairePage(QuestionViewModel questionVM, int questionIndex)
@@ -56,7 +56,7 @@ namespace quiz
             InitializeComponent();
             // set the views data context to the model object in the viewmodel
             this.DataContext = QuestionVM;
-            Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
+            //Trace.WriteLine("QuestionVM.Question.PathToImage: " + QuestionVM.Question.PathToImage);
         }
         //// ctor for new userselected questionaire on start button click
         //public QuestionairePage(User currentUser)
@@ -87,7 +87,7 @@ namespace quiz
             string str = test.Tag.ToString();
             int i = Int32.Parse(str);
             // Debug
-            Trace.WriteLine("click! sender as RadioButton = test.Tag: "+ i +" ... " + test.Tag.GetType());
+            //Trace.WriteLine("click! sender as RadioButton = test.Tag: "+ i +" ... " + test.Tag.GetType());
             QuestionVM.AnswerClicked(i);
         }
 
@@ -96,27 +96,44 @@ namespace quiz
             // zähle beantwortete fragen
             QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
-            Trace.WriteLine("click! FOWARD: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
-            Trace.WriteLine("click! FOWARD: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
-            Trace.WriteLine("click! FOWARD: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+            //Trace.WriteLine("click! FOWARD: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
+            //Trace.WriteLine("click! FOWARD: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+            //Trace.WriteLine("click! FOWARD: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
             // wenn alle fragen beantwortet sind
             if (QuestionVM.CompletedQuestions == QuestionVM.Questionaire.Questions.Count)
-                NavigationService.Navigate(new ResultsPage(QuestionVM)); // gehe zur lösung
+            {
+                // add answer to user history
+                int selectedAnswerID = -1;
+                foreach (Answer answer in QuestionVM.Answers)
+                    if (answer.SelectedAnswer)
+                        selectedAnswerID = answer.Index;
+
+                QuestionVM.User.UserHistory.Add(new History(QuestionVM.QuestionaireID, QuestionVM.Question.ID, selectedAnswerID));
+
+                // gehe zur lösung
+                NavigationService.Navigate(new ResultsPage(QuestionVM));
+            }
             else // wenn nicht alle fragen beantwortet sind
             {
                 // wenn es nicht die letzte frage ist
                 if (QuestionVM.DisplayedQuestionIndex + 1 < QuestionVM.Questionaire.Questions.Count)
                 {
-                    Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
-                    Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.DisplayedQuestionIndex + 1 = " + QuestionVM.DisplayedQuestionIndex + 1);
+                    //Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+                    //Trace.WriteLine("click! FOWARD nicht die letzte frage: QuestionVM.DisplayedQuestionIndex + 1 = " + QuestionVM.DisplayedQuestionIndex + 1);
+                    // add answer to user history
+                    int selectedAnswerID = -1;
+                    foreach (Answer answer in QuestionVM.Answers)
+                        if (answer.SelectedAnswer)
+                            selectedAnswerID = answer.Index;
 
+                    QuestionVM.User.UserHistory.Add(new History(QuestionVM.QuestionaireID, QuestionVM.Question.ID, selectedAnswerID));
                     // gehe zur nächsten frage
                     NavigationService.Navigate(new QuestionairePage(QuestionVM, QuestionVM.DisplayedQuestionIndex + 1));
                 }
                 else // wenn es die letzte frage ist
                 {
-                    Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
-                    Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+                    //Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+                    //Trace.WriteLine("click! FOWARD letzte frage: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
                     // finde die position der ersten unbeantworteten frage
                     int positionUnansweredQuestion = 0;
                     foreach (Question question in QuestionVM.Questionaire.Questions) // gehe durch alle fragen des questionairs
@@ -132,7 +149,7 @@ namespace quiz
                                 selectedFound = true;
                             }
                         }
-                        // wenn keine gewählte antwort gefunden wurde
+                        // wenn eine Frage mit nicht gewählter antwort gefunden wurde
                         if (!selectedFound)
                             NavigationService.Navigate(new QuestionairePage(QuestionVM, positionUnansweredQuestion)); // gehe zur position der unbeantworteten frage
                     }
@@ -144,9 +161,9 @@ namespace quiz
         {
             QuestionVM.CompletedQuestions = CompletedQuestionsCount(QuestionVM);
             // Debug
-            Trace.WriteLine("click! BACK: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
-            Trace.WriteLine("click! BACK: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
-            Trace.WriteLine("click! BACK: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+            //Trace.WriteLine("click! BACK: QuestionVM.CompletedQuestions = " + QuestionVM.CompletedQuestions);
+            //Trace.WriteLine("click! BACK: QuestionVM.Questionaire.Questions.Count = " + QuestionVM.Questionaire.Questions.Count);
+            //Trace.WriteLine("click! BACK: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
             // wenn es nicht die erste frage ist
             if (QuestionVM.DisplayedQuestionIndex > 0)
             {
@@ -163,7 +180,7 @@ namespace quiz
             else // wenn es die erste frage ist
             {
                 // do nothing
-                Trace.WriteLine("click! BACK impossible: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
+                //Trace.WriteLine("click! BACK impossible: QuestionVM.DisplayedQuestionIndex = " + QuestionVM.DisplayedQuestionIndex);
             }
         }
     }

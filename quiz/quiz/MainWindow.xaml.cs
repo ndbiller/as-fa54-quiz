@@ -42,6 +42,8 @@ namespace quiz
 
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {
+            // FIXME: save user for debugging
+            QuestionVM.User.WriteCSVFile();
             // TODO: minimize window here
         }
 

@@ -21,6 +21,8 @@ namespace quiz.Viewmodels
 		{
             // Instantiate the defaultUser for the view
             User = new User();
+            // Load defaultUser.txt if it exists
+            User.ReadCSVFile();
             // instantiate the displayed history and load the users answer history into it
             History = new ObservableCollection<History>();
             foreach (History answer in User.UserHistory)
