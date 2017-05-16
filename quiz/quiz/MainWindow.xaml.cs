@@ -13,24 +13,16 @@ namespace quiz
     /// Interaction logic for MainWindow.xaml
     /// Basicaly the entrypoint for our app (after App.xaml)
     /// </summary>
-    /// 
-
     public partial class MainWindow : Window
     {
-        //comboBox1.DataSource= fragenQuery.ToList();
-
-        //create the main viewmodel and set it as data context for the views in constructor
-        //public MainViewModel MainVM { get; set; }
+        //create the viewmodel and set it as data context for the views in constructor
         public QuestionViewModel QuestionVM { get; set; }
 
         public MainWindow()
         {
-            //MainVM = new MainViewModel();
-            QuestionVM = new QuestionViewModel();// { User = MainVM.User };
-            //QuestionVM.User = MainVM.User;
+            QuestionVM = new QuestionViewModel();
             InitializeComponent();
             DataContext = QuestionVM;
-            //Master myMaster = new Master();
         }
 
         private void MainWindowLoaded(object sender, RoutedEventArgs e)
@@ -42,8 +34,6 @@ namespace quiz
 
         private void MinimizeClicked(object sender, RoutedEventArgs e)
         {
-            // FIXME: save user for debugging
-            QuestionVM.User.WriteCSVFile();
             // TODO: minimize window here
         }
 
@@ -56,8 +46,7 @@ namespace quiz
         // Method to handle the Window.Closing event.
         private void Window_Closing(object sender, CancelEventArgs e)
         {
-            var response = MessageBox.Show("Do you really want to exit?", "Exiting...",
-                                           MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            var response = MessageBox.Show("Do you really want to exit?", "Exiting...", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
             if (response == MessageBoxResult.No)
             {
                 e.Cancel = true;
