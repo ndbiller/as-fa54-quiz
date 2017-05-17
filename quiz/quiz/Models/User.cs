@@ -41,6 +41,23 @@ namespace quiz.Models
             QuestionLimit = 4;
         }
 
+        public void LoadSettings()
+        {
+            if (UserHistory.Count > 0)
+                foreach (History element in UserHistory)
+                {
+                    Title = element.AppTitle;
+                    PassingPercentage = element.QuestionairePercentage;
+                    QuestionLimit = element.QuestionaireLength;
+                }
+            else
+            {
+                Title = "Sportbootführerschein Binnen (unter Antriebsmaschine)";
+                PassingPercentage = 95;
+                QuestionLimit = 4;
+            }
+        }
+
         public List<string> EvaluateHistory()
         {
             // variables for results
@@ -179,6 +196,7 @@ namespace quiz.Models
                 // lastly set current element as previous element
                 previousElement = element;
             }
+
             return results;
         }
 

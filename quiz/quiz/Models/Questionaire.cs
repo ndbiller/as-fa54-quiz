@@ -21,7 +21,8 @@ namespace quiz.Models
         {
             get
             {
-                return CountCorrect();
+                answeredCorrectly = CountCorrect();
+                return answeredCorrectly;
             }
             set
             {
@@ -29,14 +30,14 @@ namespace quiz.Models
             }
         }
 
-        public Questionaire(int id, List<Question> questions)
-        {
-            ID = id;
-            Questions = questions;
-            Results = -1;
-            AnsweredCorrectly = AnsweredCorrectly; // does this make sense? method counts twice...
-            EvalMessage = "";
-        }
+        //public Questionaire(int id, List<Question> questions)
+        //{
+        //    ID = id;
+        //    Questions = questions;
+        //    Results = -1;
+        //    AnsweredCorrectly = AnsweredCorrectly; // does this make sense? method counts twice...
+        //    EvalMessage = "";
+        //}
         public Questionaire(int dbID, int id)
         {
             ID = id;
@@ -50,6 +51,9 @@ namespace quiz.Models
         // mit limit zum leichteren debuggen
         public Questionaire(int dbID, int id, int limit)
         {
+            //if (limit <= 0 || limit > 30)
+            //    limit = 30;
+
             ID = id;
             this.dbID = dbID;
             Results = 0;
@@ -115,16 +119,9 @@ namespace quiz.Models
 
         public bool Evaluate(decimal passThreshhold)
         {
-            decimal i = AnsweredCorrectly;
-            foreach (Question question in Questions)
-            {
-                if(question.Solve())
-                {
-                    i++;
-                }
-            }
-            Results = ((i / Questions.Count) * 100);
-            Trace.WriteLine("You answered " + i + "/" + Questions.Count + " correctly. Thats " + Results + "%.");   // Debug
+            int i = CountCorrect();
+            Results = (((decimal)i / (decimal)Questions.Count) * 100);
+            Trace.WriteLine("You answered " + i + "/" + (decimal)Questions.Count + " correctly. Thats " + Results + "%.");   // Debug
             if (Results >= passThreshhold)
             {
                 Trace.WriteLine("You passed since you got more than " + passThreshhold + "% correctly");            // Debug

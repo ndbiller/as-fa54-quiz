@@ -64,7 +64,7 @@ namespace quiz.Models
         //public void ForwardClicked(int nextQuestionID)
         //{
         //    // Debug
-        //    Trace.WriteLine("nextQuestionID is " + nextQuestionID + "! ID is now " + ID);
+        //    Trace.WriteLine("Solve() = " + );
         //}
 
         public bool Solve()
@@ -73,6 +73,11 @@ namespace quiz.Models
             foreach (Answer answer in AnswerList)
                 if (answer.CorrectAnswer && answer.SelectedAnswer)
                     correct = true;
+
+            foreach (Answer answer in AnswerList)
+                Trace.WriteLine("answer.SelectedAnswer = " + answer.SelectedAnswer + ", answer.CorrectAnswer = " + answer.CorrectAnswer);
+
+            Trace.WriteLine("correct = " + correct);
             return correct;
         }
     }

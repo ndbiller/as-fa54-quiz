@@ -28,12 +28,13 @@
                            Margin="10 0 0 0" 
                            FontSize="15"
                            FontWeight="Bold"
-                           VerticalAlignment="Center" />
+                           VerticalAlignment="Center" 
+                           TextWrapping="Wrap" />
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
     
-    <!-- Settings Page -->
+    <!-- Page -->
     <StackPanel>
 
         <!-- Prüfungsbogen -->
@@ -43,7 +44,8 @@
                        FontWeight="Bold" />
             <TextBlock Text="{Binding QuestionaireID}" 
                        FontSize="20"
-                       FontWeight="Bold" />
+                       FontWeight="Bold" 
+                       TextWrapping="Wrap" />
         </StackPanel>
 
         <!-- Frage -->
@@ -55,7 +57,8 @@
             <TextBlock Text="{Binding Question.QuestionText, StringFormat=: {0}}" 
                        Margin="0 25 0 15"
                        FontSize="15"
-                       FontWeight="Bold" />
+                       FontWeight="Bold" 
+                       TextWrapping="Wrap" />
         </StackPanel>
 
         <!-- Antworten & optionales Bild -->

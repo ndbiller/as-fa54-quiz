@@ -22,6 +22,7 @@ namespace quiz
 
         private void SaveClicked(object sender, RoutedEventArgs e)
         {
+            QuestionVM.User.WriteCSVFile();
             NavigationService.Navigate(new StartPage(QuestionVM));
         }
 
@@ -32,6 +33,8 @@ namespace quiz
             currentVM.User.UserHistory = new List<History>();
             currentVM.QuestionaireHistory.Clear();
             currentVM.User.DeleteCSVFile();
+            // Set default Values for user
+            currentVM.User.LoadSettings();
             // go to start page
             NavigationService.Navigate(new StartPage(currentVM));
         }

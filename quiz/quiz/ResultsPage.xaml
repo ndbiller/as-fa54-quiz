@@ -18,13 +18,19 @@
             <ListBox MaxHeight="70"
                      FontSize="12"
                      Padding="7 0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"
+                                   TextWrapping="Wrap" />
+                        </DataTemplate>
+                </ListBox.ItemTemplate>
                 <!-- TODO: Listbox Template und dynamisch mit daten füllen -->
                 <ListBoxItem Content="{Binding Question}" 
-                                 Padding="2" />
+                             Padding="2" />
                 <ListBoxItem Content="{Binding SelectedAnswer}" 
-                                 Padding="2" />
+                             Padding="2" />
                 <ListBoxItem Content="{Binding RightAnswer}" 
-                                 Padding="2" />
+                             Padding="2" />
             </ListBox>
         </DataTemplate>
     </Page.Resources>

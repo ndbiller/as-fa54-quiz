@@ -49,6 +49,8 @@ namespace quiz.Viewmodels
             User = new User();
             // Load defaultUser.txt if it exists
             User.ReadCSVFile();
+            // Load Settings
+            User.LoadSettings();
             // create the questionnaire id, add to list
             QuestionaireIDList = new ObservableCollection<int>();
             QuestionaireID = 1;
